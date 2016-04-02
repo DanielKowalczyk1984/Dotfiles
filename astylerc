@@ -1,0 +1,23 @@
+# ~/.astylerc
+#
+# Courtesy of HN's super_mario: http://news.ycombinator.com/item?id=5348401
+# 
+
+# Use K&R formatting style
+style=1tbs
+indent-classes
+indent-switches
+indent-namespaces
+indent-preprocessor
+indent-col1-comments
+break-blocks
+pad-oper
+    
+pad-header
+unpad-paren
+delete-empty-lines
+align-pointer=name
+indent=spaces=4
+
+indent-preproc-define
+indent-preproc-block

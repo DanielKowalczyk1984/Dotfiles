@@ -1,0 +1,23 @@
+Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets'
+Plug 'jtratner/vim-flavored-markdown'
+Plug 'https://github.com/scrooloose/syntastic.git'
+Plug 'nelstrom/vim-markdown-preview'
+Plug 'skwp/vim-html-escape'
+Plug 'Latex-Box-Team/Latex-Box'
+Plug '1995parham/vim-zimpl'
+Plug 'chrisbra/csv.vim'
+
+function! BuildYCM(info)
+  ' info is a dictionary with 3 fields
+  ' - name:   name of the plugin
+  ' - status: 'installed', 'updated', or 'unchanged'
+  ' - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'https://github.com/SirVer/ultisnips.git'
+Plug 'http://github.com/ervandew/supertab.git'

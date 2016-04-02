@@ -1,0 +1,4 @@
+Bundle "https://github.com/Valloric/YouCompleteMe"
+Bundle "https://github.com/SirVer/ultisnips.git"
+Bundle "http://github.com/ervandew/supertab.git"
+Bundle "https://github.com/zorab47/vim-gams"
