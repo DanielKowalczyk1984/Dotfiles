@@ -36,8 +36,8 @@ fi
 alias lsg='ll | ag'
 
 
-alias ae='vim ~/.zsh/aliases.zsh' #alias edit
-alias ar='source ~/.zsh/aliases.zsh'  #alias reload
+alias ae='vim ~/.zsh/20_aliases.zsh' #alias edit
+alias ar='source ~/.zsh/20_aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
 # vim using
@@ -272,15 +272,6 @@ man() {
     LESS_TERMCAP_ue=$(printf "\e[0m") \
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
-}
-
-unalias z 2> /dev/null
-z() {
-  if [[ -z "$*" ]]; then
-    cd "$(_z -l 2>&1 | fzf +s --tac | sed 's/^[0-9,.]* *//')"
-  else
-    _z "$@"
-  fi
 }
 
 

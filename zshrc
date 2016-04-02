@@ -19,6 +19,8 @@ zplug "plugins/colorize", from:oh-my-zsh, if:"which vim"
 zplug "~/.zsh/themes/honukai-iterm-zsh", from:local
 
 zplug "~/.zsh", from:local
+
+zplug "b4b4r07/enhancd", of:enhancd.sh, nice:11
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
