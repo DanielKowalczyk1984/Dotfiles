@@ -3,4 +3,3 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
