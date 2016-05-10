@@ -1,4 +1,5 @@
-source ~/.zplug/zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 # Make sure you use double quotes
 
@@ -10,17 +11,19 @@ zplug "rimraf/k"
 
 zplug "rupa/z"
 
-zplug "zsh-users/zsh-syntax-highlighting", nice:12
+zplug "RobSis/zsh-completion-generator"
 
-zplug "plugins/vi-mode", from:oh-my-zsh, if:"which vim"
+zplug "zsh-users/zsh-syntax-highlighting", nice:12
 
 zplug "plugins/colorize", from:oh-my-zsh, if:"which vim"
 
-zplug "~/.zsh/themes/honukai-iterm-zsh", from:local
 
 zplug "~/.zsh", from:local
 
-zplug "b4b4r07/enhancd", of:enhancd.sh, nice:11
+zplug "~/.zsh/zsh-git-prompt", use:zshrc.sh, from:local
+
+zplug "~/.zsh/themes/honukai-iterm-zsh", from:local, nice:11
+zplug "b4b4r07/enhancd", use:enhancd.sh, nice:11
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
