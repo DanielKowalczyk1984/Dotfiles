@@ -1,0 +1,5 @@
+#ignore all the plugins of vim 
+vim/plugged/*
+
+#ignore all the plugins of tmux
+tmux/plugins/*
