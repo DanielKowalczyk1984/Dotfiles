@@ -29,7 +29,7 @@ if [[ $platform == 'linux' ]]; then
   alias ls='ls --color=auto'
 elif [[ $platform == 'darwin' ]]; then
 	alias ll='ls --group-directories-first -alh --color=auto'
-  	alias ls='ls --group-directories-first --color=auto'
+  alias ls='ls --group-directories-first --color=auto'
 fi
 
 # show me files matching "ls grep"
