@@ -7,23 +7,20 @@ zplug "zsh-users/zsh-history-substring-search"
 
 zplug "zsh-users/zsh-completions"
 
-zplug "rimraf/k"
-
 zplug "rupa/z"
-
-zplug "RobSis/zsh-completion-generator"
 
 zplug "zsh-users/zsh-syntax-highlighting", nice:12
 
 zplug "plugins/colorize", from:oh-my-zsh, if:"which vim"
-
 
 zplug "~/.zsh", from:local
 
 zplug "~/.zsh/zsh-git-prompt", use:zshrc.sh, from:local
 
 zplug "~/.zsh/themes/honukai-iterm-zsh", from:local, nice:11
-zplug "b4b4r07/enhancd", use:enhancd.sh, nice:11
+
+export ENHANCD_COMMAND=ecd
+zplug "b4b4r07/enhancd", use:init.sh, nice:11
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -33,6 +30,5 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
