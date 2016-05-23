@@ -284,6 +284,8 @@ man() {
     man "$@"
 }
 
+alias _='sudo'
+
 flpass_pass(){
     lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
 }
