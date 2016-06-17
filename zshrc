@@ -1,5 +1,6 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
+plugins=(20_aliases.zsh 50_spectrum.zsh 60_gnu_utility.zsh 80_completion.zsh 90_setopt.zsh noglob.zsh sublime.zsh zmv.zsh)
 
 # Make sure you use double quotes
 
@@ -13,7 +14,9 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:11
 
 zplug "plugins/colorize", from:oh-my-zsh, if:"which vim"
 
-zplug "~/.zsh", from:local
+for i in $plugins; do
+    zplug "~/.zsh", from:local, use:$i
+done
 
 zplug "~/.zsh", from:local, use:10_keybinds.zsh, nice:13
 
@@ -36,4 +39,3 @@ fi
 zplug load --verbose
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"

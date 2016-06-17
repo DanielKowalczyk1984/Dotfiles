@@ -327,3 +327,14 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# ------------------------------------------------------------------
+# tmux stuff
+# ------------------------------------------------------------------
+alias takeover="tmux detach -a"
+alias attach="tmux attach -t base || tmux new -s base"
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+alias tls='tmux ls'
+alias tk='tmux kill-session -t'
+

@@ -130,7 +130,7 @@ peco-select-gitadd() {
     zle reset-prompt
 }
 zle -N peco-select-gitadd
-bindkey '^g^a' peco-select-gitadd
+bindkey '^g^ ' peco-select-gitadd
 
 for keymap in 'viins'; do
   bindkey -M "$keymap" "$key_info[Home]" beginning-of-line
@@ -164,9 +164,6 @@ for keymap in 'viins'; do
   # Bind Shift + Tab to go to the previous menu item.
   bindkey -M "$keymap" "$key_info[BackTab]" reverse-menu-complete
 
-
-  # Insert 'sudo ' at the beginning of the line.
-  bindkey -M "$keymap" "$key_info[Control]X$key_info[Control]S" prepend-sudo
 done
 
 
