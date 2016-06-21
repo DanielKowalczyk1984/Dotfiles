@@ -1,5 +1,20 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# Get operating system
+platform='unknown'
+unamestr=$(uname)
+if [[ $unamestr == 'Linux' ]]; then
+  platform='linux'
+elif [[ $unamestr == 'Darwin' ]]; then
+  platform='darwin'
+fi
+
+if [[ $platform == 'linux' ]]; then
+    export ZPLUG_HOME=$HOME/.zplug
+    source $ZPLUG_HOME/init.zsh
+elif [[ $platform == 'darwin' ]]; then
+    export ZPLUG_HOME=/usr/local/opt/zplug
+    source $ZPLUG_HOME/init.zsh
+fi
+
 
 plugins=(aliases.zsh spectrum.zsh gnu_utility.zsh completion.zsh setopt.zsh noglob.zsh sublime.zsh zmv.zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
