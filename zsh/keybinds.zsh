@@ -1,11 +1,4 @@
 #
-# Options
-#
-
-# Beep on error in line editor.
-setopt BEEP
-
-#
 # Variables
 #
 
@@ -90,15 +83,15 @@ has 'history-substring-search-down' &&
 _peco-select-history() {
     if true; then
         BUFFER="$(
-        history  \
+        history 1  \
             | sort -k1,1nr \
             | perl -ne 'BEGIN { my @lines = (); } s/^\s*\d+\s*//; $in=$_; if (!(grep {$in eq $_} @lines)) { push(@lines, $in); print $in; }' \
             | fzf --query "$LBUFFER"
         )"
 
         CURSOR=$#BUFFER
-        #zle accept-line
-        #zle clear-screen
+        zle accept-line
+        zle clear-screen
         zle reset-prompt
     else
         if is-at-least 4.3.9; then
