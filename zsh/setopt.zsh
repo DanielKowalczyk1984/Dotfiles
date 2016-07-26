@@ -1,3 +1,8 @@
+# No Beep
+setopt no_beep
+setopt no_list_beep
+setopt no_hist_beep
+
 setopt auto_cd
 setopt auto_pushd
 
@@ -147,7 +152,7 @@ setopt hist_verify
 setopt bang_hist
 
 #We use only coreutils
-eval "$(dircolors --sh "/Users/Daniel/.dir_colors/dircolors.256dark")"
+eval "$(dircolors --sh "/Users/Daniel/.dir_colors/dircolors.ansi-dark")"
 
 if :; then
     setopt auto_param_slash
