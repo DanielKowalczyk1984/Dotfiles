@@ -70,11 +70,12 @@ zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
 # Directories
-zstyle ':completion:*:default' list-colors 'di=00;38;5;33:ln=00;38;5;37:so=48;5;230;38;5;136;01:pi=48;5;230;38;5;136;01:ex=00;38;5;64:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
 zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
-zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
+zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
 
 # History
 zstyle ':completion:*:history-words' stop yes
