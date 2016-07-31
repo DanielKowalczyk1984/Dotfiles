@@ -16,13 +16,14 @@ elif [[ $platform == 'darwin' ]]; then
 fi
 
 
-plugins=(gnu_utility.zsh aliases.zsh spectrum.zsh setopt.zsh completion.zsh noglob.zsh sublime.zsh zmv.zsh)
+plugins=(gnu_utility.zsh aliases.zsh spectrum.zsh setopt.zsh completion.zsh noglob.zsh sublime.zsh zmv.zsh pip.zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Make sure you use double quotes
 for i in $plugins; do
     zplug "~/.zsh", from:local, use:$i
 done
+
+fpath=(~/.zsh/completion(N-/) $fpath)
 
 zplug "zsh-users/zsh-completions"
 zplug "supercrabtree/k"
