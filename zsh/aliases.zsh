@@ -52,6 +52,8 @@ alias du='du -h -d 2'
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
   alias ls='ls --color=auto'
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
 elif [[ $platform == 'darwin' ]]; then
 	alias ll='ls --group-directories-first -alh --color=auto'
   alias ls='ls --group-directories-first --color=auto'
