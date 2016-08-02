@@ -152,7 +152,13 @@ setopt hist_verify
 setopt bang_hist
 
 #We use only coreutils
-eval "$(dircolors --sh "/Users/Daniel/.dir_colors/dircolors.ansi-dark")"
+
+if [[ $platform == 'linux' ]]; then
+    eval "$(dircolors --sh "/home/daniel/.dir_colors/dircolors.ansi-dark")"
+elif [[ $platform == 'darwin' ]]; then
+    eval "$(dircolors --sh "/Users/Daniel/.dir_colors/dircolors.ansi-dark")"
+fi
+
 
 if :; then
     setopt auto_param_slash
