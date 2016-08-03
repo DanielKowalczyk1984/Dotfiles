@@ -51,7 +51,7 @@ alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
-  alias ls='ls --color=auto'
+  alias ls='ls -X --color=auto'
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ $platform == 'darwin' ]]; then
