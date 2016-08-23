@@ -23,11 +23,10 @@
 #indent-preproc-block
 #
 #
---lineend=linux
 
 --style=google
 
---indent=spaces=2
+--indent=spaces=4
 
 --attach-namespaces
 --attach-classes
