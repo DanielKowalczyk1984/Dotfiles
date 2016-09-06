@@ -52,6 +52,8 @@ alias du='du -h -d 2'
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
   alias ls='ls -X --color=auto'
+  alias lt='tree --dirsfirst -aLpughDFiC 1'
+  alias ltd='lt -d'
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ $platform == 'darwin' ]]; then
