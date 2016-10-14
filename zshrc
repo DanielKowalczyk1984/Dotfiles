@@ -16,22 +16,26 @@ elif [[ $platform == 'darwin' ]]; then
 fi
 
 
-plugins=(gnu_utility.zsh aliases.zsh spectrum.zsh setopt.zsh completion.zsh noglob.zsh sublime.zsh zmv.zsh pip.zsh)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+plugins=(aliases.zsh spectrum.zsh setopt.zsh completion.zsh noglob.zsh sublime.zsh zmv.zsh pip.zsh keybinds.zsh)
 
-for i in $plugins; do
-    zplug "~/.zsh", from:local, use:$i
-done
+
 
 fpath=(~/.zsh/completion(N-/) $fpath)
 
 zplug "zsh-users/zsh-completions"
-zplug "supercrabtree/k"
-zplug "b4b4r07/enhancd", use:init.sh, nice:11
-zplug "~/.zsh/themes/pure", from:local, nice:11
+zplug "~/.zsh", from:local, use:aliases.zsh
+zplug "~/.zsh", from:local, use:spectrum.zsh
+zplug "~/.zsh", from:local, use:setopt.zsh
+zplug "~/.zsh", from:local, use:completion.zsh
+zplug "~/.zsh", from:local, use:noglob.zsh
+zplug "~/.zsh", from:local, use:sublime.zsh
+zplug "~/.zsh", from:local, use:zmv.zsh
+zplug "plugins/pip", from:oh-my-zsh
+zplug "plugins/archlinux", from:oh-my-zsh
+zplug "~/.zsh/themes/pure", nice:11, from:local 
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
 zplug "zsh-users/zsh-history-substring-search", nice:12
-zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -42,4 +46,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+source ~/.zsh/keybinds.zsh 
+source /usr/share/fzf/completion.zsh; source /usr/share/fzf/key-bindings.zsh
 

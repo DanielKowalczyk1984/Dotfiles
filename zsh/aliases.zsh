@@ -79,6 +79,7 @@ alias ve='vim ~/.vimrc'
 alias ze='vim ~/.zshrc'
 
 # Git Aliases
+alias gitgraph='git log --all --graph --decorate --oneline'
 alias gs='git status'
 alias gstsh='git stash'
 alias gst='git stash'
@@ -170,11 +171,11 @@ alias -g G='| grep' # now you can do: ls foo G something
 alias todo='open nvalt://find/todo'
 
 # Finder
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+# alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+# alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Homebrew
-alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+# alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 
 # File Download
 if (( $+commands[curl] )); then
@@ -384,10 +385,10 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # ------------------------------------------------------------------
 # tmux stuff
 # ------------------------------------------------------------------
-alias takeover="tmux detach -a"
-alias attach="tmux attach -t base || tmux new -s base"
-alias ta='tmux attach -t'
-alias tn='tmux new -s'
-alias tls='tmux ls'
-alias tk='tmux kill-session -t'
+alias takeover="tmux -2 detach -a"
+alias attach="tmux -2 attach -t base || tmux new -s base"
+alias ta='tmux -2 attach -t'
+alias tn='tmux -2 new -s'
+alias tls='tmux -2 ls'
+alias tk='tmux -2 kill-session -t'
 

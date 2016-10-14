@@ -3,6 +3,7 @@
 if [[ $('uname') == 'Linux' ]]; then
     local _sublime_linux_paths > /dev/null 2>&1
     _sublime_linux_paths=(
+        "/opt/sublime_text_3/sublime_text"
         "$HOME/bin/sublime_text"
         "/opt/sublime_text/sublime_text"
         "/usr/bin/sublime_text"
