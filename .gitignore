@@ -5,3 +5,6 @@ vim/plugged/*
 tmux/plugins/*
 
 vim/backups/*
+
+*.sublime-project
+*.sublime-workspace
