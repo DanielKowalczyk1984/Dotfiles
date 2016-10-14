@@ -30,9 +30,11 @@ zplug "~/.zsh", from:local, use:completion.zsh
 zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "~/.zsh/themes/pure", nice:11, from:local 
+setopt prompt_subst # Make sure propt is able to be generated properly.
+zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
 zplug "zsh-users/zsh-history-substring-search", nice:12
 
