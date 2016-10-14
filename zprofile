@@ -13,17 +13,13 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-
 # Settings for golang
-export GOPATH=/usr/local/opt/go/libexec/bin
-export GOBIN="$GOPATH/bin"
-# Settings for enchanded
-export ENHANCD_FILTER=fzf:peco
-export ENHANCD_COMMAND=ecd
-
-#
-# Editors
-#
+if command -v go >/dev/null; then
+  export GOPATH=/usr/lib/go/bin/
+  export GOROOT=`go env GOROOT`
+  echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
+  echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
+fi
 
 # Editor
 export EDITOR=vim
