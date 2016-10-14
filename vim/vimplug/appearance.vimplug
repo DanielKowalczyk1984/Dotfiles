@@ -1,5 +1,4 @@
 Plug 'skwp/vim-colors-solarized'
-Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/ShowMarks'
 Plug 'chriskempson/base16-vim'

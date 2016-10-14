@@ -18,6 +18,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set encoding=utf-8
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -112,6 +113,8 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+
+set rtp +=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 
 " ================ Custom Settings ========================
 so ~/.vim/settings.vim
