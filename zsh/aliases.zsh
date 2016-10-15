@@ -64,11 +64,6 @@ fi
 # show me files matching "ls grep"
 alias lsg='ll | ag'
 
-
-alias ae='vim ~/.zsh/20_aliases.zsh' #alias edit
-alias ar='source ~/.zsh/20_aliases.zsh'  #alias reload
-alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
-
 # mimic vim functions
 alias :q='exit'
 
@@ -105,18 +100,6 @@ alias -g L="| less"
 alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
-
-# TODOS
-# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
-# to find the note called 'todo'
-alias todo='open nvalt://find/todo'
-
-# Finder
-# alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-# alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# Homebrew
-# alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 
 # File Download
 if (( $+commands[curl] )); then
