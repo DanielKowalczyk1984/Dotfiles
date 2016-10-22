@@ -1,10 +1,9 @@
-Plug 'honza/vim-snippets'
 Plug 'jtratner/vim-flavored-markdown'
-Plug 'https://github.com/scrooloose/syntastic.git'
+Plug 'scrooloose/syntastic'
 Plug 'nelstrom/vim-markdown-preview'
 Plug 'Latex-Box-Team/Latex-Box'
 Plug '1995parham/vim-zimpl'
 Plug 'chrisbra/csv.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
-Plug 'https://github.com/SirVer/ultisnips.git'
-Plug 'http://github.com/ervandew/supertab.git'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
