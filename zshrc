@@ -48,6 +48,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
-source ~/.zsh/keybinds.zsh 
+source ~/.zsh/keybinds.zsh
 source /usr/share/fzf/completion.zsh; source /usr/share/fzf/key-bindings.zsh
 
