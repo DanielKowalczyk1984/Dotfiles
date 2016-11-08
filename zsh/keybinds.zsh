@@ -66,16 +66,12 @@ zle -N expand-dot-to-parent-directory-path
 bindkey -M "viins"  "." expand-dot-to-parent-directory-path
 
 # bind k and j for VI mode
-has 'history-substring-search-up' &&
     bindkey -M vicmd 'k' history-substring-search-up
-has 'history-substring-search-down' &&
     bindkey -M vicmd 'j' history-substring-search-down
 
 # bind P and N keys
-has 'history-substring-search-up' &&
-    bindkey -M viins '^P' history-substring-search-up
-has 'history-substring-search-down' &&
-    bindkey -M viins '^N' history-substring-search-down
+    bindkey -M viins $terminfo[kpp] history-substring-search-up
+    bindkey -M viins "$terminfo[knp]" history-substring-search-down
 
 
 
