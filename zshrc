@@ -18,7 +18,8 @@ fi
 fpath=(~/.zsh/completion(N-/) $fpath)
 
 setopt prompt_subst # Make sure propt is able to be generated properly.
-zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
+#zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "~/.zsh", from:local, use:setopt.zsh
 zplug "plugins/git", from:oh-my-zsh
