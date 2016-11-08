@@ -19,7 +19,7 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 
 setopt prompt_subst # Make sure propt is able to be generated properly.
 #zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
 #zplug "frmendes/geometry"
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "~/.zsh", from:local, use:setopt.zsh
@@ -34,22 +34,8 @@ zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
 zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
-  BULLETTRAIN_PROMPT_ORDER=(
-    status
-    custom
-    context
-    dir
-    perl
-    ruby
-    virtualenv
-    nvm
-    go
-    git
-    hg
-    cmd_exec_time
-  )
+BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_CONTEXT_SHOW=true
-
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
