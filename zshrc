@@ -48,6 +48,7 @@ zplug "~/.zsh", from:local, use:zmv.zsh
     hg
     cmd_exec_time
   )
+BULLETTRAIN_CONTEXT_SHOW=true
 
 
 # Install plugins if there are plugins that have not been installed
