@@ -17,10 +17,17 @@ fi
 
 fpath=(~/.zsh/completion(N-/) $fpath)
 
-setopt prompt_subst # Make sure propt is able to be generated properly.
 #zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
 #zplug "frmendes/geometry"
+#zplug "nyarla/zsh-theme-nerdish"
+#zplug "skylerlee/zeta-zsh-theme"
+#zplug "cbrock/sugar-free", use:sugar-free.zsh-theme
+#zplug "judgedim/oh-my-zsh-judgedim-theme", use:judgedim.zsh-theme
+#zplug "denysdovhan/spaceship-zsh-theme"
+#zplug "modules/prompt", from:prezto, nice:-20
+#zplug "eugenk/zsh-prompt-iggy", use:prompt_iggy_setup
+setopt prompt_subst # Make sure propt is able to be generated properly.
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "~/.zsh", from:local, use:setopt.zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -34,8 +41,9 @@ zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
 zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
+zplug "supercrabtree/k"
 BULLETTRAIN_TIME_SHOW=false
-BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_CONTEXT_SHOW=true 
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
