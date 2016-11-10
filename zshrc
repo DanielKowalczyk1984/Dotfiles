@@ -19,6 +19,7 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 
 #zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
 #zplug "frmendes/geometry"
+<<<<<<< HEAD
 #zplug "nyarla/zsh-theme-nerdish"
 #zplug "skylerlee/zeta-zsh-theme"
 #zplug "cbrock/sugar-free", use:sugar-free.zsh-theme
@@ -28,6 +29,10 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 #zplug "eugenk/zsh-prompt-iggy", use:prompt_iggy_setup
 setopt prompt_subst # Make sure propt is able to be generated properly.
 zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
+=======
+setopt prompt_subst # Make sure propt is able to be generated properly.
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
+>>>>>>> release/1.3
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "~/.zsh", from:local, use:setopt.zsh
 zplug "plugins/git", from:oh-my-zsh
