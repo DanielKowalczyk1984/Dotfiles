@@ -19,14 +19,12 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 
 #zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
 #zplug "frmendes/geometry"
-# setopt prompt_subst # Make sure propt is able to be generated properly.
-# zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
+setopt prompt_subst # Make sure propt is able to be generated properly.
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "~/.zsh", from:local, use:setopt.zsh
-# zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
-zplug "modules/git", from:prezto
-zplug "modules/prompt", from:prezto
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:12
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
