@@ -185,7 +185,8 @@ bindsym $mod+9 workspace number 9
 
 bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
-bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
@@ -244,7 +245,7 @@ bar {
 }
 
 
-set $mode_power power: logout(e), suspend(s), hibernate(h), reboot(r) or shutdown(p)
+set $mode_power power: lock(l), logout(e), suspend(s), hibernate(h), reboot(r) or shutdown(p)
 bindsym Mod1+Control+l mode "$mode_power"
 mode "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.config/i3/i3exit lock
