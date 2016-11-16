@@ -187,6 +187,7 @@ bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+Tab workspace prev_on_output
+bindsym $mod+Escape workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
