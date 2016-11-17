@@ -297,10 +297,10 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # ------------------------------------------------------------------
 # tmux stuff
 # ------------------------------------------------------------------
-alias takeover="tmux -2 detach -a"
-alias attach="tmux -2 attach -t base || tmux new -s base"
-alias ta='tmux -2 attach -t'
-alias tn='tmux -2 new -s'
-alias tls='tmux -2 ls'
-alias tk='tmux -2 kill-session -t'
+alias takeover="tmux  detach -a"
+alias attach="tmux  attach -t base || tmux new -s base"
+alias ta='tmux  attach -t'
+alias tn='tmux  new -s'
+alias tls='tmux  ls'
+alias tk='tmux  kill-session -t'
 
