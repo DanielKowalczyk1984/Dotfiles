@@ -19,13 +19,15 @@
     background_image = None
     custom_command = env TERM=screen-256color zsh
     font = font-linux 12
+    login_shell = True
     update_records = False
+    use_custom_command = True
     use_system_font = False
   [[solarized-dark]]
     background_color = "#002b36"
     background_image = None
     cursor_color = "#eee8d5"
-    custom_command = TERM=screen-256color zsh -l
+    custom_command = env TERM=screen-256color zsh -l
     font = Hack 14
     foreground_color = "#839496"
     icon_bell = False
