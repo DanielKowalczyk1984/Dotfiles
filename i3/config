@@ -262,7 +262,7 @@ mode "$mode_power" {
 
 #AUTOSTART STUFF
 exec_always --no-startup-id  python3 ~/.config/i3/i3-autoname-workspaces.py
-exec_always --no-startup-id feh --bg-fill $HOME/.config/Wallpapers/arch_linux_4k.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/Wallpapers/hexagons.jpg
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 # vim:filetype=i3
