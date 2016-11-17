@@ -16,7 +16,7 @@ elif [[ $platform == 'darwin' ]]; then
 fi
 
 fpath=(~/.zsh/completion(N-/) $fpath)
-export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_AUTOSTART=true
 #zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
 #zplug "frmendes/geometry"
 setopt prompt_subst # Make sure propt is able to be generated properly.
