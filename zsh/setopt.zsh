@@ -1,3 +1,6 @@
+setopt prompt_subst # Make sure propt is able to be generated properly.
+
+
 # No Beep
 setopt no_beep
 setopt no_list_beep
