@@ -17,26 +17,24 @@ fi
 
 fpath=(~/.zsh/completion(N-/) $fpath)
 # export ZSH_TMUX_AUTOSTART=true
-
-setopt prompt_subst # Make sure propt is able to be generated properly.
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, 
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "~/.zsh", from:local, use:setopt.zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/themes", from:oh-my-zsh
+zplug "supercrabtree/k"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:12
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
 zplug "~/.zsh", from:local, use:aliases.zsh
+zplug "~/.zsh", from:local, use:setopt.zsh, nice:-1
 zplug "~/.zsh", from:local, use:completion.zsh
 zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
 zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
-zplug "supercrabtree/k"
-BULLETTRAIN_TIME_SHOW=false
-BULLETTRAIN_CONTEXT_SHOW=true
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -47,5 +45,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+theme bullet-train
 source /usr/share/fzf/completion.zsh; source /usr/share/fzf/key-bindings.zsh
 
