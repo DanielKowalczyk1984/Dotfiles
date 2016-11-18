@@ -1,5 +1,6 @@
-setopt prompt_subst # Make sure propt is able to be generated properly.
-
+setopt prompt_subst # Make sure prompt is able to be generated properly.
+BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_CONTEXT_SHOW=true
 
 # No Beep
 setopt no_beep
