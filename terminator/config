@@ -11,7 +11,7 @@
   [[default]]
     [[[child1]]]
       parent = window0
-      profile = tomorrow-dark
+      profile = solarized-dark
       type = Terminal
       command = env TERM=xterm-256color zsh -l
     [[[window0]]]
@@ -88,6 +88,11 @@
     custom_command = env TERM=screen-256color zsh -l
     foreground_color = "#839496"
   [[solarized-light]]
+    font = Hack 14
+    login_shell = True
+    use_custom_command = False
+    update_records = False
+    use_system_font = False
     background_color = "#eee8d5"
     background_image = None
     cursor_color = "#002b36"
@@ -134,3 +139,13 @@
     foreground_color = "#c5c8c6"
     background_color = "#1d1f21"
     cursor_color = "#c5c8c6"
+  [[tomorrow-light]]
+    font = Hack 14
+    login_shell = True
+    use_custom_command = False
+    update_records = False
+    use_system_font = False
+    palette = "#1d1f21:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6:#969896:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    foreground_color = "#373b41"
+    background_color = "#ffffff"
+    cursor_color = "#373b41"
