@@ -32,6 +32,7 @@ zplug "~/.zsh", from:local, use:setopt.zsh, nice:-1
 zplug "~/.zsh", from:local, use:completion.zsh
 zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
 zplug "~/.zsh", from:local, use:noglob.zsh
+zplug "~/.zsh", from:local, use:spectrum.zsh 
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
 
