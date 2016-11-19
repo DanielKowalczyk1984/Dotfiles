@@ -68,7 +68,7 @@ FA_DATABASE = '\uf1c0'
 FA_PREF = '\uf013'
 WINDOW_ICONS = {
     'Gnome-terminal': FA_TERMINAL,
-    'google-chrome':FA_CHROME,
+    'google-chrome': FA_CHROME,
     'terminator': FA_TERMINAL,
     'Galculator': FA_CALCULATOR,
     'Franz': FA_COMMENTS_O,
@@ -97,7 +97,7 @@ WINDOW_ICONS = {
     'Photoscan': FA_FILM,
     'qgis': FA_MAP_O,
     'Steam': FA_STEAM,
-    'SWT': FA_DATABASE, #DBeaver changed its wm_class name?
+    'SWT': FA_DATABASE,  # DBeaver changed its wm_class name?
     'DBeaver': FA_DATABASE,
     'KeeWeb': FA_KEY,
     'zathura': FA_FILE_PDF_O,
@@ -111,14 +111,18 @@ i3 = i3ipc.Connection()
 
 # Returns an array of the values for the given property from xprop.  This
 # requires xorg-xprop to be installed.
+
+
 def xprop(win_id, property):
     try:
-        prop = proc.check_output(['xprop', '-id', str(win_id), property], stderr=proc.DEVNULL)
+        prop = proc.check_output(
+            ['xprop', '-id', str(win_id), property], stderr=proc.DEVNULL)
         prop = prop.decode('utf-8')
         return re.findall('"([^"]+)"', prop)
     except proc.CalledProcessError as e:
         print("Unable to get property for window '%s'" % str(win_id))
         return None
+
 
 def icon_for_terminal_app(window):
     names = xprop(window.window, 'WM_NAME')
@@ -127,6 +131,7 @@ def icon_for_terminal_app(window):
         for name in names:
             if name in WINDOW_ICONS:
                 return WINDOW_ICONS[name]
+
 
 def icon_for_window(window):
     classes = xprop(window.window, 'WM_CLASS')
@@ -138,27 +143,35 @@ def icon_for_window(window):
     return '*'
 
 # renames all workspaces based on the windows present
+
+
 def rename():
     for workspace in i3.get_tree().workspaces():
         icons = [icon_for_window(w) for w in workspace.leaves()]
         icon_str = ': ' + ' '.join(icons) if len(icons) else ''
         new_name = str(workspace.num) + icon_str
-        i3.command('rename workspace "%s" to "%s"' % (workspace.name, new_name))
+        i3.command('rename workspace "%s" to "%s"' %
+                   (workspace.name, new_name))
 
 rename()
 
 # exit gracefully when ctrl+c is pressed
+
+
 def signal_handler(signal, frame):
     # rename workspaces to just numbers on exit to indicate that this script is
     # no longer running
     for workspace in i3.get_tree().workspaces():
-        i3.command('rename workspace "%s" to "%d"' % (workspace.name, workspace.num))
+        i3.command('rename workspace "%s" to "%d"' %
+                   (workspace.name, workspace.num))
     i3.main_quit()
     sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
 # call rename() for relevant window events
+
+
 def on_change(i3, e):
     if e.change in ['new', 'close', 'move']:
         rename()
