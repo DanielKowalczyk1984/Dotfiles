@@ -1,3 +1,12 @@
+#!/bin/zsh
+
+umask 022
+
+# if it's a dumb terminal, return.
+if [[ ${TERM} == 'dumb' ]]; then
+    return
+fi
+
 # Get operating system
 platform='unknown'
 unamestr=$(uname)
@@ -8,6 +17,11 @@ elif [[ $unamestr == 'Darwin' ]]; then
 fi
 
 if [[ $platform == 'linux' ]]; then
+    if [[ ! -d ~/.zplug ]]; then
+      git clone https://github.com/zplug/zplug ~/.zplug
+      source ~/.zplug/init.zsh && zplug update --self
+    fi
+
     export ZPLUG_HOME=$HOME/.zplug
     source $ZPLUG_HOME/init.zsh
 elif [[ $platform == 'darwin' ]]; then
@@ -15,41 +29,42 @@ elif [[ $platform == 'darwin' ]]; then
     source $ZPLUG_HOME/init.zsh
 fi
 
-fpath=(~/.zsh/completion(N-/) $fpath)
+export TERM=xterm-256color
 export ZSH_TMUX_AUTOSTART=true
-#zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
-#zplug "frmendes/geometry"
-<<<<<<< HEAD
-#zplug "nyarla/zsh-theme-nerdish"
-#zplug "skylerlee/zeta-zsh-theme"
-#zplug "cbrock/sugar-free", use:sugar-free.zsh-theme
-#zplug "judgedim/oh-my-zsh-judgedim-theme", use:judgedim.zsh-theme
-#zplug "denysdovhan/spaceship-zsh-theme"
-#zplug "modules/prompt", from:prezto, nice:-20
-#zplug "eugenk/zsh-prompt-iggy", use:prompt_iggy_setup
-setopt prompt_subst # Make sure propt is able to be generated properly.
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
-=======
-setopt prompt_subst # Make sure propt is able to be generated properly.
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme, hook-load:""
->>>>>>> release/1.3
+ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
+ENHANCD_COMMAND=ecd
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='
+--extended
+--ansi
+--multi
+--bind=ctrl-u:page-up
+--bind=ctrl-d:page-down
+--bind=ctrl-z:toggle-all
+'
+
+fpath=(~/.zsh/completion(N-/) $fpath)
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "~/.zsh", from:local, use:setopt.zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/themes", from:oh-my-zsh
+zplug "supercrabtree/k"
+zplug "hlissner/zsh-autopair"
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:12
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
 zplug "~/.zsh", from:local, use:aliases.zsh
+zplug "~/.zsh", from:local, use:setopt.zsh, nice:-1
 zplug "~/.zsh", from:local, use:completion.zsh
 zplug "~/.zsh", from:local, use:keybinds.zsh, nice:13
 zplug "~/.zsh", from:local, use:noglob.zsh
+zplug "~/.zsh", from:local, use:spectrum.zsh 
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
-zplug "supercrabtree/k"
-BULLETTRAIN_TIME_SHOW=false
-BULLETTRAIN_CONTEXT_SHOW=true 
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -60,5 +75,5 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
-source /usr/share/fzf/completion.zsh; source /usr/share/fzf/key-bindings.zsh
+theme bullet-train
 

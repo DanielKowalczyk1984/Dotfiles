@@ -12,22 +12,6 @@ exec xset r rate 175 25
 #Font for window titles.
 font pango:Fira Mono Medium 13
 
-#Colors
-set $back               #2F343F
-set $primary            #D0D0D0
-set $secondary          #0FE0C9
-set $black              #282A2E
-set $grey               #303030
-set $white              #C5C8C6
-
-# class                 border   backgr.  text    indicator child_border
-client.focused          $primary $primary $black  #2e9ef4   $primary
-client.focused_inactive $black   $primary $black  #484e50   $black
-client.unfocused        $black   $back    $white  #292d2e   $black
-client.urgent           #2f343a  #900000  $white  #900000   #900000
-client.placeholder      #000000  #0c0c0c  $white  #000000   #0c0c0c
-client.background       $white
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 popup_during_fullscreen smart
@@ -234,15 +218,16 @@ bar {
     position top
     height 25
     font pango: Hack, FontAwesome, icons, fontello 10
-    colors {
-        background $back
-        separator $primary
-        statusline $primary
-        focused_workspace $primary $primary $back
-        active_workspace #1D2021 #1D2021 $primary
-        inactive_workspace $back $back $primary
-        urgent_workspace #CC241D #CC241D #EBDBB2
-    }
+
+  colors {
+    background #002b36
+    statusline #839496
+    separator  #586e75
+    focused_workspace  #b58900 #b58900 #002b36
+    active_workspace   #586e75 #586e75 #002b36
+    inactive_workspace #073642 #002b36 #839496
+    urgent_workspace   #dc322f #dc322f #fdf6e3
+  }
 }
 
 
@@ -263,6 +248,13 @@ mode "$mode_power" {
 #AUTOSTART STUFF
 exec_always --no-startup-id  python3 ~/.config/i3/i3-autoname-workspaces.py
 exec_always --no-startup-id feh --bg-fill $HOME/.config/Wallpapers/hexagons.jpg
+exec_always --no-startup-id "setxkbmap -option caps:escape"
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 # vim:filetype=i3
+
+#Solarized colorscheme
+client.focused          #002b36 #586e75 #fdf6e3 #268bd2
+client.focused_inactive #002b36 #073642 #839496 #073642
+client.unfocused        #002b36 #073642 #839496 #073642
+client.urgent           #002b36 #dc322f #fdf6e3 #002b36
