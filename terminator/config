@@ -2,11 +2,15 @@
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   title_font = Hack 14
-  title_transmit_bg_color = "#d30102"
+  title_inactive_bg_color = "#373b41"
+  title_inactive_fg_color = "#c5c8c6"
+  title_transmit_bg_color = "#282a2e"
+  title_transmit_fg_color = "#c5c8c6"
 [keybindings]
 [layouts]
   [[default]]
     [[[child1]]]
+      command = env TERM=xterm-256color zsh -l
       parent = window0
       profile = solarized-dark
       type = Terminal
@@ -17,11 +21,68 @@
 [profiles]
   [[default]]
     background_image = None
-    custom_command = env TERM=screen-256color zsh
     font = font-linux 12
-    login_shell = True
     update_records = False
-    use_custom_command = True
+    use_system_font = False
+  [[brewer-light]]
+    background_color = "#fcfdfe"
+    background_image = None
+    cursor_color = "#515253"
+    font = Hack 14
+    foreground_color = "#515253"
+    palette = "#0c0d0e:#e31a1c:#31a354:#dca060:#3182bd:#756bb1:#80b1d3:#b7b8b9:#737475:#e31a1c:#31a354:#dca060:#3182bd:#756bb1:#80b1d3:#fcfdfe"
+    update_records = False
+    use_system_font = False
+  [[codeschool-light]]
+    background_color = "#b5d8f6"
+    background_image = None
+    cursor_color = "#2a343a"
+    font = Hack 14
+    foreground_color = "#2a343a"
+    palette = "#232c31:#2a5491:#237986:#a03b1e:#484d79:#c59820:#b02f30:#9ea7a6:#3f4944:#2a5491:#237986:#a03b1e:#484d79:#c59820:#b02f30:#b5d8f6"
+    update_records = False
+    use_system_font = False
+  [[google]]
+    background_color = "#1d1f21"
+    background_image = None
+    cursor_color = "#c5c8c6"
+    foreground_color = "#c5c8c6"
+    palette = "#282a2e:#a54242:#8c9440:#de935f:#5f819d:#85678f:#5e8d87:#707880:#373b41:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6"
+    update_records = False
+  [[google-light]]
+    background_color = "#ffffff"
+    background_image = None
+    cursor_color = "#373b41"
+    font = Hack 14
+    foreground_color = "#373b41"
+    palette = "#1d1f21:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#c5c8c6:#969896:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#ffffff"
+    update_records = False
+    use_system_font = False
+  [[gotham]]
+    background_color = "#0a0f14"
+    background_image = None
+    cursor_color = "#98d1ce"
+    font = Hack 14
+    foreground_color = "#98d1ce"
+    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#10151b:#d26939:#081f2d:#245361:#093748:#888ba5:#599caa:#d3ebe9"
+    update_records = False
+    use_system_font = False
+  [[monokai]]
+    background_color = "#272822"
+    background_image = None
+    cursor_color = "#f1ebeb"
+    font = Hack 14
+    foreground_color = "#f1ebeb"
+    palette = "#48483e:#dc2566:#8fc029:#d4c96e:#55bcce:#9358fe:#56b7a5:#acada1:#76715e:#fa2772:#a7e22e:#e7db75:#66d9ee:#ae82ff:#66efd5:#cfd0c2"
+    update_records = False
+    use_system_font = False
+  [[mostly-bright]]
+    background_color = "#f3f3f3"
+    background_image = None
+    cursor_color = "#707070"
+    font = Hack 14
+    foreground_color = "#707070"
+    update_records = False
     use_system_font = False
   [[solarized-dark]]
     background_color = "#002b36"
@@ -30,14 +91,69 @@
     custom_command = env TERM=screen-256color zsh -l
     font = Hack 14
     foreground_color = "#839496"
-    icon_bell = False
-    login_shell = True
     update_records = False
-    use_custom_command = True
     use_system_font = False
   [[solarized-light]]
     background_color = "#eee8d5"
     background_image = None
     cursor_color = "#002b36"
+    font = Hack 14
     foreground_color = "#002b36"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    update_records = False
+    use_system_font = False
+  [[tomorrow-dark]]
+    background_color = "#1d1f21"
+    background_image = None
+    cursor_color = "#c5c8c6"
+    font = Hack 14
+    foreground_color = "#c5c8c6"
+    palette = "#1d1f21:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6:#969896:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    update_records = False
+    use_system_font = False
+  [[tomorrow-light]]
+    background_color = "#ffffff"
+    background_image = None
+    cursor_color = "#373b41"
+    font = Hack 14
+    foreground_color = "#373b41"
+    login_shell = True
+    palette = "#1d1f21:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6:#969896:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    update_records = False
+    use_system_font = False
+  [[yousai]]
+    background_color = "#f5e7de"
+    background_image = None
+    cursor_color = "#34302d"
+    font = Hack 14
+    foreground_color = "#34302d"
+    palette = "#666661:#992e2e:#4c3226:#a67c53:#4c7399:#bf9986:#d97742:#34302d:#7f7f7a:#b23636:#664233:#bf8f60:#5986b2:#d9ae98:#f2854a:#4c4742"
+    update_records = False
+    use_system_font = False
+  [[Material]]
+    palette = #212121:#b7141f:#457b24:#fc7b08:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#fd8e09:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
+    background_color = "#eaeaea"
+    cursor_color = "#16afca"
+    foreground_color = "#2e2e2d"
+    background_image = None
+    update_records = False
+    use_system_font = False
+    font = Hack 14
+  [[MaterialDark]]
+    palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
+    background_color = "#232322"
+    cursor_color = "#16afca"
+    foreground_color = "#e5e5e5"
+    background_image = None
+    update_records = False
+    use_system_font = False
+    font = Hack 14
+  [[Argonaut]]
+    palette ="#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+    background_color = "#0e1019"
+    cursor_color = "#ff0018"
+    foreground_color = "#fffaf4"
+    background_image = None
+    update_records = False
+    use_system_font = False
+    font = Hack 14
