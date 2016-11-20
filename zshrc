@@ -1,3 +1,12 @@
+#!/bin/zsh
+
+umask 022
+
+# if it's a dumb terminal, return.
+if [[ ${TERM} == 'dumb' ]]; then
+    return
+fi
+
 # Get operating system
 platform='unknown'
 unamestr=$(uname)
@@ -8,15 +17,32 @@ elif [[ $unamestr == 'Darwin' ]]; then
 fi
 
 if [[ $platform == 'linux' ]]; then
+    if [[ ! -d ~/.zplug ]]; then
+      git clone https://github.com/zplug/zplug ~/.zplug
+      source ~/.zplug/init.zsh && zplug update --self
+    fi
+
     export ZPLUG_HOME=$HOME/.zplug
     source $ZPLUG_HOME/init.zsh
 elif [[ $platform == 'darwin' ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 fi
+export TERM=xterm-256color
+export ZSH_TMUX_AUTOSTART=true
+ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
+ENHANCD_COMMAND=ecd
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='
+--extended
+--ansi
+--multi
+--bind=ctrl-u:page-up
+--bind=ctrl-d:page-down
+--bind=ctrl-z:toggle-all
+'
 
 fpath=(~/.zsh/completion(N-/) $fpath)
-# export ZSH_TMUX_AUTOSTART=true
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
@@ -24,6 +50,9 @@ zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
+zplug "hlissner/zsh-autopair"
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:12
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
@@ -47,5 +76,4 @@ fi
 
 zplug load --verbose
 theme bullet-train
-source /usr/share/fzf/completion.zsh; source /usr/share/fzf/key-bindings.zsh
 
