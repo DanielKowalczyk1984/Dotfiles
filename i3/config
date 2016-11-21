@@ -102,7 +102,9 @@ bindsym $mod+Print exec scrot -u -e 'mv $f ~/Pictures/screenshots/'
 bindsym $mod+Shift+Print exec guake -e "scrot -s -e 'mv \$f ~/Pictures/screenshots/'"
 bindsym $mod+F11 exec light -U 5
 bindsym $mod+F12 exec light -A 5
-
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 # vi keybindings
 set $vi_left h
 set $vi_down j
