@@ -5,8 +5,8 @@ perc1=$(acpi -b | ag "Battery 1" | awk '{print $4;}' | sed 's/%//g' | sed 's/,//
 perc=$(acpi -b | awk '{print $4;}' | sed 's/%//g' | sed 's/,//g')
 charging0=$(acpi -b | ag "Battery 0" | grep -c 'Discharging\|Unknown')
 charging1=$(acpi -b | ag "Battery 1" | grep -c 'Discharging\|Unknown')
-bat0="1:   $perc0"
-bat1="2:   $perc1"
+bat0="  $perc0"
+bat1="  $perc1"
 
 if [ ! $charging0 -eq 1 ]
 then bat0="  $perc0%"
