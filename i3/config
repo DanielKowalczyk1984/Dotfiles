@@ -249,7 +249,7 @@ mode "$mode_power" {
 
 #AUTOSTART STUFF
 exec_always --no-startup-id  python3 ~/.config/i3/i3-autoname-workspaces.py
-exec_always --no-startup-id feh --bg-fill /usr/share/config/Wallpapers/hexagons.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/hexagons.jpg
 exec_always --no-startup-id "setxkbmap -option caps:escape"
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
