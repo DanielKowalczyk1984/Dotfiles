@@ -41,6 +41,7 @@ export FZF_DEFAULT_OPTS='
 --bind=ctrl-d:page-down
 --bind=ctrl-z:toggle-all
 '
+export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
 
 fpath=(~/.zsh/completion(N-/) $fpath)
 zplug "plugins/archlinux", from:oh-my-zsh
