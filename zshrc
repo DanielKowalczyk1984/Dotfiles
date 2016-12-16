@@ -28,6 +28,7 @@ elif [[ $platform == 'darwin' ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 fi
+
 export TERM=xterm-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
@@ -51,6 +52,7 @@ zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
+zplug "bobthecow/git-flow-completion"
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
@@ -65,7 +67,6 @@ zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:spectrum.zsh 
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
-
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

@@ -103,7 +103,9 @@ WINDOW_ICONS = {
     'zathura': FA_FILE_PDF_O,
     'vlc': FA_FILM,
     'keepass': FA_CHROME,
-    'gnome-font-viewer': FA_PREF
+    'gnome-font-viewer': FA_PREF,
+    'lxappearance': FA_PREF,
+    'lightdm-gtk-greeter-settings-pkexec': FA_PREF
 }
 
 

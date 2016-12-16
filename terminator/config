@@ -12,7 +12,7 @@
     [[[child1]]]
       command = env TERM=xterm-256color zsh -l
       parent = window0
-      profile = solarized-dark
+      profile = MaterialClean
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -157,3 +157,12 @@
     update_records = False
     use_system_font = False
     font = Hack 14
+  [[MaterialClean]]
+      palette = "#263238:#ff9800:#8bc34a:#ffc107:#03a9f4:#e91e63:#009688:#cfd8dc:#37474f:#ffa74d:#9ccc65:#ffa000:#81d4fa:#ad1457:#26a69a:#eceff1"
+      foreground_color = "#eceff1"
+      background_color = "#263238"
+      cursor_color = "#eceff1"
+      background_image = None
+      update_records = False
+      use_system_font = False
+      font = Hack 14
