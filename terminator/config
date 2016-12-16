@@ -12,7 +12,7 @@
     [[[child1]]]
       command = env TERM=xterm-256color zsh -l
       parent = window0
-      profile = solarized-dark
+      profile = MaterialClean
       type = Terminal
     [[[window0]]]
       parent = ""
