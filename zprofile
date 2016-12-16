@@ -15,8 +15,8 @@ fi
 
 # Settings for golang
 if command -v go >/dev/null; then
-  export GOPATH=/usr/lib/go/bin
   export GOROOT=`go env GOROOT`
+  export GOPATH=$HOME/.go
   # echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
   # echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
 fi
@@ -61,7 +61,7 @@ fpath=( \
 path=(
   /usr/local/{bin,sbin}
   $path
-  $GOBIN
+  $GOPATH
 )
 
 #
