@@ -105,7 +105,7 @@ WINDOW_ICONS = {
     'keepass': FA_CHROME,
     'gnome-font-viewer': FA_PREF,
     'lxappearance': FA_PREF,
-    'Instellingen voor LightDM GTK+ welkomstscherm': FA_PREF
+    'lightdm-gtk-greeter-settings': FA_PREF
 }
 
 
