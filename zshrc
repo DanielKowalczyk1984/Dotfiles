@@ -52,7 +52,7 @@ zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
-zplug "bobthecow/git-flow-completion"
+zplug "plugins/git-flow", from:oh-my-zsh
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
