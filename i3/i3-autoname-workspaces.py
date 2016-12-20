@@ -77,7 +77,7 @@ WINDOW_ICONS = {
     'vivaldi-stable': FA_CHROME,
     'gvim': FA_CODE,
     'subl3': FA_CODE,
-    'spotify': FA_SPOTIFY,
+    'Spotify': FA_SPOTIFY,
     'Firefox': FA_FIREFOX,
     'Thunderbird': FA_ENVELOPE_O,
     'libreoffice': FA_FILE_TEXT_O,
@@ -105,7 +105,7 @@ WINDOW_ICONS = {
     'keepass': FA_CHROME,
     'gnome-font-viewer': FA_PREF,
     'lxappearance': FA_PREF,
-    'lightdm-gtk-greeter-settings-pkexec': FA_PREF
+    'lightdm-gtk-greeter-settings': FA_PREF
 }
 
 
