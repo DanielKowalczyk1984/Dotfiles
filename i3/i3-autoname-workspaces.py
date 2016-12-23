@@ -102,7 +102,7 @@ WINDOW_ICONS = {
     'KeeWeb': FA_KEY,
     'zathura': FA_FILE_PDF_O,
     'vlc': FA_FILM,
-    'keepass': FA_CHROME,
+    'Keepass': FA_CHROME,
     'gnome-font-viewer': FA_PREF,
     'lxappearance': FA_PREF,
     'lightdm-gtk-greeter-settings': FA_PREF
