@@ -1,0 +1,11 @@
+[dotfiles]
+ignore = [
+    '.git',
+    '.gitignore',
+    '*.swp',
+    'Dotfiles.sublime-*',
+    '*.sh',
+    'README.md',
+    '*.txt']
+
+packages = ['config']
