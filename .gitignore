@@ -10,3 +10,4 @@ vim/backups/*
 *.sublime-workspace
 i3/.i3*.err
 vim/.netrwhist
+vim/session
