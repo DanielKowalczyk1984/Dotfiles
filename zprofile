@@ -17,6 +17,7 @@ fi
 if command -v go >/dev/null; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/.go
+  export GOBIN=$GOPATH/bin
   # echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
   # echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
 fi
@@ -61,7 +62,7 @@ fpath=( \
 path=(
   /usr/local/{bin,sbin}
   $path
-  $GOPATH
+  $GOBIN
 )
 
 #
