@@ -21,7 +21,6 @@ if [[ $platform == 'linux' ]]; then
       git clone https://github.com/zplug/zplug ~/.zplug
       source ~/.zplug/init.zsh && zplug update --self
     fi
-
     export ZPLUG_HOME=$HOME/.zplug
     source $ZPLUG_HOME/init.zsh
 elif [[ $platform == 'darwin' ]]; then
@@ -50,9 +49,9 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
-zplug "plugins/git-flow", from:oh-my-zsh
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
