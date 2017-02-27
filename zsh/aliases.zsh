@@ -72,7 +72,53 @@ alias ve='vim ~/.vimrc'
 
 # zsh profile editing
 alias ze='vim ~/.zshrc'
-
+# --// General Config \\--
+config () {
+    case $1 in  
+        # Apps
+        vim)        $EDITOR ~/.vimrc ;;
+        zsh)        $EDITOR ~/.zshrc ;;
+        aliases)  $EDITOR ~/.zsh/aliases.zsh ;;
+        urxvt)      $EDITOR ~/.Xdefaults ;;
+        slim)       sudo $EDITOR /etc/slim.conf ;;
+        logout)     sudo $EDITOR /etc/oblogout.conf ;;
+        chat)       $EDITOR ~/.weechat/weechat.conf ;;
+        irc)        $EDITOR ~/.weechat/irc.conf ;;
+        zathura)    $EDITOR ~/.config/zathura/zathurarc ;;
+        most)       sudo $EDITOR /etc/most.conf ;;
+        motion)     sudo $EDITOR ~/.motion/motion.conf ;;
+        open)       $EDITOR ~/.config/mimeapps.list ;;
+        tmux)       $EDITOR ~/.tmux.conf ;;
+        mail)       $EDITOR ~/.muttrc ;;
+        # Music
+        mpd)        sudo $EDITOR /etc/mpd.conf ;;
+        music)      $EDITOR ~/.ncmpcpp/config ;;
+        mplayer)    sudo $EDITOR ~/.mplayer/config ;;
+        pianobar)   sudo $EDITOR ~/.config/pianobar/config ;;
+        # System
+        burg)       sudo $EDITOR /boot/burg/burg.cfg ;;
+        grub)       sudo $EDITOR /boot/grub/grub.cfg ;;
+		xorg)		sudo $EDITOR /etc/X11/xorg.conf ;;
+		rc)			sudo $EDITOR /etc/rc.conf ;;
+        fstab)      sudo $EDITOR /etc/fstab ;;
+        xinit)      $EDITOR ~/.xinitrc ;;
+		pacman)		sudo $EDITOR /etc/pacman.conf ;;
+        inittab)    sudo $EDITOR /etc/inittab ;;
+        init)       sudo $EDITOR /etc/mkinitcpio.conf ;;
+        hosts)      sudo $EDITOR /etc/hosts ;;
+        i3)         $EDITOR ~/.config/i3/config ;;
+        # Invalid
+        *)          if [ -f "$1" ]; then
+						if [ -w "$1" ]; then		
+							$EDITOR "$1"
+						else
+							sudo $EDITOR "$1"
+						fi
+					else 
+						echo "Invalid Option" 
+					fi ;;
+   esac
+}
 # Git Aliases
 alias gitgraph='git log --all --graph --decorate --oneline'
 
@@ -85,6 +131,9 @@ alias screen='TERM=screen screen'
 alias cl='clear'
 
 # Zippin
+mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 alias gz='tar -zcvf'
 
 alias ka9='killall -9'
@@ -133,7 +182,9 @@ function cdls {
   builtin cd "$argv[-1]" && ls "${(@)argv[1,-2]}"
 }
 
-
+# ------------------------------------------------------------------
+# Pygments stuff
+# ------------------------------------------------------------------
 pretty() { pygmentize -f terminal "$1" | less -R }
 
 cat_alias() {
@@ -180,7 +231,9 @@ man() {
 }
 
 alias _='sudo'
-
+# -----------------------------------------------------------------
+# lpass fzf stuff
+# -----------------------------------------------------------------
 flpass_pass(){
     lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
 }
@@ -188,7 +241,9 @@ flpass_pass(){
 flpass_user(){
     lpass show -c --username $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
 }
-
+# -----------------------------------------------------------------
+# git fzf stuff
+# -----------------------------------------------------------------
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
