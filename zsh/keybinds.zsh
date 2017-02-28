@@ -74,28 +74,6 @@ bindkey -M "viins"  "." expand-dot-to-parent-directory-path
     bindkey -M viins "$terminfo[knp]" history-substring-search-down
 
 
-
-
-peco-select-gitadd() {
-    local selected_file_to_add
-    selected_file_to_add="$(
-    git status --porcelain \
-        | perl -pe 's/^( ?.{1,2} )(.*)$/\033[31m$1\033[m$2/' \
-        | fzf --ansi --exit-0 \
-        | awk -F ' ' '{print $NF}' \
-        | tr "\n" " "
-    )"
-
-    if [ -n "$selected_file_to_add" ]; then
-        BUFFER="git add $selected_file_to_add"
-        CURSOR=$#BUFFER
-        zle accept-line
-    fi
-    zle reset-prompt
-}
-zle -N peco-select-gitadd
-bindkey '^g^ ' peco-select-gitadd
-
 for keymap in 'viins'; do
   bindkey -M "$keymap" "$key_info[Home]" beginning-of-line
   bindkey -M "$keymap" "$key_info[End]" end-of-line
