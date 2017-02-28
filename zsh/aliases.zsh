@@ -1,32 +1,33 @@
-# Aliases in this file are bash and zsh compatible
-
+# System# {{{
+# Define open command# {{{
 function open_command() {
-  emulate -L zsh
-  setopt shwordsplit
+    emulate -L zsh
+    setopt shwordsplit
 
-  local open_cmd
+    local open_cmd
 
-  # define the open command
-  case "$OSTYPE" in
-    darwin*)  open_cmd='open' ;;
-    cygwin*)  open_cmd='cygstart' ;;
-    linux*)   open_cmd='xdg-open' ;;
-    msys*)    open_cmd='start ""' ;;
-    *)        echo "Platform $OSTYPE not supported"
-              return 1
-              ;;
-  esac
+    # define the open command
+    case "$OSTYPE" in
+        darwin*)  open_cmd='open' ;;
+        cygwin*)  open_cmd='cygstart' ;;
+        linux*)   open_cmd='xdg-open' ;;
+        msys*)    open_cmd='start ""' ;;
+        *)        echo "Platform $OSTYPE not supported"
+            return 1
+            ;;
+    esac
 
-  # don't use nohup on OSX
-  if [[ "$OSTYPE" == darwin* ]]; then
-    $open_cmd "$@" &>/dev/null
-  else
-    nohup $open_cmd "$@" &>/dev/null
-  fi
+    # don't use nohup on OSX
+    if [[ "$OSTYPE" == darwin* ]]; then
+        $open_cmd "$@" &>/dev/null
+    else
+        nohup $open_cmd "$@" &>/dev/null
+    fi
 }
 
 # Open files with the default app.
 alias o="open_command"
+# }}}
 # Get operating system
 platform='unknown'
 unamestr=$(uname)
@@ -38,7 +39,7 @@ fi
 
 # PS
 alias psa="ps aux"
-alias psg="ps aux | grep "
+alias psg="ps aux | ag "
 alias psr='ps aux | grep ruby'
 
 # Moving around
@@ -66,47 +67,41 @@ alias lsg='ll | ag'
 
 # mimic vim functions
 alias :q='exit'
+# }}}
+# {{{ Config function
 
-# vimrc editing
-alias ve='vim ~/.vimrc'
-
-# zsh profile editing
-alias ze='vim ~/.zshrc'
-# --// General Config \\--
 config () {
     case $1 in  
-        # Apps
-        vim)        $EDITOR ~/.vimrc ;;
-        zsh)        $EDITOR ~/.zshrc ;;
         aliases)  $EDITOR ~/.zsh/aliases.zsh ;;
-        urxvt)      $EDITOR ~/.Xdefaults ;;
-        slim)       sudo $EDITOR /etc/slim.conf ;;
-        logout)     sudo $EDITOR /etc/oblogout.conf ;;
+        bar)        $EDITOR ~/.config/i3/scripts/py3status.config ;;
+        boot)       sudo $EDITOR /boot/grub/grub.cfg ;;
         chat)       $EDITOR ~/.weechat/weechat.conf ;;
-        irc)        $EDITOR ~/.weechat/irc.conf ;;
-        zathura)    $EDITOR ~/.config/zathura/zathurarc ;;
-        most)       sudo $EDITOR /etc/most.conf ;;
-        motion)     sudo $EDITOR ~/.motion/motion.conf ;;
-        open)       $EDITOR ~/.config/mimeapps.list ;;
-        tmux)       $EDITOR ~/.tmux.conf ;;
-        mail)       $EDITOR ~/.muttrc ;;
-        # Music
-        mpd)        sudo $EDITOR /etc/mpd.conf ;;
-        music)      $EDITOR ~/.ncmpcpp/config ;;
-        mplayer)    sudo $EDITOR ~/.mplayer/config ;;
-        pianobar)   sudo $EDITOR ~/.config/pianobar/config ;;
-        # System
-        burg)       sudo $EDITOR /boot/burg/burg.cfg ;;
-        grub)       sudo $EDITOR /boot/grub/grub.cfg ;;
-		xorg)		sudo $EDITOR /etc/X11/xorg.conf ;;
-		rc)			sudo $EDITOR /etc/rc.conf ;;
+        dunst)      $EDITOR ~/.config/dunst/dunstrc ;;
         fstab)      sudo $EDITOR /etc/fstab ;;
-        xinit)      $EDITOR ~/.xinitrc ;;
-		pacman)		sudo $EDITOR /etc/pacman.conf ;;
-        inittab)    sudo $EDITOR /etc/inittab ;;
-        init)       sudo $EDITOR /etc/mkinitcpio.conf ;;
+        grub)       sudo $EDITOR /etc/default/grub ;;
         hosts)      sudo $EDITOR /etc/hosts ;;
         i3)         $EDITOR ~/.config/i3/config ;;
+        i3status)   $EDITOR ~/.config/i3/i3status.config ;;
+        init)       sudo $EDITOR /etc/mkinitcpio.conf ;;
+        irc)        $EDITOR ~/.weechat/irc.conf ;;
+        lightdm)    sudo $EDITOR /etc/lightdm/lightdm.conf ;;
+        ls)         $EDITOR ~/.dir_colors ;;
+        mail)       $EDITOR ~/.muttrc ;;
+        most)       sudo $EDITOR /etc/most.conf ;;
+        mpd)        sudo $EDITOR ~/.mpd/mpd.conf ;;
+        mplayer)    sudo $EDITOR ~/.mplayer/config ;;
+        music)      $EDITOR ~/.ncmpcpp/config ;;
+        open)       $EDITOR ~/.local/share/applications/mimeapps.list ;;
+		pacman)		sudo $EDITOR /etc/pacman.conf ;;
+        ssh)        sudo $EDITOR /etc/ssh/ssh_config ;;
+        sshd)       sudo $EDITOR /etc/ssh/sshd_config ;;
+        tmux)       $EDITOR ~/.tmux.conf ;;
+        urxvt)      $EDITOR ~/.Xdefaults ;;
+        vim)        $EDITOR ~/.vimrc ;;
+        xinit)      $EDITOR ~/.xinitrc ;;
+		xorg)		sudo $EDITOR /etc/X11/xorg.conf ;;
+        zathura)    $EDITOR ~/.config/zathura/zathurarc ;;
+        zsh)        $EDITOR ~/.zshrc ;;
         # Invalid
         *)          if [ -f "$1" ]; then
 						if [ -w "$1" ]; then		
@@ -119,27 +114,61 @@ config () {
 					fi ;;
    esac
 }
-# Git Aliases
-alias gitgraph='git log --all --graph --decorate --oneline'
 
-# Common shell functions
+# }}}
+# Git Aliases# {{{
+alias gitgraph='git log --all --graph --decorate --oneline'
+# }}}
+# Common shell functions# {{{
 alias less='less -R'
 alias tf='tail -f'
 alias l='less'
 alias lh='ls -alt | head' # see the last modified files
 alias screen='TERM=screen screen'
 alias cl='clear'
-
-# Zippin
-mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
-mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
-mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
-alias gz='tar -zcvf'
-
+alias _='sudo'
 alias ka9='killall -9'
 alias k9='kill -9'
+# }}}
+# {{{ Creates An Archive From Given Directory
 
-# Global aliases
+mktar() { tar cvf       "${1%%/}.tar"       "${1%%/}/"; }
+mktgz() { tar cvzf      "${1%%/}.tar.gz"    "${1%%/}/"; }
+mktbz() { tar cvjf      "${1%%/}.tar.bz2"   "${1%%/}/"; }
+mkrar() { rar a -m5 -r  "${1%%/}.rar"       "${1%%/}/"; }
+mkzip() { zip -9r       "${1%%/}.zip"       "${1%%/}/"; }
+mk7z()  { 7z a -mx9     "${1%%/}.7z"        "${1%%/}/"; }
+ 
+# }}}
+# {{{ Managing Packages
+alias update='yaourt -Syua'
+alias updatef='yaourt -Syua --noconfirm'
+alias clean='yaourt -Qdtd --ignore awesome'
+alias install='yaourt -S'
+alias installa='yaourt -S --noconfirm'
+alias remove='yaourt -Rsnc'
+alias removef='yaourt -Rdd'
+alias search='yaourt -Ss' 
+alias infos='yaourt -Qi'
+alias unlock='rm /var/lib/pacman/db.lck'
+alias symlinks='sh ~/.scripts/symlinks'
+alias packages='sh ~/.scripts/packages'
+alias pkgstat='sh ~/.scripts/pkgstat'
+# }}}
+# {{{ Directories
+alias i3='cd ~/.config/i3 && ll'
+alias apps='/usr/share/applications && ll'
+alias themes='/usr/share/themes && ll'
+alias icons='/usr/share/icons && ll'
+alias pixmaps='/usr/share/pixmaps && ll'
+alias downloads='/home/daniel/Downloads && ll'
+alias dropdir='/home/daniel/Dropbox && ll'
+alias documents='/home/daniel/Documents && ll'
+alias books='/home/daniel/Drive/BooksArchive && ll'
+alias articles='/home/daniel/Dropbox/ArticlesArchive && ll'
+alias service='cd /usr/lib/systemd/system && ls'
+# }}}
+# Global aliases# {{{
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -149,15 +178,15 @@ alias -g L="| less"
 alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
-
-# File Download
+# }}}
+# File Download# {{{
 if (( $+commands[curl] )); then
   alias get='curl --continue-at - --location --progress-bar --remote-name --remote-time'
 elif (( $+commands[wget] )); then
   alias get='wget --continue --progress=bar --timestamping'
 fi
-
-# Disable correction.
+# }}}
+# Disable correction.# {{{
 alias ack='nocorrect ack'
 alias cp='nocorrect cp'
 alias ebuild='nocorrect ebuild'
@@ -171,20 +200,20 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
+# }}}
+# {{{ Oneliners for file & directory movement
 
-# Makes a directory and changes to it.
-function mkdcd {
-  [[ -n "$1" ]] && mkdir -p "$1" && builtin cd "$1"
-}
+goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
+cpf() { cp "$@" && goto "$_"; }
+mvf() { mv "$@" && goto "$_"; }
+mkf() { mkdir -p $1; cd $1 }
+cdl() { cd $@; ll }
+da() { ($1 &) }
+zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
+dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 
-# Changes to a directory and lists its contents.
-function cdls {
-  builtin cd "$argv[-1]" && ls "${(@)argv[1,-2]}"
-}
-
-# ------------------------------------------------------------------
-# Pygments stuff
-# ------------------------------------------------------------------
+# }}}
+# Pygments stuff# {{{
 pretty() { pygmentize -f terminal "$1" | less -R }
 
 cat_alias() {
@@ -217,7 +246,8 @@ pygmentize_alias() {
     fi
 }
 alias -g P="| pygmentize_alias"
-
+# }}}
+# Color manual pages# {{{
 man() {
     env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -229,21 +259,17 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
-
-alias _='sudo'
-# -----------------------------------------------------------------
-# lpass fzf stuff
-# -----------------------------------------------------------------
+# }}}
+# lpass fzf stuff# {{{
 flpass_pass(){
-    lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
+    lpass show -c --password $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
 }
 
 flpass_user(){
-    lpass show -c --username $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
+    lpass show -c --username $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
 }
-# -----------------------------------------------------------------
-# git fzf stuff
-# -----------------------------------------------------------------
+# }}}
+# git fzf stuff# {{{
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
@@ -262,13 +288,27 @@ fbr() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-# Kill all the tabs in Chrome to free up memory
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+peco-select-gitadd() {
+    local selected_file_to_add
+    selected_file_to_add="$(
+    git status --porcelain \
+        | perl -pe 's/^( ?.{1,2} )(.*)$/\033[31m$1\033[m$2/' \
+        | fzf --ansi --exit-0 \
+        | awk -F ' ' '{print $NF}' \
+        | tr "\n" " "
+    )"
 
-# ------------------------------------------------------------------
-# tmux stuff
-# ------------------------------------------------------------------
+    if [ -n "$selected_file_to_add" ]; then
+        BUFFER="git add $selected_file_to_add"
+        CURSOR=$#BUFFER
+        zle accept-line
+    fi
+    zle reset-prompt
+}
+zle -N peco-select-gitadd
+bindkey '^g^ ' peco-select-gitadd
+# }}}
+# tmux stuff# {{{
 alias takeover="tmux  detach -a"
 alias attach="tmux  attach -t base || tmux new -s base"
 alias ta='tmux  attach -t'
@@ -283,4 +323,4 @@ fs() {
   session=$(tmux list-sessions -F "#{session_name}" | \
     fzf --query="$1" --select-1 --exit-0) &&
   tmux switch-client -t "$session"
-}
+}# }}}
