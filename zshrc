@@ -1,13 +1,12 @@
 #!/bin/zsh
 
 umask 022
-
-# if it's a dumb terminal, return.
+#{{{ Check if terminbal is dumb.
 if [[ ${TERM} == 'dumb' ]]; then
     return
 fi
-
-# Get operating system
+#}}}
+#{{{ Get operating system
 platform='unknown'
 unamestr=$(uname)
 if [[ $unamestr == 'Linux' ]]; then
@@ -27,7 +26,8 @@ elif [[ $platform == 'darwin' ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 fi
-
+# }}}
+# {{{ Adding some variables
 export TERM=xterm-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
@@ -42,8 +42,9 @@ export FZF_DEFAULT_OPTS='
 --bind=ctrl-z:toggle-all
 '
 export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
-
 fpath=(~/.zsh/completion(N-/) $fpath)
+# }}}
+# {{{ List of all the plugins + load the plugins
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
@@ -76,5 +77,7 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+# }}}
+# {{{Load the theme with oh-my-zhs plugin theme
 theme bullet-train
-
+# }}}
