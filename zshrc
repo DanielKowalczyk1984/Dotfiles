@@ -81,3 +81,7 @@ zplug load --verbose
 # {{{Load the theme with oh-my-zhs plugin theme
 theme bullet-train
 # }}}
+#" Folding the .vimrc {{{
+# fold the .vimrc
+# vim:foldmethod=marker:foldlevel=0
+# }}}

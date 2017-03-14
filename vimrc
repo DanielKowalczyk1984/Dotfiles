@@ -432,7 +432,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
 " Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " Disable visualbell
