@@ -1,13 +1,12 @@
 #!/bin/zsh
 
 umask 022
-
-# if it's a dumb terminal, return.
+#{{{ Check if terminbal is dumb.
 if [[ ${TERM} == 'dumb' ]]; then
     return
 fi
-
-# Get operating system
+#}}}
+#{{{ Get operating system
 platform='unknown'
 unamestr=$(uname)
 if [[ $unamestr == 'Linux' ]]; then
@@ -21,14 +20,14 @@ if [[ $platform == 'linux' ]]; then
       git clone https://github.com/zplug/zplug ~/.zplug
       source ~/.zplug/init.zsh && zplug update --self
     fi
-
     export ZPLUG_HOME=$HOME/.zplug
     source $ZPLUG_HOME/init.zsh
 elif [[ $platform == 'darwin' ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 fi
-
+# }}}
+# {{{ Adding some variables
 export TERM=xterm-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
@@ -43,16 +42,17 @@ export FZF_DEFAULT_OPTS='
 --bind=ctrl-z:toggle-all
 '
 export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
-
 fpath=(~/.zsh/completion(N-/) $fpath)
+# }}}
+# {{{ List of all the plugins + load the plugins
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
-zplug "plugins/git-flow", from:oh-my-zsh
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
@@ -77,5 +77,11 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+# }}}
+# {{{Load the theme with oh-my-zhs plugin theme
 theme bullet-train
-
+# }}}
+#" Folding the .vimrc {{{
+# fold the .vimrc
+# vim:foldmethod=marker:foldlevel=0
+# }}}

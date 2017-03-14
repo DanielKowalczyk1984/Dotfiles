@@ -10,3 +10,6 @@ vim/backups/*
 *.sublime-workspace
 i3/.i3*.err
 vim/.netrwhist
+vim/session
+config/ranger/bookmarks
+config/ranger/history

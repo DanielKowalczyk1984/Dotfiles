@@ -152,8 +152,6 @@ setopt hist_verify
 # Enable history system like a Bash
 setopt bang_hist
 
-#We use only coreutils
-
 if [[ $platform == 'linux' ]]; then
     eval "$(dircolors --sh "/home/daniel/.dir_colors/dircolors.ansi-dark")"
 elif [[ $platform == 'darwin' ]]; then

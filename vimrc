@@ -1,6 +1,4 @@
-"*****************************************************************************
-"" Vim-PLug core
-"*****************************************************************************
+"" Vim-PLug core"{{{
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
@@ -21,14 +19,18 @@ endif
 
 " Required:
 call plug#begin(expand('~/.vim/plugged'))
-
-"*****************************************************************************
-"" Plug install packages
-"*****************************************************************************
+"}}}
+"" Plug install packages"{{{
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'matze/vim-move'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -67,10 +69,8 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
-
-"*****************************************************************************
-"" Custom bundles
-"*****************************************************************************
+"}}}
+"" Custom bundles"{{{
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -106,12 +106,8 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-projectionist'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's extra bundle
+"}}}
+"" Include user's extra bundle"{{{
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
 endif
@@ -120,11 +116,8 @@ call plug#end()
 
 " Required:
 filetype plugin indent on
-
-
-"*****************************************************************************
-"" Basic Setup
-"*****************************************************************************"
+"}}}
+"" Basic Setup"{{{
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -167,10 +160,8 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-"*****************************************************************************
-"" Visual Settings
-"*****************************************************************************
+"}}}
+"" Visual Settings"{{{
 syntax on
 set ruler
 set number
@@ -199,7 +190,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -207,7 +198,7 @@ else
       set term=xterm-256color
     endif
   endif
-  
+
 endif
 
 
@@ -244,10 +235,8 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
-
-"*****************************************************************************
-"" Abbreviations
-"*****************************************************************************
+"}}}
+"" Abbreviations"{{{
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -289,9 +278,28 @@ else
   nnoremap <silent> <leader>sh :VimShellCreate<CR>
 endif
 
-"*****************************************************************************
-"" Functions
-"*****************************************************************************
+" YouCompleteMe
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'python': 1 }
+let g:ycm_complete_in_comments_and_strings = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_auto_trigger = 1
+"}}}
+"" Functions"{{{
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
@@ -299,10 +307,8 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
-
-"*****************************************************************************
-"" Autocmd Rules
-"*****************************************************************************
+"}}}
+"" Autocmd Rules"{{{
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -329,16 +335,14 @@ augroup vimrc-make-cmake
 augroup END
 
 set autoread
-
-"*****************************************************************************
-"" Mappings
-"*****************************************************************************
+"}}}
+"" Mappings"{{{
 
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
-
 "" Git
+
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
@@ -373,18 +377,18 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
 let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
-let g:ctrlp_use_caching = 1
+let g:ctrlp_use_caching = 0
 
 " The Silver Searcher
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 1
 endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<leader>e'
+nnoremap <Leader>o :CtrlP<CR>
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
@@ -404,7 +408,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
 " Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " Disable visualbell
@@ -435,14 +439,14 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
+noremap <leader>c :d<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
+" noremap <C-j> <C-w>j
+" noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
@@ -453,20 +457,13 @@ vmap > >gv
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-"" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
-
-"*****************************************************************************
-"" Custom configs
-"*****************************************************************************
-
-" c
+"}}}
+"" Custom configs"{{{
+" c"{{{
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-
-" go
+"}}}
+" go"{{{
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [  'p:package', 'i:imports:1', 'c:constants', 'v:variables',
@@ -539,19 +536,15 @@ augroup go
   au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 
 augroup END
-
-
-" haskell
+"}}}
+" haskell"{{{
 let g:haskell_conceal_wide = 1
 let g:haskell_multiline_strings = 1
 let g:necoghc_enable_detailed_browse = 1
 autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 
-
-" lua
-
-
-" python
+"}}}
+" python"{{{
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -561,7 +554,7 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 1
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
@@ -570,20 +563,19 @@ let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
-
-" syntastic
+"}}}
+" syntastic"{{{
 let g:syntastic_python_checkers=['python', 'flake8']
-
-" vim-airline
+"}}}
+" vim-airline"{{{
 let g:airline#extensions#virtualenv#enabled = 1
-
-" Syntax highlight
+let g:airline_powerline_fonts = 1
+"}}}
+" Syntax highlight"{{{
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
-
-" ruby
+let python_highlight_all = 1"}}}
+" ruby"{{{
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
@@ -604,36 +596,24 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
-
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-" Ruby refactory
-nnoremap <leader>rap  :RAddParameter<cr>
-nnoremap <leader>rcpc :RConvertPostConditional<cr>
-nnoremap <leader>rel  :RExtractLet<cr>
-vnoremap <leader>rec  :RExtractConstant<cr>
-vnoremap <leader>relv :RExtractLocalVariable<cr>
-nnoremap <leader>rit  :RInlineTemp<cr>
-vnoremap <leader>rrlv :RRenameLocalVariable<cr>
-vnoremap <leader>rriv :RRenameInstanceVariable<cr>
-vnoremap <leader>rem  :RExtractMethod<cr>
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's local vim config
+"}}}
+" EasyMotion"{{{
+let g:EasyMotion_keys='asdfjkoweriop'
+nmap ,<ESC> ,,w
+nmap ,<S-ESC> ,,b
+"}}}
+" UndoTreeToggle"{{{
+nmap ,u :UndotreeToggle<CR>
+"}}}
+" vim-move"{{{
+let g:move_key_modifier = 'C'
+"}}}"}}}
+"" Include user's local vim config""{{{
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
+"}}}
+"" Convenience variables"{{{
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -670,4 +650,8 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
+"}}}
+" Folding the .vimrc {{{
+" fold the .vimrc
+" vim:foldmethod=marker:foldlevel=0
+" }}}
