@@ -93,6 +93,7 @@ config () {
         music)      $EDITOR ~/.ncmpcpp/config ;;
         open)       $EDITOR ~/.local/share/applications/mimeapps.list ;;
 		pacman)		sudo $EDITOR /etc/pacman.conf ;;
+        ranger)     $EDITOR ~/.config/ranger/rc.conf ;;
         ssh)        sudo $EDITOR /etc/ssh/ssh_config ;;
         sshd)       sudo $EDITOR /etc/ssh/sshd_config ;;
         tmux)       $EDITOR ~/.tmux.conf ;;
@@ -145,7 +146,7 @@ alias update='yaourt -Syua'
 alias updatef='yaourt -Syua --noconfirm'
 alias clean='yaourt -Qdtd --ignore awesome'
 alias install='yaourt -S'
-alias installa='yaourt -S --noconfirm'
+alias installf='yaourt -S --noconfirm'
 alias remove='yaourt -Rsnc'
 alias removef='yaourt -Rdd'
 alias search='yaourt -Ss' 
@@ -323,4 +324,9 @@ fs() {
   session=$(tmux list-sessions -F "#{session_name}" | \
     fzf --query="$1" --select-1 --exit-0) &&
   tmux switch-client -t "$session"
-}# }}}
+}
+# }}}
+# Folding the .vimrc {{{
+# fold the .vimrc
+# vim:foldmethod=marker:foldlevel=0
+# }}}
