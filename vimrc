@@ -1,6 +1,4 @@
-"*****************************************************************************
-"" Vim-PLug core
-"*****************************************************************************
+"" Vim-PLug core"{{{
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
@@ -21,10 +19,8 @@ endif
 
 " Required:
 call plug#begin(expand('~/.vim/plugged'))
-
-"*****************************************************************************
-"" Plug install packages
-"*****************************************************************************
+"}}}
+"" Plug install packages"{{{
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'scrooloose/nerdtree'
 Plug 'mbbill/undotree'
@@ -48,7 +44,6 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-Plug ''
 
 let g:make = 'gmake'
 if exists('make')
@@ -74,10 +69,8 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
-
-"*****************************************************************************
-"" Custom bundles
-"*****************************************************************************
+"}}}
+"" Custom bundles"{{{
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -113,12 +106,8 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-projectionist'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's extra bundle
+"}}}
+"" Include user's extra bundle"{{{
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
 endif
@@ -127,11 +116,8 @@ call plug#end()
 
 " Required:
 filetype plugin indent on
-
-
-"*****************************************************************************
-"" Basic Setup
-"*****************************************************************************"
+"}}}
+"" Basic Setup"{{{
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -174,10 +160,8 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-"*****************************************************************************
-"" Visual Settings
-"*****************************************************************************
+"}}}
+"" Visual Settings"{{{
 syntax on
 set ruler
 set number
@@ -206,7 +190,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -214,7 +198,7 @@ else
       set term=xterm-256color
     endif
   endif
-  
+
 endif
 
 
@@ -251,10 +235,8 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
-
-"*****************************************************************************
-"" Abbreviations
-"*****************************************************************************
+"}}}
+"" Abbreviations"{{{
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -316,10 +298,8 @@ let g:ycm_complete_in_comments_and_strings = 0
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_auto_trigger = 1
-
-"*****************************************************************************
-"" Functions
-"*****************************************************************************
+"}}}
+"" Functions"{{{
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
@@ -327,10 +307,8 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
-
-"*****************************************************************************
-"" Autocmd Rules
-"*****************************************************************************
+"}}}
+"" Autocmd Rules"{{{
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -357,10 +335,8 @@ augroup vimrc-make-cmake
 augroup END
 
 set autoread
-
-"*****************************************************************************
-"" Mappings
-"*****************************************************************************
+"}}}
+"" Mappings"{{{
 
 "" Split
 noremap <Leader>h :<C-u>split<CR>
@@ -412,7 +388,7 @@ endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<leader>t'
+nnoremap <Leader>o :CtrlP<CR>
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
@@ -463,7 +439,7 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
+noremap <leader>c :d<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -481,20 +457,13 @@ vmap > >gv
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-"" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
-
-"*****************************************************************************
-"" Custom configs
-"*****************************************************************************
-
-" c
+"}}}
+"" Custom configs"{{{
+" c"{{{
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-
-" go
+"}}}
+" go"{{{
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [  'p:package', 'i:imports:1', 'c:constants', 'v:variables',
@@ -567,19 +536,15 @@ augroup go
   au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 
 augroup END
-
-
-" haskell
+"}}}
+" haskell"{{{
 let g:haskell_conceal_wide = 1
 let g:haskell_multiline_strings = 1
 let g:necoghc_enable_detailed_browse = 1
 autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 
-
-" lua
-
-
-" python
+"}}}
+" python"{{{
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -598,21 +563,19 @@ let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
-
-" syntastic
+"}}}
+" syntastic"{{{
 let g:syntastic_python_checkers=['python', 'flake8']
-
-" vim-airline
+"}}}
+" vim-airline"{{{
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_powerline_fonts = 1
-
-" Syntax highlight
+"}}}
+" Syntax highlight"{{{
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
-
-" ruby
+let python_highlight_all = 1"}}}
+" ruby"{{{
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
@@ -633,30 +596,24 @@ let g:tagbar_type_ruby = {
         \ 'F:singleton methods'
     \ ]
 \ }
-
-
-" EasyMotion
+"}}}
+" EasyMotion"{{{
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
-
-" UndoTreeToggle
+"}}}
+" UndoTreeToggle"{{{
 nmap ,u :UndotreeToggle<CR>
-
-" vim-move
+"}}}
+" vim-move"{{{
 let g:move_key_modifier = 'C'
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's local vim config
+"}}}"}}}
+"" Include user's local vim config""{{{
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
+"}}}
+"" Convenience variables"{{{
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -693,4 +650,8 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
+"}}}
+" Folding the .vimrc {{{
+" fold the .vimrc
+" vim:foldmethod=marker:foldlevel=0
+" }}}
