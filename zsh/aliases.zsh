@@ -139,7 +139,7 @@ mktbz() { tar cvjf      "${1%%/}.tar.bz2"   "${1%%/}/"; }
 mkrar() { rar a -m5 -r  "${1%%/}.rar"       "${1%%/}/"; }
 mkzip() { zip -9r       "${1%%/}.zip"       "${1%%/}/"; }
 mk7z()  { 7z a -mx9     "${1%%/}.7z"        "${1%%/}/"; }
- 
+
 # }}}
 # {{{ Managing Packages
 alias update='yaourt -Syua'
@@ -151,10 +151,6 @@ alias remove='yaourt -Rsnc'
 alias removef='yaourt -Rdd'
 alias search='yaourt -Ss' 
 alias infos='yaourt -Qi'
-alias unlock='rm /var/lib/pacman/db.lck'
-alias symlinks='sh ~/.scripts/symlinks'
-alias packages='sh ~/.scripts/packages'
-alias pkgstat='sh ~/.scripts/pkgstat'
 # }}}
 # {{{ Directories
 alias i3='cd ~/.config/i3 && ll'
@@ -217,31 +213,9 @@ dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # Pygments stuff# {{{
 pretty() { pygmentize -f terminal "$1" | less -R }
 
-cat_alias() {
-    local i stdin file=0
-    stdin=("${(@f)$(cat <&0)}")
-    for i in "${stdin[@]}"
-    do
-        if [[ -f $i ]]; then
-            cat "$@" "$i"
-            file=1
-        fi
-    done
-    if [[ $file -eq 0 ]]; then
-        echo "${(F)stdin}"
-    fi
-}
-
 pygmentize_alias() {
     if has "pygmentize"; then
-        local get_styles styles style
-        get_styles="from pygments.styles import get_all_styles
-        styles = list(get_all_styles())
-        print('\n'.join(styles))"
-        styles=( $(sed -e 's/^  *//g' <<<"$get_styles" | python) )
-
-        style=${${(M)styles:#solarized}:-default}
-        cat_alias "$@" | pygmentize -O style="$style" -f console -g L
+        pygmentize -O style=native -f 256 -g L
     else
         cat -
     fi
