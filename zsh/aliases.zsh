@@ -98,6 +98,7 @@ config () {
         sshd)       sudo $EDITOR /etc/ssh/sshd_config ;;
         tmux)       $EDITOR ~/.tmux.conf ;;
         urxvt)      $EDITOR ~/.Xdefaults ;;
+        xterm)      $EDITOR ~/.Xresources ;;
         vim)        $EDITOR ~/.vimrc ;;
         xinit)      $EDITOR ~/.xinitrc ;;
 		xorg)		sudo $EDITOR /etc/X11/xorg.conf ;;
