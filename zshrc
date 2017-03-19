@@ -82,6 +82,5 @@ zplug load --verbose
 theme bullet-train
 # }}}
 #" Folding the .vimrc {{{
-# fold the .vimrc
 # vim:foldmethod=marker:foldlevel=0
 # }}}
