@@ -183,7 +183,6 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-
   " IndentLine
   let g:indentLine_enabled = 1
   let g:indentLine_concealcursor = 0
@@ -598,6 +597,23 @@ let g:tagbar_type_ruby = {
 \ }
 "}}}
 " EasyMotion"{{{
+" " Disable default mappings
+" let g:EasyMotion_do_mapping = 0
+" " Use uppercase target labels and type as a lower case
+" let g:EasyMotion_use_upper = 1
+"  " type `l` and match `l`&`L`
+" let g:EasyMotion_smartcase = 1
+" " Smartsign (type `3` and match `3`&`#`)
+" let g:EasyMotion_use_smartsign_us = 1
+
+" " Bi-directional find motion
+" " Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" " `s{char}{label}`
+" nmap s <Plug>(easymotion-s)
+" vmap s <Plug>(easymotion-s)
+
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
@@ -652,6 +668,5 @@ else
 endif
 "}}}
 " Folding the .vimrc {{{
-" fold the .vimrc
 " vim:foldmethod=marker:foldlevel=0
 " }}}
