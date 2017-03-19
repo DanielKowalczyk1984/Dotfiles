@@ -1,0 +1,119 @@
+!!!!!! XConfig file !!!!!!
+
+
+!!! ROFI !!!
+!! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   #ffffff,#525d76,#f5f5f5,#5294e2,#ffffff
+! Color scheme for urgent row
+rofi.color-urgent:                   #ffffff,#dc322f,#f5f5f5,#5294e2,#dc322f
+! Color scheme for active row
+rofi.color-active:                   #ffffff,#c2cad0,#f5f5f5,#5294e2,#c2cad0
+! Color scheme window
+rofi.color-window:                   #ffffff,#f5f5f5
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid ! Use extended color schem
+rofi.levenshtein-sort:               false
+rofi.case-sensitive:                 false
+
+!!! URxvt-unicode !!!
+URxvt*termName: rxvt-unicode-256color
+! Terminal
+!URxvt*.termName: term-256color
+! Transparency
+urxvt*.transparent : true
+urxvt*.shading : 5
+! Terminator
+! Appearance
+urxvt.scrollBar: false
+URxvt*font: xft:Hack:size=12,xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*imFont: xft:Hack:size=12:antialias=true,xft:PowerlineSymbols:size=13:antialias=true,xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*boldFont: xft:Hack:size=12:antialias=true, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*italicFont: xft:Hack:size=12, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*boldItalicFont: xft:Hack:size=12, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*utf8: 1
+!{{{ Font Settings
+Xft.antialias:  true
+Xft.autohint:   false
+Xft.dpi:        100
+Xft.hinting:    true
+Xft.hitstyle:   hintslight
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+!}}}! Settings
+urxvt*internalBorder: 3
+urxvt*cursorUnderline: true
+urxvt*cursorBlink: true
+urxvt*savelines: 10000
+! Optionnal settings
+URxvt.letterSpace:1
+! Perl extensions
+urxvt.url-launcher: /usr/bin/firefox
+urxvt.matcher.button: 1
+urxvt.colorBD: white
+urxvt.keysym.Shift-Control-V: perl:clipboard:paste
+urxvt.iso14755: False
+urxvt.perl-ext-common: default,clipboard,matcher
+urxvt*perl-ext:
+urxvt*perl-ext-common:
+! =============================================================================
+! ============================== XTERM CONFIG =================================
+! =============================================================================
+
+! Unicode support
+xterm*utf8: 1
+
+! For inclusion of all necessary environment variables
+xterm*loginShell: true
+
+! Scrollback setting
+xterm*savelines: 10000
+
+! Disable right scrollbar
+xterm*ScrollBar: false
+
+! Stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+! Save selections to clipboard
+xterm*selectToClipboard: true
+! special
+*.foreground:   #93a1a1
+*.background:   #002b36
+*.cursorColor:  #93a1a1
+
+! black
+*.color0:       #002b36
+*.color8:       #657b83
+
+! red
+*.color1:       #dc322f
+*.color9:       #dc322f
+
+! green
+*.color2:       #859900
+*.color10:      #859900
+
+! yellow
+*.color3:       #b58900
+*.color11:      #b58900
+
+! blue
+*.color4:       #268bd2
+*.color12:      #268bd2
+
+! magenta
+*.color5:       #6c71c4
+*.color13:      #6c71c4
+
+! cyan
+*.color6:       #2aa198
+*.color14:      #2aa198
+
+! white
+*.color7:       #93a1a1
+*.color15:      #fdf6e3
