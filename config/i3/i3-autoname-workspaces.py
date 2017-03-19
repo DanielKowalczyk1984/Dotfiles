@@ -105,7 +105,8 @@ WINDOW_ICONS = {
     'Keepass': FA_CHROME,
     'gnome-font-viewer': FA_PREF,
     'lxappearance': FA_PREF,
-    'lightdm-gtk-greeter-settings': FA_PREF
+    'lightdm-gtk-greeter-settings': FA_PREF,
+    'xterm': FA_TERMINAL
 }
 
 
