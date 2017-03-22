@@ -21,7 +21,7 @@ rofi.levenshtein-sort:               false
 rofi.case-sensitive:                 false
 
 !!! URxvt-unicode !!!
-URxvt*termName: rxvt-unicode-256color
+URxvt*termName: xterm-256color
 ! Terminal
 !URxvt*.termName: term-256color
 ! Transparency
@@ -30,16 +30,15 @@ urxvt*.shading : 5
 ! Terminator
 ! Appearance
 urxvt.scrollBar: false
-URxvt*font: xft:Hack:size=12,xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
-URxvt*imFont: xft:Hack:size=12:antialias=true,xft:PowerlineSymbols:size=13:antialias=true,xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
-URxvt*boldFont: xft:Hack:size=12:antialias=true, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
-URxvt*italicFont: xft:Hack:size=12, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
-URxvt*boldItalicFont: xft:Hack:size=12, xft:Pomodoro,xft:FontAwesome, xft:icomoon, xft:octicons, xft: Icons
+URxvt*font: xft:Knack Nerd Font:style=Regular:size=14
+URxvt*boldFont: xft:Knack Nerd Font:style=Bold:size=14
+URxvt*italicFont: xft:Knack Nerd Font:style=Italic:size=14
+URxvt*boldItalicFont: xft:Hack:style= Bold Italic:size=12,xft:unifont:style=Medium:antialias=false
 URxvt*utf8: 1
 !{{{ Font Settings
 Xft.antialias:  true
 Xft.autohint:   false
-Xft.dpi:        100
+Xft.dpi:        76
 Xft.hinting:    true
 Xft.hitstyle:   hintslight
 Xft.lcdfilter:  lcddefault
