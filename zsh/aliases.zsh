@@ -96,6 +96,7 @@ config () {
         ranger)     $EDITOR ~/.config/ranger/rc.conf ;;
         ssh)        sudo $EDITOR /etc/ssh/ssh_config ;;
         sshd)       sudo $EDITOR /etc/ssh/sshd_config ;;
+        terminator) $EDITOR ~/.config/terminator/config ;;
         tmux)       $EDITOR ~/.tmux.conf ;;
         urxvt)      $EDITOR ~/.Xdefaults ;;
         xterm)      $EDITOR ~/.Xresources ;;
