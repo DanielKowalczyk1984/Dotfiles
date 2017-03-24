@@ -76,6 +76,7 @@ config () {
         bar)        $EDITOR ~/.config/i3/scripts/py3status.config ;;
         boot)       sudo $EDITOR /boot/grub/grub.cfg ;;
         chat)       $EDITOR ~/.weechat/weechat.conf ;;
+        dotfiles)   $EDITOR ~/Dotfiles ;;
         dunst)      $EDITOR ~/.config/dunst/dunstrc ;;
         fstab)      sudo $EDITOR /etc/fstab ;;
         grub)       sudo $EDITOR /etc/default/grub ;;
