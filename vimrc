@@ -23,7 +23,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "" Plug install packages"{{{
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'scrooloose/nerdtree'
-Plug 'mbbill/undotree'
+Plug 'sjl/gundo.vim'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'tpope/vim-commentary'
@@ -621,7 +621,7 @@ nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
 "}}}
 " UndoTreeToggle"{{{
-nmap ,u :UndotreeToggle<CR>
+nmap ,u :GundoToggle<CR>
 "}}}
 " vim-move"{{{
 let g:move_key_modifier = 'C'
