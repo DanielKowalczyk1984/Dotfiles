@@ -31,7 +31,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'matze/vim-move'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
@@ -46,7 +45,8 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'godlygeek/tabular',        { 'on': 'Tabularize' }
+Plug 'junegunn/vim-easy-align',  { 'on': [ '<Plug>(EasyAlign)', 'EasyAlign' ] }
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
@@ -446,8 +446,8 @@ noremap <leader>c :d<CR>
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-" noremap <C-j> <C-w>j
-" noremap <C-k> <C-w>k
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
@@ -633,7 +633,33 @@ vmap <F20> <Plug>MoveBlockDown
 vmap <F21> <Plug>MoveBlockUp
 nmap <F20> <Plug>MoveLineDown
 nmap <F21> <Plug>MoveLineUp
-"}}}"}}}
+"}}}
+" tabular {{{
+    nmap <Leader>a& :Tabularize /&<CR>
+    vmap <Leader>a& :Tabularize /&<CR>
+    nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    nmap <Leader>a=> :Tabularize /=><CR>
+    vmap <Leader>a=> :Tabularize /=><CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR>
+    nmap <Leader>a:: :Tabularize /:\zs<CR>
+    vmap <Leader>a:: :Tabularize /:\zs<CR>
+    nmap <Leader>a, :Tabularize /,<CR>
+    vmap <Leader>a, :Tabularize /,<CR>
+    nmap <Leader>a,, :Tabularize /,\zs<CR>
+    vmap <Leader>a,, :Tabularize /,\zs<CR>
+    nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+    vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+" }}}
+" vim-easy-align {{{
+    " Start interactive EasyAlign in visual mode (e.g. vipxa)
+    xmap <Leader>xa <Plug>(EasyAlign)
+
+    " Start interactive EasyAlign for a motion/text object (e.g. xaip)
+    nmap <Leader>xa <Plug>(EasyAlign)
+" }}}
+"""}}}
 "" Include user's local vim config""{{{
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
