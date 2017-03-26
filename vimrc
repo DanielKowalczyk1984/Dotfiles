@@ -52,7 +52,7 @@ if exists('make')
         let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
-
+Plug 'christoomey/vim-tmux-navigator'
 "" Vim-Session
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
@@ -549,9 +549,18 @@ autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4 smartindent
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+    autocmd FileType python setlocal
+                \   foldmethod=indent
+                \   tabstop=4
+                \   shiftwidth=4
+                \   softtabstop=4
+                \   tabstop=8
+                \   textwidth=79
+                \   expandtab
+                \   autoindent
+                \   fileformat=unix
+                \   cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
 augroup END
 
 " jedi-vim
