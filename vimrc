@@ -21,7 +21,7 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 "}}}
 "" Plug install packages"{{{
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py --clang-completer --gocode-completer --racer-completer --tern-completer' }
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -95,12 +95,6 @@ Plug 'pbrisbin/vim-syntax-shakespeare'
 "" Lua Bundle
 Plug 'xolox/vim-lua-ftplugin'
 Plug 'xolox/vim-lua-inspect'
-
-
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-
 
 " ruby
 Plug 'tpope/vim-rails'
@@ -284,7 +278,7 @@ endif
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
+let g:ycm_python_binary_path = '/usr/bin/pyhton2'
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -550,7 +544,6 @@ autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 augroup vimrc-python
   autocmd!
     autocmd FileType python setlocal
-                \   foldmethod=indent
                 \   tabstop=4
                 \   shiftwidth=4
                 \   softtabstop=4
@@ -563,16 +556,6 @@ augroup vimrc-python
 
 augroup END
 
-" jedi-vim
-let g:jedi#popup_on_dot = 1
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
 "}}}
 " syntastic"{{{
 let g:syntastic_python_checkers=['python', 'flake8']

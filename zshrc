@@ -28,7 +28,7 @@ elif [[ $platform == 'darwin' ]]; then
 fi
 # }}}
 # {{{ Adding some variables
-export TERM=screen-256color
+# export TERM=screen-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=ecd

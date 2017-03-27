@@ -60,7 +60,7 @@ function expand-dot-to-parent-directory-path {
   fi
 }
 zle -N expand-dot-to-parent-directory-path
-
+bindkey -v
 
 # Expand .... to ../..
 bindkey -M "viins"  "." expand-dot-to-parent-directory-path
