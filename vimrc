@@ -21,7 +21,10 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 "}}}
 "" Plug install packages"{{{
-Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py --clang-completer --gocode-completer --racer-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py --clang-completer --system-libclang --tern-completer' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'itchyny/vim-cursorword'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -254,7 +257,9 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
-noremap <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
+inoremap <F4> <ESC>:NERDTreeToggle<CR>
+nnoremap <Leader>ft :NERDTreeToggle<CR>
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -275,8 +280,8 @@ endif
 
 " YouCompleteMe
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:ycm_python_binary_path = '/usr/bin/pyhton2'
 
@@ -434,7 +439,7 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :d<CR>
+noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -591,23 +596,23 @@ let g:tagbar_type_ruby = {
 \ }
 "}}}
 " EasyMotion"{{{
-" " Disable default mappings
-" let g:EasyMotion_do_mapping = 0
-" " Use uppercase target labels and type as a lower case
-" let g:EasyMotion_use_upper = 1
-"  " type `l` and match `l`&`L`
-" let g:EasyMotion_smartcase = 1
-" " Smartsign (type `3` and match `3`&`#`)
-" let g:EasyMotion_use_smartsign_us = 1
+map <Leader><Leader> <Plug>(easymotion-prefix)
 
-" " Bi-directional find motion
-" " Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" " `s{char}{label}`
-" nmap s <Plug>(easymotion-s)
-" vmap s <Plug>(easymotion-s)
+" Consistent with spacemacs
+" <Leader>f{char} to move to {char}
+map  <Leader>jj <Plug>(easymotion-bd-f)
+nmap <Leader>jj <Plug>(easymotion-overwin-f)
 
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
+" s{char}{char} to move to {char}{char}
+nmap <Leader>jJ <Plug>(easymotion-overwin-f2)
+
+" Jump to line
+map <Leader>jl <Plug>(easymotion-bd-jk)
+nmap <Leader>jl <Plug>(easymotion-overwin-line)
+
+" Jump to word
+map  <Leader>jw <Plug>(easymotion-bd-w)
+nmap <Leader>jw <Plug>(easymotion-overwin-w)
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
@@ -651,6 +656,25 @@ nmap <F21> <Plug>MoveLineUp
     " Start interactive EasyAlign for a motion/text object (e.g. xaip)
     nmap <Leader>xa <Plug>(EasyAlign)
 " }}}
+" vim-multiple-cursors {{{
+    let g:multi_cursor_next_key='<C-n>'
+    let g:multi_cursor_prev_key='<C-p>'
+    let g:multi_cursor_skip_key='<C-x>'
+    let g:multi_cursor_quit_key='<Esc>'
+" }}}
+"nerdtree-git-plugin "{{{
+    let g:NERDTreeIndicatorMapCustom = {
+                \ 'Modified'  : '✹',
+                \ 'Staged'    : '✚',
+                \ 'Untracked' : '✭',
+                \ 'Renamed'   : '➜',
+                \ 'Unmerged'  : '═',
+                \ 'Deleted'   : '✖',
+                \ 'Dirty'     : '✗',
+                \ 'Clean'     : '✔︎',
+                \ 'Unknown'   : '?'
+                \ }
+"}}}
 """}}}
 "" Include user's local vim config""{{{
 if filereadable(expand("~/.vimrc.local"))
