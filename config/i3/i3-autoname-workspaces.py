@@ -108,7 +108,8 @@ WINDOW_ICONS = {
     'lxappearance': FA_PREF,
     'lightdm-gtk-greeter-settings': FA_PREF,
     'xterm': FA_TERMINAL,
-    'Atom': FA_GITHUB
+    'Atom': FA_GITHUB,
+    'Alacritty': FA_TERMINAL
 
 }
 
