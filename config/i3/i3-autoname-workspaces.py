@@ -66,6 +66,7 @@ FA_FILM = '\uf008'
 FA_MAP_O = '\uf278'
 FA_DATABASE = '\uf1c0'
 FA_PREF = '\uf013'
+FA_GITHUB = '\uf09b'
 WINDOW_ICONS = {
     'Gnome-terminal': FA_TERMINAL,
     'google-chrome': FA_CHROME,
@@ -105,7 +106,11 @@ WINDOW_ICONS = {
     'Keepass': FA_CHROME,
     'gnome-font-viewer': FA_PREF,
     'lxappearance': FA_PREF,
-    'lightdm-gtk-greeter-settings': FA_PREF
+    'lightdm-gtk-greeter-settings': FA_PREF,
+    'xterm': FA_TERMINAL,
+    'Atom': FA_GITHUB,
+    'Alacritty': FA_TERMINAL
+
 }
 
 

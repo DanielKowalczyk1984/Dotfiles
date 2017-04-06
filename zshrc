@@ -28,7 +28,7 @@ elif [[ $platform == 'darwin' ]]; then
 fi
 # }}}
 # {{{ Adding some variables
-export TERM=xterm-256color
+# export TERM=screen-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=ecd
@@ -48,7 +48,7 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/themes", from:oh-my-zsh
@@ -82,6 +82,5 @@ zplug load --verbose
 theme bullet-train
 # }}}
 #" Folding the .vimrc {{{
-# fold the .vimrc
 # vim:foldmethod=marker:foldlevel=0
 # }}}

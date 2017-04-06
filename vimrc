@@ -21,9 +21,12 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 "}}}
 "" Plug install packages"{{{
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py --clang-completer --system-libclang --tern-completer' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'itchyny/vim-cursorword'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdtree'
-Plug 'mbbill/undotree'
+Plug 'sjl/gundo.vim'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'tpope/vim-commentary'
@@ -31,6 +34,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'matze/vim-move'
+Plug 'plasticboy/vim-markdown'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -44,13 +48,15 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'godlygeek/tabular'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/vim-easy-align',  { 'on': [ '<Plug>(EasyAlign)', 'EasyAlign' ] }
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
-
+Plug 'christoomey/vim-tmux-navigator'
 "" Vim-Session
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
@@ -93,12 +99,6 @@ Plug 'pbrisbin/vim-syntax-shakespeare'
 "" Lua Bundle
 Plug 'xolox/vim-lua-ftplugin'
 Plug 'xolox/vim-lua-inspect'
-
-
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-
 
 " ruby
 Plug 'tpope/vim-rails'
@@ -183,7 +183,6 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-
   " IndentLine
   let g:indentLine_enabled = 1
   let g:indentLine_concealcursor = 0
@@ -229,7 +228,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'solarized'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -259,7 +258,9 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
-noremap <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
+inoremap <F4> <ESC>:NERDTreeToggle<CR>
+nnoremap <Leader>ft :NERDTreeToggle<CR>
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -280,10 +281,10 @@ endif
 
 " YouCompleteMe
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
+let g:ycm_python_binary_path = '/usr/bin/pyhton2'
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -351,7 +352,7 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
-
+nnoremap <silent> <Leader>tg :GitGutterToggle<CR>
 " session management
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
@@ -439,14 +440,14 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :d<CR>
+noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-" noremap <C-j> <C-w>j
-" noremap <C-k> <C-w>k
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
@@ -548,21 +549,19 @@ autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4 smartindent
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+    autocmd FileType python setlocal
+                \   tabstop=4
+                \   shiftwidth=4
+                \   softtabstop=4
+                \   tabstop=8
+                \   textwidth=79
+                \   expandtab
+                \   autoindent
+                \   fileformat=unix
+                \   cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
 augroup END
 
-" jedi-vim
-let g:jedi#popup_on_dot = 1
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
 "}}}
 " syntastic"{{{
 let g:syntastic_python_checkers=['python', 'flake8']
@@ -598,16 +597,86 @@ let g:tagbar_type_ruby = {
 \ }
 "}}}
 " EasyMotion"{{{
+map <Leader><Leader> <Plug>(easymotion-prefix)
+
+" Consistent with spacemacs
+" <Leader>f{char} to move to {char}
+map  <Leader>jj <Plug>(easymotion-bd-f)
+nmap <Leader>jj <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap <Leader>jJ <Plug>(easymotion-overwin-f2)
+
+" Jump to line
+map <Leader>jl <Plug>(easymotion-bd-jk)
+nmap <Leader>jl <Plug>(easymotion-overwin-line)
+
+" Jump to word
+map  <Leader>jw <Plug>(easymotion-bd-w)
+nmap <Leader>jw <Plug>(easymotion-overwin-w)
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
 "}}}
 " UndoTreeToggle"{{{
-nmap ,u :UndotreeToggle<CR>
+nmap ,u :GundoToggle<CR>
 "}}}
 " vim-move"{{{
-let g:move_key_modifier = 'C'
-"}}}"}}}
+" for terms that send Alt as Escape sequence
+" see http://vim.wikia.com/wiki/Mapping_fast_keycodes_in_terminal_Vim
+" for why the <F20> hack. Keeps Esc from waiting for other keys to exit visual
+set <F20>=j
+set <F21>=k
+vmap <F20> <Plug>MoveBlockDown
+vmap <F21> <Plug>MoveBlockUp
+nmap <F20> <Plug>MoveLineDown
+nmap <F21> <Plug>MoveLineUp
+"}}}
+" tabular {{{
+    nmap <Leader>a& :Tabularize /&<CR>
+    vmap <Leader>a& :Tabularize /&<CR>
+    nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+    nmap <Leader>a=> :Tabularize /=><CR>
+    vmap <Leader>a=> :Tabularize /=><CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR>
+    nmap <Leader>a:: :Tabularize /:\zs<CR>
+    vmap <Leader>a:: :Tabularize /:\zs<CR>
+    nmap <Leader>a, :Tabularize /,<CR>
+    vmap <Leader>a, :Tabularize /,<CR>
+    nmap <Leader>a,, :Tabularize /,\zs<CR>
+    vmap <Leader>a,, :Tabularize /,\zs<CR>
+    nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+    vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+" }}}
+" vim-easy-align {{{
+    " Start interactive EasyAlign in visual mode (e.g. vipxa)
+    xmap <Leader>xa <Plug>(EasyAlign)
+
+    " Start interactive EasyAlign for a motion/text object (e.g. xaip)
+    nmap <Leader>xa <Plug>(EasyAlign)
+" }}}
+" vim-multiple-cursors {{{
+    let g:multi_cursor_next_key='<C-n>'
+    let g:multi_cursor_prev_key='<C-p>'
+    let g:multi_cursor_skip_key='<C-x>'
+    let g:multi_cursor_quit_key='<Esc>'
+" }}}
+"nerdtree-git-plugin "{{{
+    let g:NERDTreeIndicatorMapCustom = {
+                \ 'Modified'  : '✹',
+                \ 'Staged'    : '✚',
+                \ 'Untracked' : '✭',
+                \ 'Renamed'   : '➜',
+                \ 'Unmerged'  : '═',
+                \ 'Deleted'   : '✖',
+                \ 'Dirty'     : '✗',
+                \ 'Clean'     : '✔︎',
+                \ 'Unknown'   : '?'
+                \ }
+"}}}
+"""}}}
 "" Include user's local vim config""{{{
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
@@ -652,6 +721,5 @@ else
 endif
 "}}}
 " Folding the .vimrc {{{
-" fold the .vimrc
 " vim:foldmethod=marker:foldlevel=0
 " }}}

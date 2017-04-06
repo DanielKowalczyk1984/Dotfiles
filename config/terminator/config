@@ -1,4 +1,5 @@
 [global_config]
+  borderless = True
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   title_font = Hack 14
@@ -20,8 +21,9 @@
 [plugins]
 [profiles]
   [[default]]
+    allow_bold = False
     cursor_color = "#aaaaaa"
-    font = font-linux 12
+    font = Knack Nerd Font 14
     use_system_font = False
   [[Argonaut]]
     background_color = "#0e1019"
@@ -40,8 +42,9 @@
   [[MaterialClean]]
     background_color = "#263238"
     cursor_color = "#eceff1"
-    font = Hack 14
+    font = Knack Nerd Font 12
     foreground_color = "#eceff1"
+    icon_bell = False
     palette = "#263238:#ff9800:#8bc34a:#ffc107:#03a9f4:#e91e63:#009688:#cfd8dc:#37474f:#ffa74d:#9ccc65:#ffa000:#81d4fa:#ad1457:#26a69a:#eceff1"
     use_system_font = False
   [[MaterialDark]]
@@ -107,7 +110,7 @@
   [[solarized-light]]
     background_color = "#eee8d5"
     cursor_color = "#002b36"
-    font = Hack 14
+    font = Knack Nerd Font 14
     foreground_color = "#002b36"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
