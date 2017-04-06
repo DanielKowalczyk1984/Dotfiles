@@ -72,7 +72,8 @@ alias :q='exit'
 
 config () {
     case $1 in  
-        aliases)  $EDITOR ~/.zsh/aliases.zsh ;;
+        alacritty)  $EDITOR ~/.config/alacritty/alacritty.yml;;
+        aliases)    $EDITOR ~/.zsh/aliases.zsh ;;
         bar)        $EDITOR ~/.config/i3/scripts/py3status.config ;;
         boot)       sudo $EDITOR /boot/grub/grub.cfg ;;
         chat)       $EDITOR ~/.weechat/weechat.conf ;;
