@@ -110,7 +110,6 @@ WINDOW_ICONS = {
     'xterm': FA_TERMINAL,
     'Atom': FA_GITHUB,
     'Alacritty': FA_TERMINAL
-
 }
 
 
