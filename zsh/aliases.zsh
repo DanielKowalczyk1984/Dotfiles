@@ -68,6 +68,7 @@ alias lsg='ll | ag'
 # mimic vim functions
 alias :q='exit'
 # }}}
+
 # {{{ Config function
 
 config () {
@@ -121,9 +122,11 @@ config () {
 }
 
 # }}}
+
 # Git Aliases# {{{
 alias gitgraph='git log --all --graph --decorate --oneline'
 # }}}
+
 # Common shell functions# {{{
 alias less='less -R'
 alias tf='tail -f'
@@ -135,6 +138,7 @@ alias _='sudo'
 alias ka9='killall -9'
 alias k9='kill -9'
 # }}}
+
 # {{{ Creates An Archive From Given Directory
 
 mktar() { tar cvf       "${1%%/}.tar"       "${1%%/}/"; }
@@ -145,6 +149,7 @@ mkzip() { zip -9r       "${1%%/}.zip"       "${1%%/}/"; }
 mk7z()  { 7z a -mx9     "${1%%/}.7z"        "${1%%/}/"; }
 
 # }}}
+
 # {{{ Managing Packages
 alias update='yaourt -Syua'
 alias updatef='yaourt -Syua --noconfirm'
@@ -156,6 +161,7 @@ alias removef='yaourt -Rdd'
 alias search='yaourt -Ss' 
 alias infos='yaourt -Qi'
 # }}}
+
 # {{{ Directories
 alias i3='cd ~/.config/i3 && ll'
 alias apps='/usr/share/applications && ll'
@@ -169,6 +175,13 @@ alias books='/home/daniel/Drive/BooksArchive && ll'
 alias articles='/home/daniel/Dropbox/ArticlesArchive && ll'
 alias service='cd /usr/lib/systemd/system && ls'
 # }}}
+
+# Security {{{
+alias checkrootkits="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
+alias checkvirus="clamscan --recursive=yes --infected /home"
+alias updateantivirus="sudo freshclam"
+# }}}
+
 # Global aliases# {{{
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -180,6 +193,7 @@ alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
 # }}}
+
 # File Download# {{{
 if (( $+commands[curl] )); then
   alias get='curl --continue-at - --location --progress-bar --remote-name --remote-time'
@@ -187,6 +201,7 @@ elif (( $+commands[wget] )); then
   alias get='wget --continue --progress=bar --timestamping'
 fi
 # }}}
+
 # Disable correction.# {{{
 alias ack='nocorrect ack'
 alias cp='nocorrect cp'
@@ -202,8 +217,8 @@ alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
 # }}}
-# {{{ Oneliners for file & directory movement
 
+# {{{ Oneliners for file & directory movement
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
@@ -212,8 +227,8 @@ cdl() { cd $@; ll }
 da() { ($1 &) }
 zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
 dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
-
 # }}}
+
 # Pygments stuff# {{{
 pretty() { pygmentize -f terminal "$1" | less -R }
 
@@ -226,6 +241,7 @@ pygmentize_alias() {
 }
 alias -g P="| pygmentize_alias"
 # }}}
+
 # Color manual pages# {{{
 man() {
     env \
@@ -239,6 +255,7 @@ man() {
     man "$@"
 }
 # }}}
+
 # lpass fzf stuff# {{{
 flpass_pass(){
     lpass show -c --password $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
@@ -248,6 +265,7 @@ flpass_user(){
     lpass show -c --username $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
 }
 # }}}
+
 # git fzf stuff# {{{
 fshow() {
   git log --graph --color=always \
@@ -287,6 +305,7 @@ peco-select-gitadd() {
 zle -N peco-select-gitadd
 bindkey '^g^ ' peco-select-gitadd
 # }}}
+
 # tmux stuff# {{{
 alias takeover="tmux  detach -a"
 alias attach="tmux  attach -t base || tmux new -s base"
@@ -304,6 +323,7 @@ fs() {
   tmux switch-client -t "$session"
 }
 # }}}
+
 # Folding the .vimrc {{{
 # fold the .vimrc
 # vim:foldmethod=marker:foldlevel=0
