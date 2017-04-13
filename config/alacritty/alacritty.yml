@@ -34,34 +34,31 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Hack  # should be "Menlo" or something on macOS.
+    family: Iosevka Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Hack # should be "Menlo" or something on macOS.
+    family: Iosevka Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: Bold
+    # style: Bold
 
   # The italic font face
   italic:
-    family: Hack # should be "Menlo" or something on macOS.
+    family: Iosevka Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
-  size: 13.0
+  size: 14.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 2.0
-    y: -13.0
+    x: 4.0
+    y: -14.0
 
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 custom_cursor_colors: false
 # Should display the render timer
@@ -154,6 +151,7 @@ render_timer: false
 #     magenta: '0xd3869b'
 #     cyan:    '0x8ec07c'
 #     white:   '0xebdbb2'
+
 # Colors (Gruvbox light)
 # colors:
 #   # Default colors
@@ -184,62 +182,63 @@ render_timer: false
 #     magenta: '0x8f3f71'
 #     cyan:    '0x427b58'
 #     white:   '0x3c3836'
-# Colors (Solarized Light)
-colors:
-  # Default Colors
-  primary:
-    background: '0xfdf6e3'
-    foreground: '0x626262'
-  # Normal colors
-  normal:
-    black:   '0x262626'
-    red:     '0xd70000'
-    green:   '0x5f8700'
-    yellow:  '0xaf8700'
-    blue:    '0x0087ff'
-    magenta: '0xaf005f'
-    cyan:    '0x00afaf'
-    white:   '0xe4e4e4'
-  # Bright colors
-  bright:
-    black:   '0x1c1c1c'
-    red:     '0xd75f00'
-    green:   '0x585858'
-    yellow:  '0x626262'
-    blue:    '0x808080'
-    magenta: '0x5f5faf'
-    cyan:    '0x8a8a8a'
-    white:   '0xffffd7'
-# Colors (Solarized Dark)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x002b36'
-#     foreground: '0x839496'
 
+# Colors (Solarized Light)
+# colors:
+#   # Default Colors
+#   primary:
+#     background: '0xfdf6e3'
+#     foreground: '0x626262'
 #   # Normal colors
 #   normal:
-#     black:   '0x073642'
-#     red:     '0xdc322f'
-#     green:   '0x859900'
-#     yellow:  '0xb58900'
-#     blue:    '0x268bd2'
-#     magenta: '0xd33682'
-#     cyan:    '0x2aa198'
-#     white:   '0xeee8d5'
-
+#     black:   '0x262626'
+#     red:     '0xd70000'
+#     green:   '0x5f8700'
+#     yellow:  '0xaf8700'
+#     blue:    '0x0087ff'
+#     magenta: '0xaf005f'
+#     cyan:    '0x00afaf'
+#     white:   '0xe4e4e4'
 #   # Bright colors
 #   bright:
-#     black:   '0x002b36'
-#     red:     '0xcb4b16'
-#     green:   '0x586e75'
-#     yellow:  '0x657b83'
-#     blue:    '0x839496'
-#     magenta: '0x6c71c4'
-#     cyan:    '0x93a1a1'
-#     white:   '0xfdf6e3'
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
+#     black:   '0x1c1c1c'
+#     red:     '0xd75f00'
+#     green:   '0x585858'
+#     yellow:  '0x626262'
+#     blue:    '0x808080'
+#     magenta: '0x5f5faf'
+#     cyan:    '0x8a8a8a'
+#     white:   '0xffffd7'
+
+# Colors (Solarized Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x002b36'
+    foreground: '0x839496'
+
+  # Normal colors
+  normal:
+    black:   '0x073642'
+    red:     '0xdc322f'
+    green:   '0x859900'
+    yellow:  '0xb58900'
+    blue:    '0x268bd2'
+    magenta: '0xd33682'
+    cyan:    '0x2aa198'
+    white:   '0xeee8d5'
+
+  # Bright colors
+  bright:
+    black:   '0x002b36'
+    red:     '0xcb4b16'
+    green:   '0x586e75'
+    yellow:  '0x657b83'
+    blue:    '0x839496'
+    magenta: '0x6c71c4'
+    cyan:    '0x93a1a1'
+    white:   '0xfdf6e3'
+
 # Colors (Material Theme)
 # colors:
 #   # Default colors
@@ -268,6 +267,7 @@ colors:
 #     magenta: '0x6c71c4'
 #     cyan:    '0x35434d'
 #     white:   '0xffffff'
+
 # Colors (Tomorrow Night Bright)
 # colors:
 #   # Default colors
