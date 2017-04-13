@@ -27,8 +27,22 @@ elif [[ $platform == 'darwin' ]]; then
     source $ZPLUG_HOME/init.zsh
 fi
 # }}}
+# {{{Powerlevel9k settings
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh context root_indicator background_jobs status dir dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time vcs)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
+POWERLEVEL9K_TIME_FORMAT="%D{%I:%M:%S %P}"
+# }}}
 # {{{ Adding some variables
-# export TERM=screen-256color
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=ecd
@@ -51,13 +65,13 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
-zplug "plugins/themes", from:oh-my-zsh
 zplug "supercrabtree/k"
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:12
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "zsh-users/zsh-syntax-highlighting", nice:11
 zplug "~/.zsh", from:local, use:aliases.zsh
 zplug "~/.zsh", from:local, use:setopt.zsh, nice:-1
@@ -77,9 +91,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
-# }}}
-# {{{Load the theme with oh-my-zhs plugin theme
-theme bullet-train
 # }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0

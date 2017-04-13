@@ -27,7 +27,6 @@ URxvt*termName: xterm-256color
 ! Transparency
 urxvt*.transparent : true
 urxvt*.shading : 5
-! Terminator
 ! Appearance
 urxvt.scrollBar: false
 URxvt*font: xft:Knack Nerd Font:style=Regular:size=14
