@@ -43,6 +43,7 @@ path=(
   /usr/local/{bin,sbin}
   $path
   $GOBIN
+  ~/.cargo/bin
 )
 # }}}
 # Pager# {{{
