@@ -190,16 +190,9 @@ else
   let g:indentLine_faster = 1
 
 
-  if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-  else
-    if $TERM == 'xterm'
-      set term=xterm-256color
-    endif
-  endif
-
+if $TERM == 'xterm'
+  set term=xterm-256color
 endif
-
 
 if &term =~ '256color'
   set t_ut=
