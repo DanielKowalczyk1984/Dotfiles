@@ -188,7 +188,7 @@ else
   let g:indentLine_concealcursor = 0
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
-
+endif
 
 if $TERM == 'xterm'
   set term=xterm-256color
