@@ -15,8 +15,8 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 dimensions:
-  columns: 80
-  lines: 24
+  columns: 160
+  lines: 80
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
@@ -239,7 +239,7 @@ colors:
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
 
-# Colors (Material Theme)
+# # Colors (Material Theme)
 # colors:
 #   # Default colors
 #   primary:
