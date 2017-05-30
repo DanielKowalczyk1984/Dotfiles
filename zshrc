@@ -34,7 +34,7 @@ if zplug check bhilburn/powerlevel9k; then
     POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
     POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh context root_indicator background_jobs status dir dir_writable)
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time vcs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs)
     POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
     POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
     POWERLEVEL9K_STATUS_VERBOSE=false
@@ -65,6 +65,7 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
+zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "supercrabtree/k"
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
