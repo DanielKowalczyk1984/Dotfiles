@@ -45,8 +45,8 @@ fi
 # {{{ Adding some variables
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
-ENHANCD_COMMAND=ecd
-export FZF_DEFAULT_COMMAND='ag -g ""'
+ENHANCD_COMMAND=cd
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_DEFAULT_OPTS='
 --extended
 --ansi
