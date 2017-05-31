@@ -51,12 +51,12 @@ font:
     style: "Regular"
 
   # Point size of the font
-  size: 12.0
+  size: 14.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: -13.0
-    y: 0.0
+    x: -14.0
+    y: 3.0
 
   use_thin_strokes: false
 
@@ -267,6 +267,93 @@ colors:
 #     magenta: '0x6c71c4'
 #     cyan:    '0x35434d'
 #     white:   '0xffffff'
+
+# # Colors (Oceanic Material)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1c262b'
+#     foreground: '0xc2c8d7'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xee2a29'
+#     green:   '0x3fa33f'
+#     yellow:  '0xfee92e'
+#     blue:    '0x1d80ef'
+#     magenta: '0x8800a0'
+#     cyan:    '0x16aec9'
+#     white:   '0xa4a4a4'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x767676'
+#     red:     '0xdc5b60'
+#     green:   '0x70be71'
+#     yellow:  '0xfef063'
+#     blue:    '0x53a4f3'
+#     magenta: '0xa94dbb'
+#     cyan:    '0x42c6d9'
+#     white:   '0xfffefe'
+
+# # Colors (Material)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0xeaeaea'
+#     foreground: '0x222221'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x212121'
+#     red:     '0xb7141e'
+#     green:   '0x457b23'
+#     yellow:  '0xf5971d'
+#     blue:    '0x134eb2'
+#     magenta: '0x550087'
+#     cyan:    '0x0e707c'
+#     white:   '0xeeeeee'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x424242'
+#     red:     '0xe83a3f'
+#     green:   '0x7aba39'
+#     yellow:  '0xfee92e'
+#     blue:    '0x53a4f3'
+#     magenta: '0xa94dbb'
+#     cyan:    '0x26bad1'
+#     white:   '0xd8d8d8'
+
+# # Colors (MaterialDark)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x222221'
+#     foreground: '0xe4e4e4'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x212121'
+#     red:     '0xb7141e'
+#     green:   '0x457b23'
+#     yellow:  '0xf5971d'
+#     blue:    '0x134eb2'
+#     magenta: '0x550087'
+#     cyan:    '0x0e707c'
+#     white:   '0xeeeeee'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x424242'
+#     red:     '0xe83a3f'
+#     green:   '0x7aba39'
+#     yellow:  '0xfee92e'
+#     blue:    '0x53a4f3'
+#     magenta: '0xa94dbb'
+#     cyan:    '0x26bad1'
+#     white:   '0xd8d8d8'
 
 # Colors (Tomorrow Night Bright)
 # colors:
