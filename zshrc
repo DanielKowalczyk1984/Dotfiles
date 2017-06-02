@@ -21,6 +21,9 @@ if [[ $platform == 'linux' ]]; then
     fi
     source /usr/share/zsh/scripts/zplug/init.zsh
 elif [[ $platform == 'darwin' ]]; then
+    if [[ ! -d /usr/local/opt/zplug ]]; then
+        brew install zplug
+    fi
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 fi
@@ -60,7 +63,7 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 # }}}
 # {{{ List of all the plugins + load the plugins
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh, defer:3
+zplug "plugins/git", from:oh-my-zsh 
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
