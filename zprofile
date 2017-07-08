@@ -5,6 +5,11 @@ if command -v go >/dev/null; then
   export GOBIN=$GOPATH/bin
 fi
 # }}}
+# Settings for gem {{{
+if command -v gem >/dev/null; then
+    export GEM_BIN=$(ruby -e "print Gem.user_dir")/bin
+fi
+# }}}
 # Editor# {{{
 export EDITOR=vim
 export CVSEDITOR="${EDITOR}"
@@ -36,6 +41,7 @@ path=(
   $path
   $GOBIN
   ~/.cargo/bin
+  $GEM_BIN
 )
 # }}}
 # Pager# {{{
