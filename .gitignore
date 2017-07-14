@@ -5,7 +5,7 @@ vim/plugged/*
 tmux/plugins/*
 
 vim/backups/*
-
+vim/autoload/*
 *.sublime-project
 *.sublime-workspace
 i3/.i3*.err
