@@ -63,12 +63,13 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 # }}}
 # {{{ List of all the plugins + load the plugins
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh 
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
+zplug "modules/archive", from:prezto
 zplug "supercrabtree/k"
 zplug "hlissner/zsh-autopair"
 zplug "b4b4r07/enhancd", use:init.sh
@@ -82,7 +83,7 @@ zplug "~/.zsh", from:local, use:setopt.zsh, defer:0
 zplug "~/.zsh", from:local, use:completion.zsh
 zplug "~/.zsh", from:local, use:keybinds.zsh, defer:2
 zplug "~/.zsh", from:local, use:noglob.zsh
-zplug "~/.zsh", from:local, use:spectrum.zsh 
+zplug "~/.zsh", from:local, use:spectrum.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
 zplug "takaaki-kasai/git-foresta", as:command, use:"git-foresta"
