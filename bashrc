@@ -7,3 +7,7 @@ export PATH=/usr/local/p/versions/python:$PATH
 
 
 
+
+export LINGO_17_HOME="/home/daniel/lingo17"
+
+export PATH="/home/daniel/lingo17:$PATH"
