@@ -33,8 +33,8 @@ if zplug check bhilburn/powerlevel9k; then
     POWERLEVEL9K_MODE='nerdfont-complete'
     POWERLEVEL9K_PROMPT_ON_NEWLINE=true
     POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
-    POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-    POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳"
+    POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\u21b1 "
+    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u21b3 "
     POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh context root_indicator background_jobs status dir dir_writable)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs)
@@ -46,7 +46,7 @@ if zplug check bhilburn/powerlevel9k; then
 fi
 # }}}
 # {{{ Adding some variables
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
@@ -65,7 +65,7 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/git-flow", from:oh-my-zsh
+# zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
@@ -95,7 +95,7 @@ if ! zplug check --verbose; then
     fi
 fi
 
-zplug load 
+zplug load
 # }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
