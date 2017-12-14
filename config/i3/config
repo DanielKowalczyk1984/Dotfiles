@@ -56,7 +56,7 @@ mode "$mode_gaps_outer" {
 #Custom special key fixes# {{{
 # open terminal
 bindsym $mod+t exec i3-sensible-terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -249,10 +249,12 @@ exec_always --no-startup-id  python3 ~/.config/i3/i3-autoname-workspaces.py
 exec_always --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/hexagons.jpg
 exec_always --no-startup-id "setxkbmap -option caps:escape"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
 exec --no-startup-id dropbox start
+exec_always --no-startup-id  "xinput --disable 14"
 exec --no-startup-id fluxgui
 exec --no-startup-id nm-applet
-exec --no-startup-id xautolock -time 10 -locker "i3lock-wrapper -l" 
+exec --no-startup-id xautolock -time 10 -locker "i3lock-wrapper -l"
 # vim:filetype=i3
 # }}}
 # Folding the .vimrc {{{
