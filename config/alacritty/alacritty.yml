@@ -56,7 +56,7 @@ font:
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: -14.0
-    y: 3.0
+    y: 4.0
 
   use_thin_strokes: false
 
