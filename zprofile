@@ -1,16 +1,13 @@
-#
-# Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 # Settings for golang# {{{
 if command -v go >/dev/null; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/.go
   export GOBIN=$GOPATH/bin
-  # echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
-  # echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
+fi
+# }}}
+# Settings for gem {{{
+if command -v gem >/dev/null; then
+    export GEM_BIN=$(ruby -e "print Gem.user_dir")/bin
 fi
 # }}}
 # Editor# {{{
@@ -43,7 +40,7 @@ path=(
   /usr/local/{bin,sbin}
   $path
   $GOBIN
-  ~/.cargo/bin
+  $GEM_BIN
 )
 # }}}
 # Pager# {{{
@@ -92,7 +89,12 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 #}}}
 # {{{ Gurobi environment
-export GUROBI_HOME="/opt/gurobi702/linux64"
+export GUROBI_HOME="/opt/gurobi751/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
 # }}}
+#" Folding the .vimrc {{{
+# vim:foldmethod=marker:foldlevel=0
+# }}}
+
+export PATH="$HOME/.cargo/bin:$PATH"

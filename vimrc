@@ -277,11 +277,11 @@ endif
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_python_binary_path = '/usr/bin/pyhton2'
+let g:ycm_python_binary_path = '/usr/bin/pyhton'
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
+let g:ycm_global_ycm_extra_conf = '~/Dotfiles/vim'
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
