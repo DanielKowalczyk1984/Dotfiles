@@ -1,5 +1,0 @@
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
