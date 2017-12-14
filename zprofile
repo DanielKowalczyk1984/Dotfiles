@@ -40,7 +40,6 @@ path=(
   /usr/local/{bin,sbin}
   $path
   $GOBIN
-  ~/.cargo/bin
   $GEM_BIN
 )
 # }}}
@@ -90,10 +89,12 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 #}}}
 # {{{ Gurobi environment
-export GUROBI_HOME="/opt/gurobi702/linux64"
+export GUROBI_HOME="/opt/gurobi751/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
 # }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+
+export PATH="$HOME/.cargo/bin:$PATH"
