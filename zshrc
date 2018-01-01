@@ -49,7 +49,7 @@ fi
 export ZSH_TMUX_AUTOSTART=false
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='rg --hidden ""'
 export FZF_DEFAULT_OPTS='
 --extended
 --ansi
@@ -65,13 +65,11 @@ fpath=(~/.zsh/completion(N-/) $fpath)
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-# zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "modules/archive", from:prezto
 zplug "supercrabtree/k"
-zplug "hlissner/zsh-autopair"
+zplug "hlissner/zsh-autopair", defer:2
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
