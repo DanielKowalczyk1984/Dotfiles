@@ -2,7 +2,7 @@
 vim/plugged/*
 
 #ignore all the plugins of tmux
-tmux/plugins/*
+
 
 vim/backups/*
 vim/autoload/*
