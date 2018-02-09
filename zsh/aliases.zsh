@@ -180,6 +180,17 @@ alias service='cd /usr/lib/systemd/system && ls'
 alias checkrootkits="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
 alias checkvirus="clamscan --recursive=yes --infected /home"
 alias updateantivirus="sudo freshclam"
+
+passwdgen()
+{
+  if [ $1 ]; then
+    local length=$1
+  else
+    local length=16
+  fi
+
+  tr -dc A-Za-z0-9_ < /dev/urandom  | head -c${1:-${length}}
+}
 # }}}
 
 # Global aliases# {{{
