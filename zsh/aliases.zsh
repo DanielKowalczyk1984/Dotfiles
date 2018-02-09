@@ -147,7 +147,39 @@ mktbz() { tar cvjf      "${1%%/}.tar.bz2"   "${1%%/}/"; }
 mkrar() { rar a -m5 -r  "${1%%/}.rar"       "${1%%/}/"; }
 mkzip() { zip -9r       "${1%%/}.zip"       "${1%%/}/"; }
 mk7z()  { 7z a -mx9     "${1%%/}.7z"        "${1%%/}/"; }
+targz()
+{
+  local tmpFile="${@%/}.tar";
+  tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1;
 
+  size=$(
+    stat -f"%z" "${tmpFile}" 2> /dev/null; # OS X `stat`
+    stat -c"%s" "${tmpFile}" 2> /dev/null;  # GNU `stat`
+  );
+
+  local cmd="";
+  if (( size < 52428800 )) && hash zopfli 2> /dev/null; then
+    # the .tar file is smaller than 50 MB and Zopfli is available; use it
+    cmd="zopfli";
+  else
+    if hash pigz 2> /dev/null; then
+      cmd="pigz";
+    else
+      cmd="gzip";
+    fi;
+  fi;
+
+  echo "Compressing .tar ($((size / 1000)) kB) using \`${cmd}\`…";
+  "${cmd}" -v "${tmpFile}" || return 1;
+  [ -f "${tmpFile}" ] && rm "${tmpFile}";
+
+  zippedSize=$(
+  	stat -f"%z" "${tmpFile}.gz" 2> /dev/null; # OS X `stat`
+  	stat -c"%s" "${tmpFile}.gz" 2> /dev/null; # GNU `stat`
+  );
+
+  echo "${tmpFile}.gz ($((zippedSize / 1000)) kB) created successfully.";
+}
 # }}}
 
 # {{{ Managing Packages
