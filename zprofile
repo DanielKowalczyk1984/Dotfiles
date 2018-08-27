@@ -41,6 +41,8 @@ path=(
   $path
   $GOBIN
   $GEM_BIN
+  $HOME/.cargo/bin
+  $HOME/bin
 )
 # }}}
 # Pager# {{{
@@ -93,8 +95,9 @@ export GUROBI_HOME="/opt/gurobi752/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
 # }}}
+# thefuck {{{
+eval $(thefuck --alias)
+# }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
-
-export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
