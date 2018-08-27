@@ -1,4 +1,4 @@
-# Settings for golang# {{{
+# Settings for golang {{{
 if command -v go >/dev/null; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/.go
@@ -10,13 +10,13 @@ if command -v gem >/dev/null; then
     export GEM_BIN=$(ruby -e "print Gem.user_dir")/bin
 fi
 # }}}
-# Editor# {{{
+# Editor {{{
 export EDITOR=vim
 export CVSEDITOR="${EDITOR}"
 export SVN_EDITOR="${EDITOR}"
 export GIT_EDITOR="${EDITOR}"
 # }}}
-# Language# {{{
+# Language {{{
 # LANGUAGE must be set by en_US
 export LANGUAGE="en_US.UTF-8"
 export LANG="${LANGUAGE}"
@@ -35,7 +35,7 @@ fpath=( \
     $fpath \
     )
 # }}}
-# Set the list of directories that Zsh searches for programs.# {{{
+# Set the list of directories that Zsh searches for programs {{{
 path=(
   /usr/local/{bin,sbin}
   $path
@@ -45,7 +45,7 @@ path=(
   $HOME/bin
 )
 # }}}
-# Pager# {{{
+# Pager {{{
 export PAGER=less
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 export LESSCHARSET='utf-8'
@@ -64,7 +64,7 @@ if (( $+commands[lesspipe.sh] )); then
   export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
 fi
 # }}}
-# History# {{{
+# History {{{
 # History file
 export HISTFILE=~/.zsh_history
 # History size in memory
@@ -79,7 +79,7 @@ if [[ $UID == 0 ]]; then
     export SAVEHIST=0
 fi
 # }}}
-#{{{ Temporary Files
+# Temporary Files {{{
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
   mkdir -p -m 700 "$TMPDIR"
@@ -90,7 +90,7 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 #}}}
-# {{{ Gurobi environment
+# Gurobi environment {{{
 export GUROBI_HOME="/opt/gurobi752/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
