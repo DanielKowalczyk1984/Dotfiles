@@ -55,7 +55,7 @@ font:
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: -14.5
+    x: -14.0
     y: 0.0
 
   use_thin_strokes: false
@@ -388,6 +388,35 @@ colors:
 #     magenta: '0xb77ee0'
 #     cyan:    '0x54ced6'
 #     white:   '0x2a2a2a'
+
+# Colors (Nord)
+# colors:
+#    # Default colors
+#    primary:
+#      background: '0x2E3440'
+#      foreground: '0xD8DEE9'
+
+#    # Normal colors
+#    normal:
+#      black:   '0x3B4252'
+#      red:     '0xBF616A'
+#      green:   '0xA3BE8C'
+#      yellow:  '0xEBCB8B'
+#      blue:    '0x81A1C1'
+#      magenta: '0xB48EAD'
+#      cyan:    '0x88C0D0'
+#      white:   '0xE5E9F0'
+
+#    # Bright colors
+#    bright:
+#      black:   '0x4C566A'
+#      red:     '0xBF616A'
+#      green:   '0xA3BE8C'
+#      yellow:  '0xEBCB8B'
+#      blue:    '0x81A1C1'
+#      magenta: '0xB48EAD'
+#      cyan:    '0x8FBCBB'
+#      white:   '0xECEFF4'
 
 # Visual Bell
 #
