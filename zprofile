@@ -97,4 +97,4 @@ export LD_LIBRARY_PATH=$GUROBI_HOME/lib
 # vim:foldmethod=marker:foldlevel=0
 # }}}
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"

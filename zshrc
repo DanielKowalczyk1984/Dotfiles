@@ -46,7 +46,7 @@ if zplug check bhilburn/powerlevel9k; then
 fi
 # }}}
 # {{{ Adding some variables
-export ZSH_TMUX_AUTOSTART=false
+export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
 export FZF_DEFAULT_COMMAND='rg --hidden ""'
