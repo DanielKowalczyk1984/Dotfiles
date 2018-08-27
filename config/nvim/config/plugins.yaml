@@ -5,7 +5,8 @@
 # Startup
 # -------
 - repo: Shougo/dein.vim
-- repo: rafi/awesome-vim-colorschemes
+# - repo: rafi/awesome-vim-colorschemes
+- repo: flazz/vim-colorschemes
 - repo: rafi/vim-badge
 - repo: thinca/vim-localrc
 - repo: christoomey/vim-tmux-navigator
@@ -278,20 +279,6 @@
     let g:neosnippet#expand_word_boundary = 1
     autocmd MyAutoCmd CompleteDone * call neosnippet#complete_done()
     autocmd MyAutoCmd InsertLeave * NeoSnippetClearMarkers
-
-- repo: ludovicchabant/vim-gutentags
-  if: executable('ctags') && empty($VIM_MINIMAL)
-  on_path: .*
-  hook_add: |
-    let g:gutentags_cache_dir = $VARPATH.'/tags'
-    let g:gutentags_generate_on_write = 1
-    let g:gutentags_generate_on_missing = 0
-    let g:gutentags_generate_on_new = 0
-    let g:gutentags_ctags_exclude_wildignore = 1
-    let g:gutentags_ctags_exclude = [
-      \ '*/wp-admin', '*/wp-content', '*/wp-includes',
-      \ '*/application/vendor', '*/vendor/ckeditor', '*/media/vendor'
-      \ ]
 
 - repo: Shougo/echodoc.vim
   if: empty($VIM_MINIMAL)

@@ -1,4 +1,4 @@
-# System# {{{
+# System {{{
 # Define open command# {{{
 function open_command() {
     emulate -L zsh
@@ -51,24 +51,28 @@ alias df='df -h'
 alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
+  alias el='exa -al'
+  alias es='exa -x'
   alias ll='ls -alh --color=auto'
   alias ls='ls -X --color=auto'
   alias lt='tree --dirsfirst -aLpughDFiC 1'
   alias ltd='lt -d'
+  function elt() {exa --group-directories-first -al -T --level=$1}
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ $platform == 'darwin' ]]; then
 	alias ll='ls --group-directories-first -alh --color=auto'
-  alias ls='ls --group-directories-first --color=auto'
+        alias ls='ls --group-directories-first --color=auto'
 fi
 
 # show me files matching "ls grep"
 alias lsg='ll | ag'
+alias lsr='ll | rg'
 
 # mimic vim functions
 alias :q='exit'
 # }}}
-# {{{ Config function
+# Config function {{{
 
 config () {
     case $1 in  
@@ -121,11 +125,11 @@ config () {
 }
 
 # }}}
-# Git Aliases# {{{
+# Git Aliases {{{
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 alias gitgraph='git log --all --graph --decorate --oneline'
 # }}}
-# Common shell functions# {{{
+# Common shell functions {{{
 alias less='less -R'
 alias tf='tail -f'
 alias l='less'
@@ -136,7 +140,7 @@ alias _='sudo'
 alias ka9='killall -9'
 alias k9='kill -9'
 # }}}
-# {{{ Creates An Archive From Given Directory
+# Creates An Archive From Given Directory {{{
 
 mktar() { tar cvf       "${1%%/}.tar"       "${1%%/}/"; }
 mktgz() { tar cvzf      "${1%%/}.tar.gz"    "${1%%/}/"; }
@@ -178,7 +182,7 @@ targz()
   echo "${tmpFile}.gz ($((zippedSize / 1000)) kB) created successfully.";
 }
 # }}}
-# {{{ Managing Packages
+# Managing Packages {{{
 alias update='yaourt -Syua'
 alias updatef='yaourt -Syua --noconfirm'
 alias clean='yaourt -Qdtd --ignore awesome'
@@ -189,7 +193,7 @@ alias removef='yaourt -Rdd'
 alias search='yaourt -Ss' 
 alias infos='yaourt -Qi'
 # }}}
-# {{{ Directories
+# Directories {{{
 alias i3='cd ~/.config/i3 && ll'
 alias apps='/usr/share/applications && ll'
 alias themes='/usr/share/themes && ll'
@@ -218,7 +222,7 @@ passwdgen()
   tr -dc A-Za-z0-9_ < /dev/urandom  | head -c${1:-${length}}
 }
 # }}}
-# Global aliases# {{{
+# Global aliases {{{
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -229,14 +233,14 @@ alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
 # }}}
-# File Download# {{{
+# File Download {{{
 if (( $+commands[curl] )); then
   alias get='curl --continue-at - --location --progress-bar --remote-name --remote-time'
 elif (( $+commands[wget] )); then
   alias get='wget --continue --progress=bar --timestamping'
 fi
 # }}}
-# Disable correction.# {{{
+# Disable correction {{{
 alias ack='nocorrect ack'
 alias cp='nocorrect cp'
 alias ebuild='nocorrect ebuild'
@@ -251,7 +255,7 @@ alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
 # }}}
-# {{{ Oneliners for file & directory movement
+# Oneliners for file & directory movement {{{
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
@@ -261,7 +265,7 @@ da() { ($1 &) }
 zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
 dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # }}}
-# Pygments stuff# {{{
+# Pygments stuff {{{
 pretty() { pygmentize -f terminal "$1" | less -R }
 
 pygmentize_alias() {
@@ -273,7 +277,7 @@ pygmentize_alias() {
 }
 alias -g P="| pygmentize_alias"
 # }}}
-# Color manual pages# {{{
+# Color manual pages {{{
 # man() {
 #     env \
 #     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -286,7 +290,7 @@ alias -g P="| pygmentize_alias"
 #     man "$@"
 # }
 # }}}
-# lpass fzf stuff# {{{
+# lpass fzf stuff {{{
 flpass_pass(){
     lpass show -c --password $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
 }
@@ -295,7 +299,7 @@ flpass_user(){
     lpass show -c --username $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
 }
 # }}}
-# git fzf stuff# {{{
+# git fzf stuff {{{
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
@@ -334,7 +338,7 @@ peco-select-gitadd() {
 zle -N peco-select-gitadd
 bindkey '^g^ ' peco-select-gitadd
 # }}}
-# tmux stuff# {{{
+# tmux stuff {{{
 alias takeover="tmux  detach -a"
 alias attach="tmux  attach -t base || tmux new -s base"
 alias ta='tmux  attach -t'

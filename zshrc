@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 umask 022
-#{{{ Check if terminbal is dumb.
+# Check if terminbal is dumb {{{
 if [[ ${TERM} == 'dumb' ]]; then
     return
 fi
 #}}}
-#{{{ Get operating system
+# Get operating system {{{
 platform='unknown'
 unamestr=$(uname)
 if [[ $unamestr == 'Linux' ]]; then
@@ -28,7 +28,7 @@ elif [[ $platform == 'darwin' ]]; then
     source $ZPLUG_HOME/init.zsh
 fi
 # }}}
-# {{{Powerlevel9k settings
+# Powerlevel9k settings {{{
 if zplug check bhilburn/powerlevel9k; then
     POWERLEVEL9K_MODE='nerdfont-complete'
     POWERLEVEL9K_PROMPT_ON_NEWLINE=false
@@ -45,7 +45,7 @@ if zplug check bhilburn/powerlevel9k; then
     POWERLEVEL9K_TIME_FORMAT="%D{%I:%M:%S %P}"
 fi
 # }}}
-# {{{ Adding some variables
+# Adding some variables {{{
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
@@ -61,7 +61,7 @@ export FZF_DEFAULT_OPTS='
 # export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
 fpath=(~/.zsh/completion(N-/) $fpath)
 # }}}
-# {{{ List of all the plugins + load the plugins
+# List of all the plugins + load the plugins {{{
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
@@ -95,6 +95,6 @@ fi
 
 zplug load
 # }}}
-#" Folding the .vimrc {{{
+# Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
