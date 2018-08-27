@@ -51,10 +51,13 @@ alias df='df -h'
 alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
+  alias el='exa -al'
+  alias es='exa -x'
   alias ll='ls -alh --color=auto'
   alias ls='ls -X --color=auto'
   alias lt='tree --dirsfirst -aLpughDFiC 1'
   alias ltd='lt -d'
+  function elt() {exa --group-directories-first -al -T --level=$1}
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ $platform == 'darwin' ]]; then
@@ -64,6 +67,7 @@ fi
 
 # show me files matching "ls grep"
 alias lsg='ll | ag'
+alias lsr='ll | rg'
 
 # mimic vim functions
 alias :q='exit'
