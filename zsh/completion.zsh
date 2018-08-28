@@ -36,7 +36,6 @@ else
 fi
 # }}}
 # Group matches and describe.# {{{
-zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description '%d'
@@ -44,14 +43,16 @@ zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
 zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
-zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:default' menu select=long
 # list-prompt '%S%M matches%s'
 zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
+zstyle ':completion:*' menu yes select
+zstyle ':completion:*-case' menu select=5
 # }}}
 # Fuzzy match mistyped completions.# {{{
-zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+zstyle ':completion:*' completer  _complete _match _prefix _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # }}}
@@ -65,7 +66,7 @@ zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 # }}}
 # Directories# {{{
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion:*:cd:*' ignore-parents parent partial-word
 zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
