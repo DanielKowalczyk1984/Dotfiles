@@ -5,7 +5,6 @@
 # Startup
 # -------
 - repo: Shougo/dein.vim
-# - repo: rafi/awesome-vim-colorschemes
 - repo: flazz/vim-colorschemes
 - repo: rafi/vim-badge
 - repo: thinca/vim-localrc
@@ -16,8 +15,6 @@
 - repo: itchyny/vim-parenmatch
 - repo: vim-airline/vim-airline
 - repo: vim-airline/vim-airline-themes
-  hook_add: |
-    let g:airline_theme='luna'
 - repo: ryanoasis/vim-devicons
 - repo: itchyny/vim-cursorword
   hook_add: |
@@ -62,6 +59,23 @@
     let g:go_highlight_extra_types = 1
     let g:go_highlight_operators = 1
 
+- repo: lervag/vimtex
+  on_ft: tex
+  hook_source: |
+    let g:vimtex_compiler_programe = 'nvr'
+    if !exists('g:deoplete#omni#input_patterns')
+        let g:deoplete#omni#input_patterns = {}
+    endif
+    let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
+    let g:vimtex_fold_enabled = 1
+    let g:vimtex_fold_types = {
+      \ 'preamble' : {'enabled' : 1},
+      \ 'envs' : {
+      \   'whitelist' : ['figure', 'table'],
+      \  },
+      \ }
+
+
 - { repo: vim-python/python-syntax, on_ft: python }
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
 - { repo: vim-scripts/python_match.vim, on_ft: python }
@@ -70,7 +84,6 @@
 
 - { repo: StanAngeloff/php.vim, on_ft: php }
 - { repo: shawncplus/phpcomplete.vim, on_ft: php, on_i: 1 }
-
 - { repo: tbastos/vim-lua, on_ft: lua }
 - { repo: osyo-manga/vim-monster, on_ft: ruby }
 - { repo: toyamarinyon/vim-swift, on_ft: swift }
@@ -99,7 +112,8 @@
   hook_post_source: source $VIMPATH/config/plugins/nerdtree.vim
 
 - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
-- { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
+# - { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
+- { repo: tomtom/tcomment_vim}
 - { repo: t9md/vim-choosewin, on_map: { n: <Plug> }}
 - { repo: Shougo/vinarise.vim, on_cmd: Vinarise }
 - { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
@@ -191,10 +205,27 @@
   on_path: COMMIT_EDITMSG
   hook_source: let g:committia_min_window_width = 70
 
-- repo: benekastah/neomake
+# - repo: benekastah/neomake
+#   if: has('nvim') && empty($VIM_MINIMAL)
+#   on_cmd: Neomake
+#   hook_source: source $VIMPATH/config/plugins/neomake.vim
+#   hook_add: |
+#     let g:lint_filetypes = [
+#       \  'yaml.ansible', 'python', 'php', 'ruby', 'vim', 'go', 'sh',
+#       \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
+#       \  'markdown', 'html', 'yaml'
+#       \ ]
+#     autocmd MyAutoCmd BufWritePost *
+#       \ if index(g:lint_filetypes, &filetype) > -1 && empty(&buftype)
+#       \|   Neomake
+#       \| elseif &filetype =~ 'html'
+#       \|   Neomake tidy
+#       \| endif
+
+- repo: w0rp/ale
   if: has('nvim') && empty($VIM_MINIMAL)
-  on_cmd: Neomake
-  hook_source: source $VIMPATH/config/plugins/neomake.vim
+  on_cmd: ALELint
+  hook_source: source $VIMPATH/config/plugins/ale.vim
   hook_add: |
     let g:lint_filetypes = [
       \  'yaml.ansible', 'python', 'php', 'ruby', 'vim', 'go', 'sh',
@@ -203,9 +234,7 @@
       \ ]
     autocmd MyAutoCmd BufWritePost *
       \ if index(g:lint_filetypes, &filetype) > -1 && empty(&buftype)
-      \|   Neomake
-      \| elseif &filetype =~ 'html'
-      \|   Neomake tidy
+      \|    ALELint
       \| endif
 
 - repo: junegunn/goyo.vim
@@ -327,7 +356,7 @@
 
 - repo: zchee/deoplete-clang
   if: has('nvim') && empty($VIM_MINIMAL)
-  on_ft: c
+  on_ft: c,cpp
   on_i: 1
   hook_source: |
     autocmd MyAutoCmd FileType c setlocal omnifunc=
