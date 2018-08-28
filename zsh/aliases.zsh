@@ -111,6 +111,7 @@ config () {
 		xorg)		sudo $EDITOR /etc/X11/xorg.conf ;;
         zathura)    $EDITOR ~/.config/zathura/zathurarc ;;
         zsh)        $EDITOR ~/.zshrc ;;
+        nvim)       $EDITOR ~/.config/nvim/config/plugins.yaml ;;
         # Invalid
         *)          if [ -f "$1" ]; then
 						if [ -w "$1" ]; then		

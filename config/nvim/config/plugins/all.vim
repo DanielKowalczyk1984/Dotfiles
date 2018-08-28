@@ -304,11 +304,6 @@ if dein#tap('vim-commentary')
 	nmap gcu <Plug>Commentary<Plug>Commentary
 endif
 
-if dein#tap('tomtom/tcomment')
-	xmap <Leader>v  <Plug>TComment
-  nmap <Leader>v  <Plug>TComment
-endif
-
 if dein#tap('vim-easymotion')
 	nmap ss <Plug>(easymotion-s2)
 	nmap sd <Plug>(easymotion-s)
