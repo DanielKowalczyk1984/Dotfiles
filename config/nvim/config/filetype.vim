@@ -77,6 +77,8 @@ augroup MyAutoCmd " {{{
 
 	autocmd FileType cam setlocal nonumber synmaxcol=10000
 
+	autocmd FileType tex let g:tex_conceal = ""
+
 	autocmd FileType go highlight default link goErr WarningMsg |
 		\ match goErr /\<err\>/
 
