@@ -714,5 +714,5 @@ else
 endif
 "}}}
 " Folding the .vimrc {{{
-" vim:foldmethod=marker:foldlevel=0
+" vim:foldmethod=marker:foldlevel=1
 " }}}
