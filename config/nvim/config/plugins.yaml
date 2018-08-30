@@ -365,6 +365,9 @@
 - repo: tweekmonster/deoplete-clang2
   if: has('nvim') && empty($VIM_MINIMAL)
   on_ft: [ c, cpp ]
+  hook_source: |
+    highlight default link CompletePlaceHolder Visual
+    highlight default link CompletePlaceHolderEnds Visual
 
 - repo: wellle/tmux-complete.vim
   if: has('nvim') && empty($VIM_MINIMAL)
