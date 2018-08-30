@@ -6,6 +6,8 @@
 # -------
 - repo: Shougo/dein.vim
 - repo: flazz/vim-colorschemes
+- repo: terryma/vim-multiple-cursors
+- repo: matze/vim-move
 - repo: arcticicestudio/nord-vim
 - repo: thinca/vim-localrc
 - repo: christoomey/vim-tmux-navigator
@@ -67,14 +69,6 @@
         let g:deoplete#omni#input_patterns = {}
     endif
     let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
-    let g:vimtex_fold_enabled = 1
-    let g:vimtex_fold_types = {
-      \ 'preamble' : {'enabled' : 1},
-      \ 'envs' : {
-      \   'whitelist' : ['figure', 'table'],
-      \  },
-      \ }
-
 
 - { repo: vim-python/python-syntax, on_ft: python }
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
@@ -82,11 +76,8 @@
 - { repo: tmhedberg/SimpylFold, on_ft: python }
 - { repo: raimon49/requirements.txt.vim, on_ft: requirements }
 
-- { repo: StanAngeloff/php.vim, on_ft: php }
-- { repo: shawncplus/phpcomplete.vim, on_ft: php, on_i: 1 }
 - { repo: tbastos/vim-lua, on_ft: lua }
 - { repo: osyo-manga/vim-monster, on_ft: ruby }
-- { repo: toyamarinyon/vim-swift, on_ft: swift }
 - { repo: vim-jp/syntax-vim-ex, n_ft: vim }
 
 - { repo: chrisbra/csv.vim, on_ft: csv }
@@ -101,8 +92,6 @@
 - { repo: jstrater/mpvim, on_ft: portfile }
 - { repo: robbles/logstash.vim, on_ft: logstash }
 - { repo: exu/pgsql.vim, on_ft: pgsql }
-- { repo: othree/nginx-contrib-vim, on_ft: nginx }
-- { repo: IN3D/vim-raml, on_ft: raml }
 
 # ==========================================
 # Commands
@@ -204,23 +193,6 @@
   on_path: COMMIT_EDITMSG
   hook_source: let g:committia_min_window_width = 70
 
-# - repo: benekastah/neomake
-#   if: has('nvim') && empty($VIM_MINIMAL)
-#   on_cmd: Neomake
-#   hook_source: source $VIMPATH/config/plugins/neomake.vim
-#   hook_add: |
-#     let g:lint_filetypes = [
-#       \  'yaml.ansible', 'python', 'php', 'ruby', 'vim', 'go', 'sh',
-#       \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
-#       \  'markdown', 'html', 'yaml'
-#       \ ]
-#     autocmd MyAutoCmd BufWritePost *
-#       \ if index(g:lint_filetypes, &filetype) > -1 && empty(&buftype)
-#       \|   Neomake
-#       \| elseif &filetype =~ 'html'
-#       \|   Neomake tidy
-#       \| endif
-
 - repo: w0rp/ale
   if: has('nvim') && empty($VIM_MINIMAL)
   on_cmd: ALELint
@@ -286,14 +258,14 @@
     source $VIMPATH/config/plugins/deoplete.vim
     call deoplete#enable()
 
-- repo: Shougo/neocomplete
-  depends: context_filetype.vim
-  if: ! has('nvim') && has('lua') && empty($VIM_MINIMAL)
-  on_event: InsertEnter
-  hook_add: |
-    let g:neocomplete#data_directory = $VARPATH.'/complete'
-    let g:neocomplete#enable_at_startup = 1
-  hook_source: source $VIMPATH/config/plugins/neocomplete.vim
+# - repo: Shougo/neocomplete
+#   depends: context_filetype.vim
+#   if: ! has('nvim') && has('lua') && empty($VIM_MINIMAL)
+#   on_event: InsertEnter
+#   hook_add: |
+#     let g:neocomplete#data_directory = $VARPATH.'/complete'
+#     let g:neocomplete#enable_at_startup = 1
+#   hook_source: source $VIMPATH/config/plugins/neocomplete.vim
 
 - repo: Shougo/neosnippet.vim
   depends: [ neosnippet-snippets, context_filetype.vim ]
@@ -353,21 +325,16 @@
   on_i: 1
   hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
 
-# - repo: zchee/deoplete-clang
-#   if: has('nvim') && empty($VIM_MINIMAL)
-#   on_ft: [c, cpp]
-#   on_i: 1
-#   hook_source: |
-#     # autocmd MyAutoCmd FileType c setlocal omnifunc=
-#     let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
-#     let g:deoplete#sources#clang#clang_header = "/usr/include/clang"
-
 - repo: tweekmonster/deoplete-clang2
   if: has('nvim') && empty($VIM_MINIMAL)
   on_ft: [ c, cpp ]
   hook_source: |
     highlight default link CompletePlaceHolder Visual
     highlight default link CompletePlaceHolderEnds Visual
+
+- repo: sheerun/vim-polyglot
+  if: has('nvim') && empty($VIM_MINIMAL)
+  on_ft: [ c, cpp ]
 
 - repo: wellle/tmux-complete.vim
   if: has('nvim') && empty($VIM_MINIMAL)
