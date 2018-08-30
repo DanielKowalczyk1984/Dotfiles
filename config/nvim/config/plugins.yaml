@@ -6,6 +6,7 @@
 # -------
 - repo: Shougo/dein.vim
 - repo: flazz/vim-colorschemes
+- repo: arcticicestudio/nord-vim
 - repo: thinca/vim-localrc
 - repo: christoomey/vim-tmux-navigator
 - repo: junegunn/vim-peekaboo
