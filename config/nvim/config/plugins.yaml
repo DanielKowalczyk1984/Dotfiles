@@ -6,7 +6,6 @@
 # -------
 - repo: Shougo/dein.vim
 - repo: flazz/vim-colorschemes
-- repo: rafi/vim-badge
 - repo: thinca/vim-localrc
 - repo: christoomey/vim-tmux-navigator
 - repo: junegunn/vim-peekaboo
@@ -87,7 +86,7 @@
 - { repo: tbastos/vim-lua, on_ft: lua }
 - { repo: osyo-manga/vim-monster, on_ft: ruby }
 - { repo: toyamarinyon/vim-swift, on_ft: swift }
-- { repo: vim-jp/syntax-vim-ex, on_ft: vim }
+- { repo: vim-jp/syntax-vim-ex, n_ft: vim }
 
 - { repo: chrisbra/csv.vim, on_ft: csv }
 - { repo: tpope/vim-git, on_ft: [ gitcommit, gitrebase, gitconfig ]}
@@ -112,8 +111,7 @@
   hook_post_source: source $VIMPATH/config/plugins/nerdtree.vim
 
 - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
-# - { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
-- { repo: tomtom/tcomment_vim}
+- { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
 - { repo: t9md/vim-choosewin, on_map: { n: <Plug> }}
 - { repo: Shougo/vinarise.vim, on_cmd: Vinarise }
 - { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
@@ -354,14 +352,18 @@
   on_i: 1
   hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
 
-- repo: zchee/deoplete-clang
+# - repo: zchee/deoplete-clang
+#   if: has('nvim') && empty($VIM_MINIMAL)
+#   on_ft: [c, cpp]
+#   on_i: 1
+#   hook_source: |
+#     # autocmd MyAutoCmd FileType c setlocal omnifunc=
+#     let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
+#     let g:deoplete#sources#clang#clang_header = "/usr/include/clang"
+
+- repo: tweekmonster/deoplete-clang2
   if: has('nvim') && empty($VIM_MINIMAL)
-  on_ft: c,cpp
-  on_i: 1
-  hook_source: |
-    autocmd MyAutoCmd FileType c setlocal omnifunc=
-    let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
-    let g:deoplete#sources#clang#clang_header = "/usr/include/clang"
+  on_ft: [ c, cpp ]
 
 - repo: wellle/tmux-complete.vim
   if: has('nvim') && empty($VIM_MINIMAL)

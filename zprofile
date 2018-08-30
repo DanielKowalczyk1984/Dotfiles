@@ -11,7 +11,7 @@ if command -v gem >/dev/null; then
 fi
 # }}}
 # Editor {{{
-export EDITOR=vim
+export EDITOR=nvim
 export CVSEDITOR="${EDITOR}"
 export SVN_EDITOR="${EDITOR}"
 export GIT_EDITOR="${EDITOR}"
