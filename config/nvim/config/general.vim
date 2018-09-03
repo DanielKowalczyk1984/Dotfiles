@@ -54,6 +54,11 @@ if has('wildmenu')
 	set wildignore+=**/node_modules/**,**/bower_modules/**,*/.sass-cache/*
 	set wildignore+=application/vendor/**,**/vendor/ckeditor/**,media/vendor/**
 	set wildignore+=__pycache__,*.egg-info
+	set wildignore+=*.aux,*.lof,*.log,*.lot,*.fls,*.out,*.toc,*.fmt,*.fot,*.cb,*.cb2,.*.lb
+  set wildignore+=*.bbl,*.bcf,*.blg,*-blx.aux,*-blx.bib,*.run.xml
+  set wildignore+=*.fdb_latexmk,*.synctex,*.synctex(busy),*.synctex.gz,*.synctex.gz(busy),*.pdfsync
+
+
 endif
 
 " }}}
