@@ -6,7 +6,6 @@
 # -------
 - repo: Shougo/dein.vim
 - repo: flazz/vim-colorschemes
-- repo: terryma/vim-multiple-cursors
 - repo: matze/vim-move
 - repo: arcticicestudio/nord-vim
 - repo: thinca/vim-localrc
@@ -340,6 +339,10 @@
   if: has('nvim') && empty($VIM_MINIMAL)
   on_i: 1
   hook_add: let g:tmuxcomplete#trigger = ''
+
+- repo: rhysd/vim-grammarous
+  if: has('nvim')
+  on_map: { n: <Plug> }
 
 
 # ==========================================
