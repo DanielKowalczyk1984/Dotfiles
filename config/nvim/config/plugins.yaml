@@ -341,7 +341,7 @@
   hook_add: let g:tmuxcomplete#trigger = ''
 
 - repo: rhysd/vim-grammarous
-  if: has('nvim')
+  if: has('nvim') && empty($VIM_MINIMAL)
   on_map: { n: <Plug> }
 
 
