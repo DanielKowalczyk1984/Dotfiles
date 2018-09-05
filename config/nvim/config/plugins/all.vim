@@ -9,7 +9,7 @@ if dein#tap('denite.nvim')
 	nnoremap <silent><LocalLeader>d :<C-u>Denite directory_rec -default-action=cd<CR>
 	nnoremap <silent><LocalLeader>v :<C-u>Denite register -buffer-name=register<CR>
 	xnoremap <silent><LocalLeader>v :<C-u>Denite register -buffer-name=register -default-action=replace<CR>
-	nnoremap <silent><LocalLeader>l :<C-u>Denite location_list -buffer-name=list<CR>
+	nnoremap <silent><LocalLeader>L :<C-u>Denite location_list -buffer-name=list<CR>
 	nnoremap <silent><LocalLeader>q :<C-u>Denite quickfix -buffer-name=list<CR>
 	nnoremap <silent><LocalLeader>n :<C-u>Denite dein<CR>
 	nnoremap <silent><LocalLeader>g :<C-u>Denite grep<CR>
