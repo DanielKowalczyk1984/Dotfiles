@@ -113,6 +113,7 @@
 - { repo: jreybert/vimagit, on_cmd: Magit }
 - { repo: tweekmonster/helpful.vim, on_cmd: HelpfulVersion }
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
+
 - repo: sbdchd/neoformat
   on_cmd: Neoformat
   hook_source: |
