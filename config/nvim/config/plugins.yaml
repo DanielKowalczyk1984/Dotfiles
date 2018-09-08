@@ -90,7 +90,6 @@
 - { repo: dag/vim-fish, on_ft: fish }
 - { repo: jstrater/mpvim, on_ft: portfile }
 - { repo: robbles/logstash.vim, on_ft: logstash }
-- { repo: exu/pgsql.vim, on_ft: pgsql }
 
 # ==========================================
 # Commands
@@ -267,14 +266,14 @@
     source $VIMPATH/config/plugins/deoplete.vim
     call deoplete#enable()
 
-# - repo: Shougo/neocomplete
-#   depends: context_filetype.vim
-#   if: ! has('nvim') && has('lua') && empty($VIM_MINIMAL)
-#   on_event: InsertEnter
-#   hook_add: |
-#     let g:neocomplete#data_directory = $VARPATH.'/complete'
-#     let g:neocomplete#enable_at_startup = 1
-#   hook_source: source $VIMPATH/config/plugins/neocomplete.vim
+- repo: Shougo/neocomplete
+  depends: context_filetype.vim
+  if: ! has('nvim') && has('lua') && empty($VIM_MINIMAL)
+  on_event: InsertEnter
+  hook_add: |
+    let g:neocomplete#data_directory = $VARPATH.'/complete'
+    let g:neocomplete#enable_at_startup = 1
+  hook_source: source $VIMPATH/config/plugins/neocomplete.vim
 
 - repo: Shougo/neosnippet.vim
   depends: [ neosnippet-snippets, context_filetype.vim ]
@@ -340,10 +339,6 @@
   hook_source: |
     highlight default link CompletePlaceHolder Visual
     highlight default link CompletePlaceHolderEnds Visual
-
-# - repo: sheerun/vim-polyglot
-#   if: has('nvim') && empty($VIM_MINIMAL)
-#   on_ft: [ c, cpp ]
 
 - repo: wellle/tmux-complete.vim
   if: has('nvim') && empty($VIM_MINIMAL)
