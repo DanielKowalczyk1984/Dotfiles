@@ -119,7 +119,6 @@
   hook_source: |
     let g:neoformat_tex_latexindent = {
         \ 'exe': 'latexindent',
-        \ 'replace': 1,
         \ 'stdin': 1,
         \ 'no_append': 1,
         \ }
