@@ -167,6 +167,13 @@ nnoremap <silent> <A-j> :<C-U>tabnext<CR>
 nnoremap <silent> <A-k> :<C-U>tabprevious<CR>
 nnoremap <silent> <C-Tab> :<C-U>tabnext<CR>
 nnoremap <silent> <C-S-Tab> :<C-U>tabprevious<CR>
+" Buffers
+nnoremap <silent> <Leader>bn :bnext!<CR>
+nnoremap <silent> <Leader>bp :bprevious!<CR>
+nnoremap <silent> <Leader>bd :bd<CR>
+nnoremap <silent> <Leader>bD :bd!<CR>
+nnoremap <silent> <Leader>bN :new<CR>
+nnoremap <silent> <Leader>bV :vnew<CR>
 " Uses g:lasttab set on TabLeave in MyAutoCmd
 let g:lasttab = 1
 nmap <silent> \\ :execute 'tabn '.g:lasttab<CR>
