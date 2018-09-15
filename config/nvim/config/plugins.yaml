@@ -5,6 +5,7 @@
 # Startup
 # -------
 - repo: Shougo/dein.vim
+- repo: mhinz/vim-startify
 - repo: flazz/vim-colorschemes
 - repo: matze/vim-move
 - repo: arcticicestudio/nord-vim
