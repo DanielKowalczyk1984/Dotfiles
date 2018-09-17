@@ -1,5 +1,5 @@
 func! myspacevim#before() abort
-    " FileType AutoCmd {{{
+    " FileType AutoCmd: {{{
     augroup MyAutoCmd
       " Automatically set read-only for files being edited elsewhere
       autocmd SwapExists * nested let v:swapchoice = 'o'
@@ -74,6 +74,13 @@ func! myspacevim#before() abort
         \ setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
     augroup END " }}}
+		" Neoformat settings:{{{
+let g:neoformat_enabled_tex = ['latexindent']
+let g:neoformat_tex_latexindent = {
+		\ 'exe': 'latexindent',
+		\ 'stdin': 1,
+		\ 'no_append': 1,
+		\ }"}}}
 endf
 
 func! myspacevim#after() abort
@@ -198,7 +205,7 @@ func! myspacevim#after() abort
     call <SID>toggle(0, &hlsearch)
 
     let &cpoptions = s:save_cpo "}}}
-    " Wildmenu {{{
+    " Wildmenu: {{{
     if has('wildmenu')
       set nowildmenu
       set wildmode=list:longest,full
@@ -214,7 +221,7 @@ func! myspacevim#after() abort
       set wildignore+=*.fdb_latexmk,*.synctex,*.synctex(busy),*.synctex.gz,*.synctex.gz(busy),*.pdfsync
     endif
     " }}}
-		" NERDTree{{{
+		" NERDTree: {{{
 
 autocmd MyAutoCmd FileType nerdtree call s:nerdtree_settings()
 
@@ -565,8 +572,8 @@ function! s:execute_system_associated(filenode)
 endfunction
 " }}}}}}
 "}}}
-" Duplicate lines
+		" Duplicate lines: {{{
 nnoremap <Leader>d m`YP``
-vnoremap <Leader>d YPgv
+vnoremap <Leader>d YPgv"}}}
 endf
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
