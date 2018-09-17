@@ -38,16 +38,11 @@ func! myspacevim#before() abort
 
       autocmd FileType crontab setlocal nobackup nowritebackup
 
-      autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
-
       autocmd FileType yaml.docker-compose setlocal expandtab
 
       autocmd FileType gitcommit setlocal spell
 
       autocmd FileType gitcommit,qfreplace setlocal nofoldenable
-
-      " https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
-      autocmd FileType html,css,javascript,jsx,javascript.jsx setlocal backupcopy=yes
 
       autocmd FileType zsh setlocal foldenable foldmethod=marker
 
@@ -61,10 +56,6 @@ func! myspacevim#before() abort
         \ set expandtab
         \ | setlocal spell autoindent formatoptions=tcroqn2 comments=n:>
 
-      autocmd FileType apache setlocal path+=./;/
-
-      autocmd FileType cam setlocal nonumber synmaxcol=10000
-
       autocmd FileType tex let g:tex_conceal = ""
 
       autocmd FileType go highlight default link goErr WarningMsg |
@@ -75,12 +66,12 @@ func! myspacevim#before() abort
 
     augroup END " }}}
 		" Neoformat settings:{{{
-let g:neoformat_enabled_tex = ['latexindent']
-let g:neoformat_tex_latexindent = {
-		\ 'exe': 'latexindent',
-		\ 'stdin': 1,
-		\ 'no_append': 1,
-		\ }"}}}
+		let g:neoformat_enabled_tex = ['latexindent']
+		let g:neoformat_tex_latexindent = {
+			\ 'exe': 'latexindent',
+			\ 'stdin': 1,
+			\ 'no_append': 1,
+			\ }"}}}
 endf
 
 func! myspacevim#after() abort
