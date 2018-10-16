@@ -1,0 +1,57 @@
+[papers]
+dir = ~/Documents/papers
+
+[mip]
+dir = ~/Dropbox/ArticlesArchive/MathProgramming
+
+[KPcuts]
+dir = ~/Dropbox/ArticlesArchive/KnapsackCuts
+
+[bpp]
+dir = ~/Dropbox/ArticlesArchive/BPP
+
+[lotsizing]
+dir = ~/Dropbox/ArticlesArchive/lotsizing
+
+[presentations]
+dir = ~/Dropbox/ArticlesArchive/presentations
+
+[thesis]
+dir = ~/Dropbox/ArticlesArchive/thesisOR
+
+[vrp]
+dir = ~/Dropbox/ArticlesArchive/VRP
+
+[sdp]
+dir = ~/Dropbox/ArticlesArchive/SemidefinteProgramming
+
+[vcp]
+dir = ~/Dropbox/ArticlesArchive/ColoringProblems
+
+[tools]
+dir = ~/Dropbox/ArticlesArchive/OR-tools
+
+[optimization]
+dir = ~/Dropbox/ArticlesArchive/General Optimization
+
+[scheduling]
+dir = ~/Dropbox/ArticlesArchive/General Scheduling
+
+[cg]
+dir = ~/Dropbox/ArticlesArchive/ColumnGeneration
+
+[robust]
+dir = ~/Dropbox/ArticlesArchive/RobustOptimization
+
+[bdd]
+dir = ~/Dropbox/ArticlesArchive/ZDD&BDD
+
+[approx]
+dir = ~/Dropbox/ArticlesArchive/ApproxAlgorithms
+
+[settings]
+default-library = papers
+file-name = {doc[title]} {doc[year]}
+# Edit the info.yaml file before adding a doc into the library
+# papis add --edit
+add-edit = True
