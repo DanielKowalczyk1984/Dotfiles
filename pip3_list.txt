@@ -2,7 +2,6 @@ appdirs
 Archey3 
 Beaker 
 beautifulsoup4 
-Brlapi 
 catfish 
 chardet 
 cheat 
@@ -17,7 +16,6 @@ dotfiles
 enum-compat 
 executor 
 fasteners 
-freezedry 
 Glances 
 greenlet 
 gufw 
@@ -25,7 +23,6 @@ howdoi
 humanfriendly 
 i3ipc 
 isc 
-lightdm-gtk-greeter-settings 
 louis 
 lxml 
 Mako 
