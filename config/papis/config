@@ -49,6 +49,9 @@ dir = ~/Dropbox/ArticlesArchive/ZDD&BDD
 [approx]
 dir = ~/Dropbox/ArticlesArchive/ApproxAlgorithms
 
+[kpc]
+dir = ~/Dropbox/ArticlesArchive/KP(C)
+
 [settings]
 default-library = papers
 file-name = {doc[title]} {doc[year]}
