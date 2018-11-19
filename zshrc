@@ -74,6 +74,7 @@ zplug "b4b4r07/enhancd", use:init.sh
 zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "zsh-users/zsh-autosuggestions"
 zplug "bhilburn/powerlevel9k", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:1
 zplug "~/.zsh", from:local, use:aliases.zsh
