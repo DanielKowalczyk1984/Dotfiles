@@ -14,7 +14,7 @@ env:
 
 # Window dimensions in character columns and lines
 # (changes require restart)
-dimensions:
+window.dimensions:
   columns: 160
   lines: 80
 
@@ -55,12 +55,11 @@ font:
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   use_thin_strokes: false
 
-custom_cursor_colors: false
 # Should display the render timer
 render_timer: false
 # Colors (ayu Light)
@@ -550,7 +549,7 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-hide_cursor_when_typing: false
+mouse.hide_cursor_when_typing: false
 
 # Shell
 #
