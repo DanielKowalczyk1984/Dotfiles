@@ -52,9 +52,42 @@ dir = ~/Dropbox/ArticlesArchive/ApproxAlgorithms
 [kpc]
 dir = ~/Dropbox/ArticlesArchive/KP(C)
 
+[app]
+dir = ~/Dropbox/ArticlesArchive/ApplicationsOR
+
+[mwisp]
+dir = ~/Dropbox/ArticlesArchive/MWISP
+
+[rcpsp]
+dir = ~/Dropbox/ArticlesArchive/RCPSP
+
+[rlp]
+dir = ~/Dropbox/ArticlesArchive/RLP
+
+[metallo]
+dir = ~/Dropbox/ArticlesArchive/Metallo_papers
+
+[covering]
+dir = ~/Dropbox/ArticlesArchive/SetCovering
+
+[history]
+dir = ~/Dropbox/ArticlesArchive/History
+
+[MLOP]
+dir = ~/Dropbox/ArticlesArchive/CO&ML
+
+[scatter]
+dir = ~/Dropbox/ArticlesArchive/ScatterSearch
+
+[cp]
+dir = ~/Dropbox/ArticlesArchive/CP
+
 [settings]
 default-library = papers
 file-name = {doc[title]} {doc[year]}
 # Edit the info.yaml file before adding a doc into the library
 # papis add --edit
 add-edit = True
+# Ask for confirmation when doing papis add ...
+add-confirm = True
+match-format = {doc[title]}{doc[author]}{doc[year]}
