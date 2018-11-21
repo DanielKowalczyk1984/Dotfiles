@@ -82,6 +82,9 @@ dir = ~/Dropbox/ArticlesArchive/ScatterSearch
 [cp]
 dir = ~/Dropbox/ArticlesArchive/CP
 
+[free]
+dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
+
 [settings]
 default-library = papers
 file-name = {doc[title]} {doc[year]}
