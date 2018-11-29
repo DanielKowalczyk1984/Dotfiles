@@ -16,3 +16,7 @@ config/ranger/history
 config/ranger/colorschemes/*
 tmux/plugins/*
 .netrwhist
+config/sublime-text-3/*
+!config/sublime-text-3/Packages/User/*-settings
+config/papis/*
+!config/papis/config

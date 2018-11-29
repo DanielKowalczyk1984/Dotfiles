@@ -109,7 +109,7 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-	autocrlf = false
+	autocrlf = input
 	editor = subl -n -w
 	excludesfile = /Users/Daniel/.global_gitignore
 [advice]

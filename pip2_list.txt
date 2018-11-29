@@ -1,7 +1,6 @@
 appdirs 
 arandr 
 click 
-Editra 
 futures 
 greenlet 
 hgsvn 
@@ -23,16 +22,10 @@ pyinotify
 pyparsing 
 python-dateutil 
 python-hglib 
-python-musicbrainz 
 pytz 
-sbackup 
 scipy 
 setuptools 
 six 
-syncthing-gtk 
 team 
-Terminator 
 trollius 
-ufw 
 wxPython 
-wxPython-common 
