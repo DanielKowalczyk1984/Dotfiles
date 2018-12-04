@@ -42,6 +42,9 @@
 		"SublimeLinter",
 		"SublimeLinter-chktex",
 		"SublimeLinter-clang",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-cpplint",
+		"SublimeLinter-gcc",
 		"SublimeREPL",
 		"Themr",
 		"Uncrustify"
