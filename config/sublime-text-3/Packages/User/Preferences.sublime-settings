@@ -72,7 +72,8 @@
 		"*.nav",
 		"*.pre",
 		"*.snm",
-		"*.vrb"
+		"*.vrb",
+		"*.html"
 	],
 	"folder_exclude_patterns":
 	[
@@ -85,7 +86,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"ignored_packages":
 	[
 		"SublimeLinter-clang",

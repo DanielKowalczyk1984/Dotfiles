@@ -85,6 +85,9 @@ dir = ~/Dropbox/ArticlesArchive/CP
 [free]
 dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
 
+[fpt]
+dir = ~/Dropbox/ArticlesArchive/FTP
+
 [settings]
 default-library = papers
 file-name = {doc[title]} {doc[year]}
