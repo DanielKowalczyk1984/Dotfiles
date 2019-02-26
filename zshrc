@@ -49,7 +49,16 @@ fi
 export ZSH_TMUX_AUTOSTART=true
 ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
-export FZF_DEFAULT_COMMAND='rg --hidden ""'
+if (( $+commands[fd] )); then
+  export FZF_CMD='fd --hidden --follow --no-ignore-vcs --exclude ".git/*" --exclude "node_modules/*"'
+  export FZF_DEFAULT_COMMAND="$FZF_CMD --type f"
+  export FZF_CTRL_T_COMMAND="$FZF_CMD"
+  export FZF_ALT_C_COMMAND="$FZF_CMD --type d ."
+elif (( $+commands[rg] )); then
+  export FZF_CMD='rg --no-messages --no-ignore-vcs'
+  export FZF_DEFAULT_COMMAND="$FZF_CMD --files"
+  export FZF_CTRL_T_COMMAND="$FZF_CMD"
+fi
 export FZF_DEFAULT_OPTS='
 --extended
 --ansi
