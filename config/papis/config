@@ -88,6 +88,18 @@ dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
 [fpt]
 dir = ~/Dropbox/ArticlesArchive/FTP
 
+[tspdp]
+dir = ~/Dropbox/ArticlesArchive/TSPTD
+
+[quantum]
+dir = ~/Dropbox/ArticlesArchive/Quantum
+
+[math]
+dir = ~/Dropbox/ArticlesArchive/Math
+
+[books]
+dir = ~/Dropbox/BooksArchive
+
 [settings]
 default-library = papers
 file-name = {doc[title]} {doc[year]}

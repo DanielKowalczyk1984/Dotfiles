@@ -51,7 +51,7 @@ alias df='df -h'
 alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
-  alias el='exa -al'
+  alias el='exa -al --group-directories-first'
   alias es='exa -x'
   alias ll='ls -alh --color=auto'
   alias ls='ls -X --color=auto'
