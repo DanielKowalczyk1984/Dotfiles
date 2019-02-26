@@ -82,14 +82,13 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Knack Nerd Font",
+	"font_face": "Hack Nerd Font",
 	"font_options":
 	[
 	],
-	"font_size": 10,
+	"font_size": 12,
 	"ignored_packages":
 	[
-		"SublimeLinter-clang",
 		"Vintage"
 	],
 	"match_brackets": false,
@@ -98,7 +97,7 @@
 	"match_brackets_content": false,
 	"match_brackets_square": false,
 	"match_tags": false,
-	"theme": "Boxy Ocean.sublime-theme",
+	"theme": "Material Solarized Dark.sublime-theme",
 	"theme_accent_cyan": true,
 	"theme_bar": true,
 	"theme_bar_logo_atomized": true,
