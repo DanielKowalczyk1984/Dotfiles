@@ -88,6 +88,15 @@ dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
 [fpt]
 dir = ~/Dropbox/ArticlesArchive/FTP
 
+[quantum]
+dir = ~/Dropbox/ArticlesArchive/Quantum
+
+[math]
+dir = ~/Dropbox/ArticlesArchive/Math
+
+[books]
+dir = ~/Dropbox/BooksArchive
+
 [tsptd]
 dir = ~/Dropbox/ArticlesArchive/TSPTD
 
