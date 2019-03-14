@@ -184,15 +184,15 @@ targz()
 }
 # }}}
 # Managing Packages {{{
-alias update='yaourt -Syua'
-alias updatef='yaourt -Syua --noconfirm'
-alias clean='yaourt -Qdtd --ignore awesome'
-alias install='yaourt -S'
-alias installf='yaourt -S --noconfirm'
-alias remove='yaourt -Rsnc'
-alias removef='yaourt -Rdd'
-alias search='yaourt -Ss' 
-alias infos='yaourt -Qi'
+alias update='yay -Syua'
+alias updatef='yay -Syua --noconfirm'
+alias clean='yay -Qdtd --ignore awesome'
+alias install='yay -S'
+alias installf='yay -S --noconfirm'
+alias remove='yay -Rsnc'
+alias removef='yay -Rdd'
+alias search='yay -Ss' 
+alias infos='yay -Qi'
 # }}}
 # Directories {{{
 alias i3='cd ~/.config/i3 && ll'
