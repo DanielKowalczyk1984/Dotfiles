@@ -266,31 +266,6 @@ da() { ($1 &) }
 zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
 dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # }}}
-# Pygments stuff {{{
-pretty() { pygmentize -f terminal "$1" | less -R }
-
-pygmentize_alias() {
-    if has "pygmentize"; then
-        pygmentize -O style=native -f 256 -g L
-    else
-        cat -
-    fi
-}
-alias -g P="| pygmentize_alias"
-# }}}
-# Color manual pages {{{
-# man() {
-#     env \
-#     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-#     LESS_TERMCAP_md=$(printf "\e[1;31m") \
-#     LESS_TERMCAP_me=$(printf "\e[0m") \
-#     LESS_TERMCAP_se=$(printf "\e[0m") \
-#     LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-#     LESS_TERMCAP_ue=$(printf "\e[0m") \
-#     LESS_TERMCAP_us=$(printf "\e[1;32m") \
-#     man "$@"
-# }
-# }}}
 # lpass fzf stuff {{{
 flpass_pass(){
     lpass show -c --password $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
