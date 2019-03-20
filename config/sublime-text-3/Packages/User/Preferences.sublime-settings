@@ -89,7 +89,8 @@
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage"
+		"SublimeLinter-clang",
+		"SublimeLinter-cpplint"
 	],
 	"match_brackets": false,
 	"match_brackets_angle": false,
