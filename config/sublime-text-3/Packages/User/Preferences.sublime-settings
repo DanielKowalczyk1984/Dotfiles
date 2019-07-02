@@ -153,6 +153,7 @@
 	"font_size": 9,
 	"ignored_packages":
 	[
+		"ActualVim",
 		"SublimeLinter-clang",
 		"SublimeLinter-cpplint"
 	],
