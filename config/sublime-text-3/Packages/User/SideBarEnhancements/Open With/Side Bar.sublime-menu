@@ -47,7 +47,7 @@
 									"extensions":"pdf|dvi|ps", //any file with extension
 									"args":[]
 						},
-				"open_automatically" : false// will close the view/tab and launch the application
+				"open_automatically" : true// will close the view/tab and launch the application
 			},
 
 			{"caption":"-"}
