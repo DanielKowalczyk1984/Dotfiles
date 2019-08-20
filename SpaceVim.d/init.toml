@@ -46,6 +46,9 @@ auto-completion-return-key-behavior = "smart"
 auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
+name = "colorscheme"
+
+[[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
@@ -54,7 +57,7 @@ default_height = 30
 name = 'lang#latex'
 
 [[layers]]
-name = 'denite'
+name = 'unite'
 
 [[layers]]
 name = 'lang#go'
