@@ -15,21 +15,23 @@ elif [[ $unamestr == 'Darwin' ]]; then
   platform='darwin'
 fi
 
-if [[ $platform == 'linux' ]]; then
-    if [[ ! -d /usr/share/zsh/scripts/zplug ]]; then
-      yaourt -S zplug
-    fi
-    source /usr/share/zsh/scripts/zplug/init.zsh
-elif [[ $platform == 'darwin' ]]; then
-    if [[ ! -d /usr/local/opt/zplug ]]; then
-        brew install zplug
-    fi
-    export ZPLUG_HOME=/usr/local/opt/zplug
-    source $ZPLUG_HOME/init.zsh
-fi
+# if [[ $platform == 'linux' ]]; then
+#     if [[ ! -d /usr/share/zsh/scripts/zplug ]]; then
+#       yaourt -S zplug
+#     fi
+#     source /usr/share/zsh/scripts/zplug/init.zsh
+# elif [[ $platform == 'darwin' ]]; then
+#     if [[ ! -d /usr/local/opt/zplug ]]; then
+#         brew install zplug
+#     fi
+#     export ZPLUG_HOME=/usr/local/opt/zplug
+#     source $ZPLUG_HOME/init.zsh
+# fi
+export ZPLUG_HOME=/home/daniel/.zplug
+source $ZPLUG_HOME/init.zsh
 # }}}
 # Powerlevel9k settings {{{
-if zplug check bhilburn/powerlevel9k; then
+if zplug romkatv/powerlevel10k; then
     POWERLEVEL9K_MODE='nerdfont-complete'
     POWERLEVEL9K_PROMPT_ON_NEWLINE=false
     POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
@@ -76,7 +78,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
-zplug "plugins/vi-mode", from:oh-my-zsh
+# zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "supercrabtree/k"
 zplug "hlissner/zsh-autopair", defer:2
 zplug "b4b4r07/enhancd", use:init.sh
@@ -84,7 +86,7 @@ zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-autosuggestions"
-zplug "bhilburn/powerlevel9k", as:theme
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:1
 zplug "~/.zsh", from:local, use:aliases.zsh
 zplug "~/.zsh", from:local, use:setopt.zsh, defer:0
@@ -94,6 +96,7 @@ zplug "~/.zsh", from:local, use:noglob.zsh
 zplug "~/.zsh", from:local, use:spectrum.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
+zplug "~/.zsh", from:local, use:p10k.zsh
 zplug "takaaki-kasai/git-foresta", as:command, use:"git-foresta"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

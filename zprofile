@@ -91,9 +91,10 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 #}}}
 # Gurobi environment {{{
-export GUROBI_HOME="/opt/gurobi810/linux64"
+export GUROBI_HOME="/opt/gurobi811/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
+export CPLEX_DIR="/opt/ibm/ILOG/CPLEX_Studio1263/"
 # }}}
 # thefuck {{{
 eval $(thefuck --alias)

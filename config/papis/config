@@ -73,7 +73,7 @@ dir = ~/Dropbox/ArticlesArchive/SetCovering
 [history]
 dir = ~/Dropbox/ArticlesArchive/History
 
-[MLOP]
+[COML]
 dir = ~/Dropbox/ArticlesArchive/CO&ML
 
 [scatter]
@@ -99,6 +99,12 @@ dir = ~/Dropbox/BooksArchive
 
 [tsptd]
 dir = ~/Dropbox/ArticlesArchive/TSPTD
+
+[minimal]
+dir=~/Dropbox/ArticlesArchive/Articles/MinimalSubmanifolds
+
+[minmax]
+dir=~/Dropbox/ArticlesArchive/Articles/MinMax
 
 [settings]
 default-library = papers

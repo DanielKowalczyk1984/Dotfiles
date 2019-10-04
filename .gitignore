@@ -20,3 +20,5 @@ config/sublime-text-3/*
 !config/sublime-text-3/Packages/User/*-settings
 config/papis/*
 !config/papis/config
+config/Code\ -\ OSS/*
+!config/Code\ -\ OSS/User/*.json
