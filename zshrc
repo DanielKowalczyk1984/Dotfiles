@@ -15,18 +15,20 @@ elif [[ $unamestr == 'Darwin' ]]; then
   platform='darwin'
 fi
 
-if [[ $platform == 'linux' ]]; then
-    if [[ ! -d /usr/share/zsh/scripts/zplug ]]; then
-      yaourt -S zplug
-    fi
-    source /usr/share/zsh/scripts/zplug/init.zsh
-elif [[ $platform == 'darwin' ]]; then
-    if [[ ! -d /usr/local/opt/zplug ]]; then
-        brew install zplug
-    fi
-    export ZPLUG_HOME=/usr/local/opt/zplug
-    source $ZPLUG_HOME/init.zsh
-fi
+# if [[ $platform == 'linux' ]]; then
+#     if [[ ! -d /usr/share/zsh/scripts/zplug ]]; then
+#       yaourt -S zplug
+#     fi
+#     source /usr/share/zsh/scripts/zplug/init.zsh
+# elif [[ $platform == 'darwin' ]]; then
+#     if [[ ! -d /usr/local/opt/zplug ]]; then
+#         brew install zplug
+#     fi
+#     export ZPLUG_HOME=/usr/local/opt/zplug
+#     source $ZPLUG_HOME/init.zsh
+# fi
+export ZPLUG_HOME=/home/daniel/.zplug
+source $ZPLUG_HOME/init.zsh
 # }}}
 # Powerlevel9k settings {{{
 if zplug romkatv/powerlevel10k; then
