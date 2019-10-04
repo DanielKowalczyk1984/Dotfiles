@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Material Theme",
-    "editor.fontFamily": "Hack Nerd Font",
+    "workbench.colorTheme": "Nord",
+    "editor.fontFamily": "Fira Code",
     "editor.matchBrackets": true,
     "editor.formatOnPaste": true,
     "C_Cpp.updateChannel": "Insiders",
@@ -211,14 +211,28 @@
         "Hoeve",
         "MINJOB",
         "Sadykov",
+        "Tikzstyle",
         "WSPT",
         "ZDDs",
+        "convexification",
         "discretization",
         "footnoteref",
+        "natbib",
         "pred"
     ],
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "window.zoomLevel": 0,
+    "terminal.integrated.rendererType": "dom",
+    "[c]": {
+        "editor.defaultFormatter": "ccls-project.ccls"
+    },
+    "cSpell.ignoreRegExpList": [
+        "GRB.*"
+    ],
+    "C_Cpp.autocomplete": "Disabled"
 }
