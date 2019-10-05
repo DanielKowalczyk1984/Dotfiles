@@ -217,6 +217,7 @@
         "convexification",
         "discretization",
         "footnoteref",
+        "gchar",
         "natbib",
         "pred"
     ],
