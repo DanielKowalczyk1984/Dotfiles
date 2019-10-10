@@ -32,7 +32,7 @@ source $ZPLUG_HOME/init.zsh
 # }}}
 # Adding some variables {{{
 export ZSH_TMUX_AUTOSTART=true
-ENHANCD_FILTER="fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
+ENHANCD_FILTER="sk-tmux:sk:fzf-tmux:fzf:peco:percol:gof:pick:icepick:sentaku:selecta"
 ENHANCD_COMMAND=cd
 if (( $+commands[fd] )); then
   export FZF_CMD='fd --hidden --follow --no-ignore-vcs --exclude ".git/*" --exclude "node_modules/*"'
@@ -66,6 +66,7 @@ zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "supercrabtree/k"
+zplug "lotabout/skim", as:command, use:"bin/sk-tmux"
 zplug "takaaki-kasai/git-foresta", as:command, use:"git-foresta"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -80,6 +81,7 @@ zplug "~/.zsh", from:local, use:spectrum.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
 zplug "~/.zsh", from:local, use:p10k.zsh
+# eval "$(starship init zsh)"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "

@@ -268,11 +268,11 @@ dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # }}}
 # lpass fzf stuff {{{
 flpass_pass(){
-    lpass show -c --password $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
+    lpass show -c --password $(lpass ls  | sk-tmux | awk '{print $(nf)}' | sed 's/\]//g')
 }
 
 flpass_user(){
-    lpass show -c --username $(lpass ls  | fzf | awk '{print $(nf)}' | sed 's/\]//g')
+    lpass show -c --username $(lpass ls  | sk-tmux | awk '{print $(nf)}' | sed 's/\]//g')
 }
 # }}}
 # git fzf stuff {{{
