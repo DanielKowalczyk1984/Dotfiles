@@ -62,7 +62,12 @@ zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/cargo", from:oh-my-zsh
+zplug "plugins/rust", from:oh-my-zsh
+zplug "plugins/pip", from:oh-my-zsh
+zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
+zplug "plugins/ripgrep", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "supercrabtree/k"
