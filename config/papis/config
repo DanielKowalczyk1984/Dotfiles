@@ -1,5 +1,5 @@
 [papers]
-dir = ~/Documents/papers
+dir = ~/Dropbox/ArticlesArchive
 
 [mip]
 dir = ~/Dropbox/ArticlesArchive/MathProgramming
@@ -108,7 +108,8 @@ dir=~/Dropbox/ArticlesArchive/Articles/MinMax
 
 [settings]
 default-library = papers
-file-name = {doc[title]} {doc[year]}
+add-folder-name = {doc[title]}{doc[year]}
+add-file-name = {doc[author_list][0][family]}{doc[year]}
 # Edit the info.yaml file before adding a doc into the library
 # papis add --edit
 add-edit = True
