@@ -1,7 +1,5 @@
 [global_config]
-  font = Hack Nerd Font 12
-	use_system_font = False
-	borderless = True
+  borderless = True
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   title_font = Hack Nerd Font 12
@@ -15,7 +13,7 @@
     [[[child1]]]
       command = env TERM=xterm-256color zsh -l
       parent = window0
-      profile = nord 
+      profile = nord
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -79,6 +77,13 @@
     background_color = "#f3f3f3"
     cursor_color = "#707070"
     foreground_color = "#707070"
+  [[nord]]
+    background_color = "#2e3440"
+    cursor_color = "#D8DEE9"
+    font = Hack Nerd Font 10
+    foreground_color = "#d8dee9"
+    palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
+    use_system_font = False
   [[solarized-dark]]
     background_color = "#002b36"
     cursor_color = "#eee8d5"
@@ -105,8 +110,3 @@
     cursor_color = "#34302d"
     foreground_color = "#34302d"
     palette = "#666661:#992e2e:#4c3226:#a67c53:#4c7399:#bf9986:#d97742:#34302d:#7f7f7a:#b23636:#664233:#bf8f60:#5986b2:#d9ae98:#f2854a:#4c4742"
-	[[nord]]
-    background_color = "#2E3440"
-    cursor_color = "#D8DEE9"
-    foreground_color = "#D8DEE9"
-		palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
