@@ -1,0 +1,80 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    colorscheme = "nord"
+    background = "dark"
+    enable_guicolors = false
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "bar"
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = true
+    enable_statusline_display_mode = true
+    statusline_unicode_symbols = true
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = false
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+    # windows_leader = "s"
+    enable_cursorline = 0
+    snippet_engine = "neosnippet"
+    # sidebar
+    filemanager = "nerdtree"
+    sidebar_direction = "left"
+    # linter settings
+    enable_neomake = 0
+    enable_ale = 1
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "smart"
+auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+name = "colorscheme"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = 'lang#latex'
+
+[[layers]]
+name = 'unite'
+
+[[layers]]
+name = 'lang#go'
+
+[[layers]]
+name = 'lang#julia'
+
+[[layers]]
+name = 'lang#python'
+
+[[layers]]
+name = 'lang#vim'
+
+[[layers]]
+name = 'lang#rust'
+
+[[layers]]
+name = 'lang#c'
+
+[[layers]]
+name = 'lang#toml'
+
+[[layers]]
+name = "git"
+
+[[layers]]
+name = "edit"
