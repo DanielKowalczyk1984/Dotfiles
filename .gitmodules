@@ -7,3 +7,9 @@
 [submodule "meta/rust"]
 	path = meta/rust
 	url = git://github.com/alexcormier/dotbot-rust
+[submodule "shells/tmux/plugins/tpm"]
+	path = shells/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "shells/tmux/plugins/tmux-cpu"]
+	path = shells/tmux/plugins/tmux-cpu
+	url = https://github.com/tmux-plugins/tmux-cpu
