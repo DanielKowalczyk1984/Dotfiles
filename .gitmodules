@@ -1,15 +1,9 @@
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-    url = https://github.com/tmux-plugins/tpm
-[submodule "tmux/plugins/tmux-open"]
-    path = tmux/plugins/tmux-cpu
-    url = https://github.com/tmux-plugins/tmux-cpu
-[submodule ".dotbot"]
+[submodule "meta/dotbot"]
 	path = meta/dotbot
 	url = git://github.com/anishathalye/dotbot
-[submodule ".plugins/yay"]
+[submodule "meta/yay"]
 	path = meta/yay
 	url = git://github.com/oxson/dotbot-yay
-[submodule ".plugins/rust"]
+[submodule "meta/rust"]
 	path = meta/rust
 	url = git://github.com/alexcormier/dotbot-rust
