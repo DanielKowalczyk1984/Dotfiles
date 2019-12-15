@@ -266,13 +266,17 @@ da() { ($1 &) }
 zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
 dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # }}}
-# lpass fzf stuff {{{
-flpass_pass(){
-    lpass show -c --password $(lpass ls  | sk-tmux | awk '{print $(nf)}' | sed 's/\]//g')
+# bitwarden fzf stuff {{{
+fzf_bw_pass() {
+  if hash bw 2>/dev/null; then
+    bw get item "$(bw list items | jq '.[] | "\(.name) | username: \(.login.username) | id: \(.id)" ' | sk-tmux | awk '{print $(NF -0)}' | sd '"' '')" | jq '.login.password' | sd '"' '' | xclip -sel clip
+  fi
 }
 
-flpass_user(){
-    lpass show -c --username $(lpass ls  | sk-tmux | awk '{print $(nf)}' | sed 's/\]//g')
+fzf_bw_user() {
+  if hash bw 2>/dev/null; then
+    bw get item "$(bw list items | jq '.[] | "\(.name) | username: \(.login.username) | id: \(.id)" ' | sk-tmux | awk '{print $(NF -0)}' | sd '"' '')" | jq '.login.username' | sd '"' '' | xclip -sel clip
+  fi
 }
 # }}}
 # git fzf stuff {{{
@@ -330,6 +334,9 @@ fs() {
     fzf --query="$1" --select-1 --exit-0) &&
   tmux switch-client -t "$session"
 }
+# }}}
+# papis alias {{{
+alias pro="papis-rofi"
 # }}}
 # Folding the .vimrc {{{
 # fold the .vimrc
