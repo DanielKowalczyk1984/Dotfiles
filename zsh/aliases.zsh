@@ -267,13 +267,13 @@ zsh-stats() { history | awk '{print $2}' | sort | uniq -c | sort -rn | head }
 dirsize() { du -h --max-depth=1 "$@" | sort -k 1,1hr -k 2,2f; }
 # }}}
 # bitwarden fzf stuff {{{
-fzf_bw_pass() {
+sk_bw_pass() {
   if hash bw 2>/dev/null; then
     bw get item "$(bw list items | jq '.[] | "\(.name) | username: \(.login.username) | id: \(.id)" ' | sk-tmux | awk '{print $(NF -0)}' | sd '"' '')" | jq '.login.password' | sd '"' '' | xclip -sel clip
   fi
 }
 
-fzf_bw_user() {
+sk_bw_user() {
   if hash bw 2>/dev/null; then
     bw get item "$(bw list items | jq '.[] | "\(.name) | username: \(.login.username) | id: \(.id)" ' | sk-tmux | awk '{print $(NF -0)}' | sd '"' '')" | jq '.login.username' | sd '"' '' | xclip -sel clip
   fi
