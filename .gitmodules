@@ -4,3 +4,12 @@
 [submodule "tmux/plugins/tmux-open"]
     path = tmux/plugins/tmux-cpu
     url = https://github.com/tmux-plugins/tmux-cpu
+[submodule ".dotbot"]
+	path = meta/dotbot
+	url = git://github.com/anishathalye/dotbot
+[submodule ".plugins/yay"]
+	path = meta/yay
+	url = git://github.com/oxson/dotbot-yay
+[submodule ".plugins/rust"]
+	path = meta/rust
+	url = git://github.com/alexcormier/dotbot-rust
