@@ -1,2 +1,0 @@
-/Users/Daniel/.yadr/tmux	40
-/Users/Daniel/.yadr/zsh	40
