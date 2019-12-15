@@ -1,0 +1,26 @@
+[
+  {
+    "defaults": {
+      "link": {
+        "create": true,
+        "relink": true,
+        "force": true
+      }
+    }
+  },
+  {
+    "clean": [ "~/.vim" ]
+  },
+  {
+    "link": {
+      "~/.SpaceVim.d": "editors/SpaceVim.d"
+    }
+  },
+  {
+    "shell": [
+      ["pip install --user neovim", "Installing Python 2 NeoVim plugin"],
+      ["pip install --user neovim", "Installing Python 3 NeoVim plugin"],
+      ["curl -sLf https://spacevim.org/install.sh | bash"]
+    ]
+  }
+]
