@@ -1,0 +1,38 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.astylerc: astylerc
+    ~/.bashrc: bashrc
+    ~/.SpaceVim.d: SpaceVim.d
+    ~/.dir_colors: dir_colors
+    ~/.editrc: editrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.global_gitignore: global_gitignore
+    ~/.inputrc: inputrc
+    ~/.ripgreprc: ripgreprc
+    ~/.tmux: tmux
+    ~/.tmux.conf: tmux.conf
+    ~/.Xdefaults: Xdefaults
+    ~/.defaultSettings.yaml: defaultSettings.yaml
+    ~/.zprofile: zprofile
+    ~/.zsh: zsh
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+
+- link:
+    ~/.config/alacritty: config/alacritty
+    ~/.config/bat: config/bat
+    ~/.config/i3: config/i3
+    ~/.config/papis: config/papis
+    ~/.config/ranger: config/ranger
+    ~/.config/sublime-text-3: config/sublime-text-3
+    ~/.config/terminator: config/terminator
+    ~/.config/zathura: config/zathura
+
+
