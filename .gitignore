@@ -22,3 +22,5 @@ config/papis/*
 !config/papis/config
 config/Code\ -\ OSS/*
 !config/Code\ -\ OSS/User/*.json
+__pycache__/
+__init__.py
