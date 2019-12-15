@@ -225,7 +225,7 @@
         "pred"
     ],
     "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
     "C_Cpp.default.cStandard": "c99",
@@ -238,5 +238,7 @@
     "cSpell.ignoreRegExpList": [
         "GRB.*"
     ],
-    "C_Cpp.autocomplete": "Disabled"
+    "C_Cpp.autocomplete": "Disabled",
+    "languageTool.language": "en-GB",
+    "ltex.language": "en-GB"
 }
