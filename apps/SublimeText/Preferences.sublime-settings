@@ -73,14 +73,20 @@
 		"*.pre",
 		"*.snm",
 		"*.vrb",
-		"*.html"
+		"*.html",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.cproject",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/mddcpor.sublime-workspace",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.project"
 	],
 	"extra_folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/data",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/build",
+		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.settings"
 	],
 	"file_exclude_patterns":
 	[
