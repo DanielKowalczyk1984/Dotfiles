@@ -1,0 +1,86 @@
+[
+	{
+		"name": "bdd-formulation",
+		"rootPath": "/home/daniel/Dropbox/PapersOR/PM/implementation",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "bdd-formulation-tex",
+		"rootPath": "/home/daniel/Dropbox/PapersOR/PM/Tex",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "WCTtex",
+		"rootPath": "/home/daniel/Dropbox/PapersOR/WCT/WCTtex",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "DDopt18",
+		"rootPath": "/home/daniel/Dropbox/Conferences/DDopt18",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "ISMP2018",
+		"rootPath": "/home/daniel/Dropbox/Conferences/ISMP2018/talk",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "seminar tue",
+		"rootPath": "/home/daniel/Dropbox/Conferences/SeminarCO/talk",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "poster-eurotech",
+		"rootPath": "/home/daniel/Dropbox/Conferences/Eurotech2019/poster",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "mddCP-OR",
+		"rootPath": "/home/daniel/Dropbox/apps/ORapps/mddCP-OR",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "VRP",
+		"rootPath": "/home/daniel/Dropbox/apps/ORapps/bcp_vrp",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "SeminarDtu",
+		"rootPath": "/home/daniel/Dropbox/Conferences/SeminarDTU2019/talk",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "Dotfiles",
+		"rootPath": "/home/daniel/Dotfiles",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "fwo",
+		"rootPath": "/home/daniel/Dropbox/CV en sollicitatiebrieven/fwo/latex",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	}
+]
