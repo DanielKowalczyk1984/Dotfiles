@@ -15,7 +15,8 @@
       "~/.zprofile": "shells/zprofile",
       "~/.zshenv": "shells/zshenv",
       "~/.inputrc": "shells/inputrc",
-      "~/.editrc": "shells/editrc"
+      "~/.editrc": "shells/editrc",
+      "~/.dir_colors": "shells/dir_colors"
     }
   }
 ]
