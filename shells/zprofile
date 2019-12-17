@@ -100,7 +100,7 @@ export CPLEX_DIR="/opt/ibm/ILOG/CPLEX_Studio1263/"
 eval $(thefuck --alias)
 # }}}
 # Ripgrep config file {{{
-export RIPGREP_CONFIG_PATH="~/.config/ripgrep/ripgreprc"
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgreprc
 # }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
