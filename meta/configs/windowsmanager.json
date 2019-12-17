@@ -10,7 +10,8 @@
   },
   {
     "link": {
-        "~/.config/i3": "windowsmanagers/i3"
+        "~/.config/i3": "windowsmanagers/i3",
+        "~/.Xdefaults": "windowsmanagers/Xdefaults"
     }
   }
 ]
