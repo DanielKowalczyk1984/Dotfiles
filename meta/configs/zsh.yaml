@@ -14,8 +14,11 @@
     "~/.dir_colors": shells/dir_colors
 - shell:
     -
-    description: Downloading zplug
-    command: scripts/install-zplug
+        command: scripts/install-zplug
+        description: Downloading zplug
+        stdout: true
     -
-    description: Setting Z-shell as default shell
-    command: scripts/default-zsh
+        command: scripts/defaults-zsh
+        description: Setting Z-shell as default shell
+        stdout: true
+        stderr: true
