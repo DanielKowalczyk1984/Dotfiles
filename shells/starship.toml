@@ -1,0 +1,47 @@
+prompt_order = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_state",
+    "git_status",
+    "package",
+    "dotnet",
+    "golang",
+    "java",
+    "nodejs",
+    "python",
+    "ruby",
+    "rust",
+    "nix_shell",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "cmd_duration",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character"
+]
+
+[username]
+show_always = true
+
+[hostname]
+disabled = false
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
