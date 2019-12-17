@@ -12,6 +12,7 @@
     "~/.inputrc": shells/inputrc
     "~/.editrc": shells/editrc
     "~/.dir_colors": shells/dir_colors
+    "~/.config/starship.toml": shells/starship.toml
 - shell:
     -
         command: scripts/install-zplug
