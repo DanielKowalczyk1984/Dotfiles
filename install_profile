@@ -3,7 +3,7 @@
 set -e
 
 BASE_CONFIG="base"
-CONFIG_SUFFIX=".json"
+CONFIG_SUFFIX=".yaml"
 
 META_DIR="meta"
 CONFIG_DIR="configs"
