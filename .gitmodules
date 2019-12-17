@@ -1,6 +1,7 @@
 [submodule "meta/dotbot"]
 	path = meta/dotbot
 	url = git://github.com/anishathalye/dotbot
+	ignore = dirty
 [submodule "meta/yay"]
 	path = meta/yay
 	url = git://github.com/oxson/dotbot-yay
