@@ -14,7 +14,8 @@
       "~/.astylerc": "development/astylerc",
       "~/.gitconfig": "development/gitconfig",
       "~/.global_gitignore": "development/global_gitignore",
-      "~/.config/bat": "development/bat"
+      "~/.config/bat": "development/bat",
+      "~/.config/ripgrep": "development/ripgrep"
     }
   }
 ]
