@@ -12,3 +12,10 @@
     "~/.inputrc": shells/inputrc
     "~/.editrc": shells/editrc
     "~/.dir_colors": shells/dir_colors
+- shell:
+    -
+    description: Downloading zplug
+    command: scripts/install-zplug
+    -
+    description: Setting Z-shell as default shell
+    command: scripts/default-zsh
