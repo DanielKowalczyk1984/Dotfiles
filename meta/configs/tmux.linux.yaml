@@ -1,0 +1,9 @@
+---
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- link:
+    "~/.tmux.conf": shells/tmux.conf
+    "~/.tmux": shells/tmux
