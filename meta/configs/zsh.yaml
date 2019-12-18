@@ -1,0 +1,25 @@
+---
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- link:
+    "~/.zshrc": shells/zshrc
+    "~/.zsh": shells/zsh
+    "~/.zprofile": shells/zprofile
+    "~/.zshenv": shells/zshenv
+    "~/.inputrc": shells/inputrc
+    "~/.editrc": shells/editrc
+    "~/.dir_colors": shells/dir_colors
+    "~/.config/starship.toml": shells/starship.toml
+- shell:
+    -
+        command: scripts/install-zplug
+        description: Downloading zplug
+        stdout: true
+    -
+        command: scripts/defaults-zsh
+        description: Setting Z-shell as default shell
+        stdout: true
+        stderr: true

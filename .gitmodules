@@ -1,6 +1,16 @@
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-    url = https://github.com/tmux-plugins/tpm
-[submodule "tmux/plugins/tmux-open"]
-    path = tmux/plugins/tmux-cpu
-    url = https://github.com/tmux-plugins/tmux-cpu
+[submodule "meta/dotbot"]
+	path = meta/dotbot
+	url = git://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "meta/yay"]
+	path = meta/yay
+	url = git://github.com/oxson/dotbot-yay
+[submodule "meta/rust"]
+	path = meta/rust
+	url = git://github.com/alexcormier/dotbot-rust
+[submodule "shells/tmux/plugins/tpm"]
+	path = shells/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "shells/tmux/plugins/tmux-cpu"]
+	path = shells/tmux/plugins/tmux-cpu
+	url = https://github.com/tmux-plugins/tmux-cpu

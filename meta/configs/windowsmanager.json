@@ -1,0 +1,17 @@
+[
+  {
+    "defaults": {
+      "link": {
+        "create": true,
+        "relink": true,
+        "force": true
+      }
+    }
+  },
+  {
+    "link": {
+        "~/.config/i3": "windowsmanagers/i3",
+        "~/.Xdefaults": "windowsmanagers/Xdefaults"
+    }
+  }
+]
