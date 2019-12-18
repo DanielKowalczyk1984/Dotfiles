@@ -92,7 +92,7 @@ status.register("pulseaudio",
 #         "play": "▶",
 #         "stop": "◾",
 #     },)
-status.register("window_title"
+status.register("window"
         )
 
 status.run()
