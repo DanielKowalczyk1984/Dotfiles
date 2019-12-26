@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# Interactively select (in skim) bookmarks to open from Firefox or
+# Chrome/Chromium (depends on $BROWSER). Should work on Linux and MacOS.
+#
+# requires: sqlite3, jq (if you use chrome/chromium)
+
+sep='{{::}}'
+[[ $OSTYPE == linux* ]] && open='xdg-open' || open='open'
+
+_do_sk() {
+  for url in $(awk -F "${1:-$sep}" '{printf "%s, %s\n", $1, $2}' | sk --prompt='bookmarks > ' --multi | sed 's#.*\(https*://\)#\1#'); do
+  if [[ $OSTYPE == linux* ]]; then
+    $BROWSER "$url" &
+  else
+    $open "$url" &
+  fi
+  done
+}
+
+case ${BROWSER:-firefox} in
+  qutebrowser)
+    sed -e 's/ /{{::}}/' urls | awk -F'{{::}}' '{printf "%s{{::}}%s\n", $2, $1}' | _do_sk
+    ;;
+  firefox)
+    for dir in ~/.mozilla/firefox/*.default \
+               $XDG_CONFIG_HOME/firefox/.mozilla/firefox/*.default \
+               $XDG_DATA_HOME/mozilla/firefox/*.default \
+               ~/Library/Application\ Support/Firefox/Profiles/*.default; do
+      if [[ -d "$dir" ]]; then
+        sqlite3 -separator $sep "$dir/places.sqlite" \
+          "SELECT DISTINCT mb.title, mp.url FROM moz_bookmarks mb \
+          INNER JOIN moz_places mp ON mp.id = mb.fk \
+          WHERE mb.type = 1 AND mb.title IS NOT NULL \
+          ORDER BY mp.frecency DESC" | _do_sk
+        break
+      fi
+    done
+    ;;
+  *)
+    for dir in ~/.config/google-chrome/Default ~/.config/chromium/Default ~/Library/Application\ Support/Google/Chrome/Default; do
+      # requires jq
+      if [[ -f "$dir/Bookmarks" ]]; then
+        jq -r '.. | [.name, .url]? | @tsv' "$dir/Bookmarks" | \
+          sed '/^[ \t]*$/d;/\t$/d;/\tchrome:\/\//d' | \
+          _do_sk "\t"
+        break
+      fi
+    done
+    ;;
+esac
