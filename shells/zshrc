@@ -27,7 +27,7 @@ fi
 #     export ZPLUG_HOME=/usr/local/opt/zplug
 #     source $ZPLUG_HOME/init.zsh
 # fi
-export ZPLUG_HOME=/home/daniel/.zplug
+export ZPLUG_HOME=$HOME/.zplug
 source $ZPLUG_HOME/init.zsh
 # }}}
 # Adding some variables {{{
