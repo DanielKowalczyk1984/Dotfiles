@@ -54,6 +54,7 @@ export FZF_DEFAULT_OPTS='
 '
 # export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
 fpath=(~/.zsh/completion(N-/) $fpath)
+eval "$(dircolors --sh "$HOME/.dir_colors/dircolors.ansi-dark")"
 # }}}
 # List of all the plugins + load the plugins {{{
 zplug "b4b4r07/enhancd", use:init.sh
@@ -70,8 +71,6 @@ zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/ripgrep", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-# zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
-zplug "supercrabtree/k"
 zplug "takaaki-kasai/git-foresta", as:command, use:"git-foresta"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -85,9 +84,7 @@ zplug "~/.zsh", from:local, use:setopt.zsh, defer:0
 zplug "~/.zsh", from:local, use:spectrum.zsh
 zplug "~/.zsh", from:local, use:sublime.zsh
 zplug "~/.zsh", from:local, use:zmv.zsh
-# zplug "~/.zsh", from:local, use:p10k.zsh
 eval "$(starship init zsh)"
-# eval "$(starship init zsh)"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
