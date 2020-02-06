@@ -103,3 +103,5 @@ alias papis="~/.virtualenvs/papis/bin/papis"
 # Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+
+source /home/danielk/.config/broot/launcher/bash/br
