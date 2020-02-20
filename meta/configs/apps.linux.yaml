@@ -8,3 +8,4 @@
     "~/.config/zathura": apps/zathura
     "~/.config/ranger": apps/ranger
     "~/.config/papis": apps/papis
+    "~/.config/broot": apps/broot
