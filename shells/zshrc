@@ -52,7 +52,6 @@ export FZF_DEFAULT_OPTS='
 --bind=ctrl-d:page-down
 --bind=ctrl-z:toggle-all
 '
-# export ZSH_CUSTOM=~/.zplug/repos/robbyrussell/oh-my-zsh/custom
 fpath=(~/.zsh/completion(N-/) $fpath)
 eval "$(dircolors --sh "$HOME/.dir_colors/dircolors.ansi-dark")"
 # }}}
@@ -104,3 +103,5 @@ alias papis="~/.virtualenvs/papis/bin/papis"
 # Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+
+source /home/danielk/.config/broot/launcher/bash/br
