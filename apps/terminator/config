@@ -23,7 +23,7 @@
   [[default]]
     allow_bold = False
     cursor_color = "#aaaaaa"
-    font = Fira Code 10
+    font = FuraCode Nerd Font 10
     use_system_font = False
   [[Argonaut]]
     background_color = "#0e1019"

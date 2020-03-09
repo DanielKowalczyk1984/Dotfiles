@@ -152,13 +152,6 @@ setopt hist_verify
 # Enable history system like a Bash
 setopt bang_hist
 
-if [[ $platform == 'linux' ]]; then
-    eval "$(dircolors --sh "/home/daniel/.dir_colors/dircolors.ansi-dark")"
-elif [[ $platform == 'darwin' ]]; then
-    eval "$(dircolors --sh "/Users/Daniel/.dir_colors/dircolors.ansi-dark")"
-fi
-
-
 if :; then
     setopt auto_param_slash
     setopt list_types

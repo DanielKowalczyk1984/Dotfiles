@@ -53,8 +53,8 @@ alias du='du -h -d 2'
 if [[ $platform == 'linux' ]]; then
   alias el='exa -al --group-directories-first'
   alias es='exa -x'
-  alias ll='ls -alh --color=auto'
-  alias ls='ls -X --color=auto'
+  alias ll='lsd -al --group-dirs first'
+  alias ls='lsd --group-dirs first'
   alias lt='tree --dirsfirst -aLpughDFiC 1'
   alias ltd='lt -d'
   function elt() {exa --group-directories-first -al -T --level=$1}
@@ -75,7 +75,7 @@ alias :q='exit'
 # Config function {{{
 
 config () {
-    case $1 in  
+    case $1 in
         alacritty)  $EDITOR ~/.config/alacritty/alacritty.yml;;
         aliases)    $EDITOR ~/.zsh/aliases.zsh ;;
         bar)        $EDITOR ~/.config/i3/scripts/py3status.config ;;
@@ -114,13 +114,13 @@ config () {
         nvim)       $EDITOR ~/.config/nvim/config/plugins.yaml ;;
         # Invalid
         *)          if [ -f "$1" ]; then
-						if [ -w "$1" ]; then		
+						if [ -w "$1" ]; then
 							$EDITOR "$1"
 						else
 							sudo $EDITOR "$1"
 						fi
-					else 
-						echo "Invalid Option" 
+					else
+						echo "Invalid Option"
 					fi ;;
    esac
 }
@@ -191,7 +191,7 @@ alias install='yay -S'
 alias installf='yay -S --noconfirm'
 alias remove='yay -Rsnc'
 alias removef='yay -Rdd'
-alias search='yay -Ss' 
+alias search='yay -Ss'
 alias infos='yay -Qi'
 # }}}
 # Directories {{{
@@ -200,11 +200,11 @@ alias apps='/usr/share/applications && ll'
 alias themes='/usr/share/themes && ll'
 alias icons='/usr/share/icons && ll'
 alias pixmaps='/usr/share/pixmaps && ll'
-alias downloads='/home/daniel/Downloads && ll'
-alias dropdir='/home/daniel/Dropbox && ll'
-alias documents='/home/daniel/Documents && ll'
-alias books='/home/daniel/Drive/BooksArchive && ll'
-alias articles='/home/daniel/Dropbox/ArticlesArchive && ll'
+alias downloads='$HOME/Downloads && ll'
+alias dropdir='$HOME/Dropbox && ll'
+alias documents='$HOME/Documents && ll'
+alias books='$HOME/Dropbox/BooksArchive && ll'
+alias articles='$HOME/Dropbox/ArticlesArchive && ll'
 alias service='cd /usr/lib/systemd/system && ls'
 # }}}
 # Security {{{

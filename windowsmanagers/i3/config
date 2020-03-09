@@ -200,13 +200,13 @@ new_window none
 font pango:Fira Code
 
 bar {
-    status_command /usr/bin/i3status-rs ~/i3/i3status-rust.conf
+    status_command /usr/bin/i3status-rs ~/.config/i3/i3status-rust.conf
     strip_workspace_numbers no
     mode dock
     tray_output eDP1
     position top
     height 25
-    font pango: Fira Code, Hack Nerd Font, FontAwesome, icons, fontello 10
+    font pango: FuraCode Nerd Font, Hack Nerd Font, FontAwesome, icons, fontello 10
 
   colors {
     background #002b36

@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "FuraCode Nerd Font",
     "editor.matchBrackets": true,
     "editor.formatOnPaste": true,
     "C_Cpp.updateChannel": "Insiders",
