@@ -50,9 +50,6 @@ default_height = 30
 name = 'lang#latex'
 
 [[layers]]
-name = 'unite'
-
-[[layers]]
 name = 'lang#go'
 
 [[layers]]
