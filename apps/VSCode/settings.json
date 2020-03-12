@@ -2,7 +2,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
     "editor.fontFamily": "FuraCode Nerd Font",
-    "editor.matchBrackets": true,
+    "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
     "C_Cpp.updateChannel": "Insiders",
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
@@ -190,9 +190,9 @@
     "terminal.external.linuxExec": "alacritty",
     "ccls.completion.enableSnippetInsertion": true,
     "ccls.completion.detailedLabel": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
+    // "[cpp]": {
+    //     "editor.defaultFormatter": "ccls-project.ccls"
+    // },
     "terminal.explorerKind": "external",
     "files.associations": {
         "*.ipynb": "jupyter"
@@ -232,13 +232,16 @@
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
-    "[c]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
+    // "[c]": {
+    //     "editor.defaultFormatter": "ccls-project.ccls"
+    // },
     "cSpell.ignoreRegExpList": [
         "GRB.*"
     ],
     "C_Cpp.autocomplete": "Disabled",
     "languageTool.language": "en-GB",
-    "ltex.language": "en-GB"
+    "ltex.language": "en-GB",
+    "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
+    "rust.clippy_preference": "on"
 }
