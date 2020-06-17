@@ -225,7 +225,7 @@
         "preprocess"
     ],
     "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
     "C_Cpp.default.cStandard": "c99",
