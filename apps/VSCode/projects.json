@@ -82,5 +82,26 @@
 		"paths": [],
 		"group": "",
 		"enabled": true
+	},
+	{
+		"name": "gub-knapsack",
+		"rootPath": "/home/danielk/Dropbox/PapersOR/gub-knapsack",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "schedWT",
+		"rootPath": "/home/danielk/Dropbox/apps/ORapps/schedWT",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "UHasseltCV",
+		"rootPath": "/home/danielk/Dropbox/CV en sollicitatiebrieven/UHasselt/CV",
+		"paths": [],
+		"group": "",
+		"enabled": true
 	}
 ]
