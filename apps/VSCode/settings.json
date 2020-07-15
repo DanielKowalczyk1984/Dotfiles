@@ -240,5 +240,10 @@
     "rust-client.updateOnStartup": true,
     "rust.all_features": true,
     "rust.clippy_preference": "on",
-    "C_Cpp.autocomplete": "Disabled"
+    "C_Cpp.autocomplete": "Disabled",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "sync.gist": "ddb9afbd9e2373dcef4c6d7b4e6a38ff",
+    "C_Cpp.clang_format_fallbackStyle": "Chromium",
+    "C_Cpp.clang_format_sortIncludes": true
 }
