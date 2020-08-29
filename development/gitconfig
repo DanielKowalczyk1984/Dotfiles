@@ -1,5 +1,7 @@
 # set your user tokens as environment variables, such as ~/.secrets
 # See the README for examples.
+[interactive]
+    diffFilter = delta --color-only
 [color]
   ui = true
 [color "branch"]
@@ -109,6 +111,7 @@
   # the usual default is to push all branches
   default = upstream
 [core]
+    pager = delta --theme='Nord'
 	autocrlf = input
 	editor = subl -n -w
 	excludesfile = /Users/Daniel/.global_gitignore
@@ -126,12 +129,12 @@
 [include]
   path = .gitconfig.user
 [user]
-	name = DanielKowalczyk1984
-	email = daniel.kowalczyk1984@gmail.com
+	name = Kowalczyk, D.
+	email = d.kowalczyk@tue.nl
 	username = DanielKowalczyk1984
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -140,5 +143,5 @@
 	smudge = git-lfs smudge %f
 	required = true
 [pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
+	# diff = diff-so-fancy | less --tabs=1,5 -RFX
+	# show = diff-so-fancy | less --tabs=1,5 -RFX

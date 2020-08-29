@@ -13,5 +13,5 @@
     "~/.config/sublime-text-3/Packages/User/LaTeXYZ.sublime-settings": apps/SublimeText/LaTeXYZ.sublime-settings
     "~/.config/sublime-text-3/Packages/User/LSP.sublime-settings": apps/SublimeText/LSP.sublime-settings
     "~/.config/sublime-text-3/Packages/User/EasyClangComplete.sublime-settings": apps/SublimeText/EasyClangComplete.sublime-settings
-    "~/.config/Code - OSS/User/settings.json": apps/VSCode/settings.json
-    "~/.config/Code - OSS/User/globalStorage/alefragnani.project-manager/projects.json": apps/VSCode/projects.json
+    "~/.config/Code/User/settings.json": apps/VSCode/settings.json
+    "~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json": apps/VSCode/projects.json

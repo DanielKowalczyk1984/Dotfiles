@@ -2,7 +2,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
     "editor.fontFamily": "FuraCode Nerd Font",
-    "editor.matchBrackets": true,
+    "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
     "C_Cpp.updateChannel": "Insiders",
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
@@ -190,9 +190,6 @@
     "terminal.external.linuxExec": "alacritty",
     "ccls.completion.enableSnippetInsertion": true,
     "ccls.completion.detailedLabel": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
     "terminal.explorerKind": "external",
     "files.associations": {
         "*.ipynb": "jupyter"
@@ -207,6 +204,7 @@
         "BDDs",
         "Baptiste",
         "Dantzig",
+        "GUBs",
         "Gurobi",
         "Hoeve",
         "MINJOB",
@@ -216,29 +214,66 @@
         "Xeon",
         "ZDDs",
         "bioinformatics",
+        "coeffs",
         "convexification",
         "discretization",
         "footnoteref",
         "gchar",
         "integrality",
         "natbib",
-        "pred"
+        "polytope",
+        "pred",
+        "preprocess"
     ],
     "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
     "C_Cpp.default.cStandard": "c99",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
-    "[c]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
     "cSpell.ignoreRegExpList": [
         "GRB.*"
     ],
-    "C_Cpp.autocomplete": "Disabled",
     "languageTool.language": "en-GB",
-    "ltex.language": "en-GB"
+    "ltex.language": "en-GB",
+    "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
+    "rust.clippy_preference": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "sync.gist": "ddb9afbd9e2373dcef4c6d7b4e6a38ff",
+    "C_Cpp.clang_format_fallbackStyle": "Chromium",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "editor.largeFileOptimizations": false,
+    "python.autoComplete.addBrackets": true,
+    "python.dataScience.alwaysScrollOnNewCell": true,
+    "python.dataScience.ignoreVscodeTheme": true,
+    "python.dataScience.themeMatplotlibPlots": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.dataScience.interactiveWindowMode": "perFile",
+    "extensions.ignoreRecommendations": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path.linux": "/home/danielk/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.draft-path.linux": "/home/danielk/.vs-kubernetes/tools/draft/linux-amd64/draft",
+        "vs-kubernetes.minikube-path.linux": "/home/danielk/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vs-kubernetes.kubectl-path.linux": "/home/danielk/.vs-kubernetes/tools/kubectl/kubectl"
+    },
+    "cSpell.enableFiletypes": [
+        "cmake"
+    ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "fenix.repos": [
+        "https://raw.githubusercontent.com/FenixTemplates/Default/master/fenix.json"
+    ],
+    "fenix.runCommands": "ask",
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true
 }

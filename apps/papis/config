@@ -4,6 +4,9 @@ dir = ~/Dropbox/ArticlesArchive/Papers
 [mip]
 dir = ~/Dropbox/ArticlesArchive/MathProgramming
 
+[geometry]
+dir = ~/Dropbox/ArticlesArchive/Geometry
+
 [KPcuts]
 dir = ~/Dropbox/ArticlesArchive/KnapsackCuts
 
