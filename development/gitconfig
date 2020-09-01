@@ -142,6 +142,10 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[pager]
-	# diff = diff-so-fancy | less --tabs=1,5 -RFX
-	# show = diff-so-fancy | less --tabs=1,5 -RFX
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul

@@ -18,7 +18,7 @@
 # if you don't want the hidden files you can launch `br -H`)
 # A popular flag is the `g` one which displays git related info.
 #
-default_flags = ""
+default_flags = "gh"
 
 ###############################################################
 # Verbs and shortcuts
@@ -64,13 +64,13 @@ execution = "$PAGER {file}"
 # and right arrow keys will be used to go to the parent
 # directory or to open a selected one:
 #
-# [[verbs]]
-# key = "left"
-# execution = ":parent"
+[[verbs]]
+key = "left"
+execution = ":parent"
 #
-# [[verbs]]
-# key = "right"
-# execution = ":focus"
+[[verbs]]
+key = "right"
+execution = ":focus"
 
 # Another popular set of shorctuts for going up and down:
 #
