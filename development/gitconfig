@@ -1,5 +1,3 @@
-# set your user tokens as environment variables, such as ~/.secrets
-# See the README for examples.
 [interactive]
     diffFilter = delta --color-only
 [color]
@@ -107,8 +105,6 @@
 [branch]
   autosetupmerge = true
 [push]
-  # 'git push' will push the current branch to its tracking branch
-  # the usual default is to push all branches
   default = upstream
 [core]
     pager = delta --theme='Nord'
@@ -118,13 +114,9 @@
 [advice]
   statusHints = false
 [diff]
-  # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
-  # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
 [rerere]
-  # Remember my merges
-  # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 [include]
   path = .gitconfig.user
@@ -145,7 +137,6 @@
 [delta]
     features = side-by-side line-numbers decorations
     whitespace-error-style = 22 reverse
-
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
