@@ -33,10 +33,10 @@ show_always = true
 disabled = false
 [git_status]
 conflicted = "🏳"
-ahead = "🏎💨"
+ahead = "🏎 💨"
 behind = "😰"
 diverged = "😵"
-untracked = "🤷‍"
+untracked = "🤷"
 stashed = "📦"
 modified = "📝"
 staged.value = "++"
@@ -45,3 +45,5 @@ staged_count.enabled = true
 staged_count.style = "green"
 renamed = "👅"
 deleted = "🗑"
+[git_branch]
+symbol = "🌱 "
