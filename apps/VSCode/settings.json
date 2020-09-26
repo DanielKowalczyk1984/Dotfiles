@@ -4,7 +4,6 @@
     "editor.fontFamily": "FuraCode Nerd Font",
     "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
-    "C_Cpp.updateChannel": "Insiders",
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.external.args": {
@@ -231,7 +230,7 @@
     "cmake.configureOnOpen": false,
     "C_Cpp.default.cStandard": "c99",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "terminal.integrated.rendererType": "dom",
     "cSpell.ignoreRegExpList": [
         "GRB.*"
