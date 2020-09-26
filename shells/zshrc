@@ -94,6 +94,12 @@ fi
 
 zplug load
 # }}}
+# Configure Zoxide {{{
+eval "$(zoxide init zsh)"
+# }}}
+# Configure Broot {{{
+source $HOME/.config/broot/launcher/bash/br
+# }}}
 # VirtualEnv {{{
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
@@ -102,5 +108,3 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 # Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
-
-source /home/danielk/.config/broot/launcher/bash/br
