@@ -74,9 +74,9 @@
 		"*.snm",
 		"*.vrb",
 		"*.html",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.cproject",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/mddcpor.sublime-workspace",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.project"
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.cproject",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/mddcpor.sublime-workspace",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.project"
 	],
 	"extra_folder_exclude_patterns":
 	[
@@ -84,9 +84,9 @@
 		".git",
 		".hg",
 		"CVS",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/data",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/build",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.settings"
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/data",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/build",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.settings"
 	],
 	"file_exclude_patterns":
 	[
@@ -138,9 +138,9 @@
 		"*.snm",
 		"*.vrb",
 		"*.html",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.cproject",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/mddcpor.sublime-workspace",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.project"
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.cproject",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/mddcpor.sublime-workspace",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.project"
 	],
 	"folder_exclude_patterns":
 	[
@@ -148,9 +148,9 @@
 		".git",
 		".hg",
 		"CVS",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/data",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/build",
-		"/home/daniel/Dropbox/apps/ORapps/mddCP-OR/.settings"
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/data",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/build",
+		"/home/daniel/MyDocuments/apps/ORapps/mddCP-OR/.settings"
 	],
 	"font_face": "Hack Nerd Font",
 	"font_options":

@@ -201,10 +201,10 @@ alias themes='/usr/share/themes && ll'
 alias icons='/usr/share/icons && ll'
 alias pixmaps='/usr/share/pixmaps && ll'
 alias downloads='$HOME/Downloads && ll'
-alias dropdir='$HOME/Dropbox && ll'
+alias dropdir='$HOME/MyDocuments && ll'
 alias documents='$HOME/Documents && ll'
-alias books='$HOME/Dropbox/BooksArchive && ll'
-alias articles='$HOME/Dropbox/ArticlesArchive && ll'
+alias books='$HOME/MyDocuments/BooksArchive && ll'
+alias articles='$HOME/MyDocuments/ArticlesArchive && ll'
 alias service='cd /usr/lib/systemd/system && ls'
 # }}}
 # Security {{{

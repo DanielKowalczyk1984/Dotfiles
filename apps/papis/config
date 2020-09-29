@@ -1,113 +1,113 @@
 [papers]
-dir = ~/Dropbox/ArticlesArchive/Papers
+dir = ~/MyDocuments/ArticlesArchive/Papers
 
 [mip]
-dir = ~/Dropbox/ArticlesArchive/MathProgramming
+dir = ~/MyDocuments/ArticlesArchive/MathProgramming
 
 [geometry]
-dir = ~/Dropbox/ArticlesArchive/Geometry
+dir = ~/MyDocuments/ArticlesArchive/Geometry
 
 [KPcuts]
-dir = ~/Dropbox/ArticlesArchive/KnapsackCuts
+dir = ~/MyDocuments/ArticlesArchive/KnapsackCuts
 
 [bpp]
-dir = ~/Dropbox/ArticlesArchive/BPP
+dir = ~/MyDocuments/ArticlesArchive/BPP
 
 [lotsizing]
-dir = ~/Dropbox/ArticlesArchive/lotsizing
+dir = ~/MyDocuments/ArticlesArchive/lotsizing
 
 [presentations]
-dir = ~/Dropbox/ArticlesArchive/presentations
+dir = ~/MyDocuments/ArticlesArchive/presentations
 
 [thesis]
-dir = ~/Dropbox/ArticlesArchive/thesisOR
+dir = ~/MyDocuments/ArticlesArchive/thesisOR
 
 [vrp]
-dir = ~/Dropbox/ArticlesArchive/VRP
+dir = ~/MyDocuments/ArticlesArchive/VRP
 
 [sdp]
-dir = ~/Dropbox/ArticlesArchive/SemidefinteProgramming
+dir = ~/MyDocuments/ArticlesArchive/SemidefinteProgramming
 
 [vcp]
-dir = ~/Dropbox/ArticlesArchive/ColoringProblems
+dir = ~/MyDocuments/ArticlesArchive/ColoringProblems
 
 [tools]
-dir = ~/Dropbox/ArticlesArchive/OR-tools
+dir = ~/MyDocuments/ArticlesArchive/OR-tools
 
 [optimization]
-dir = ~/Dropbox/ArticlesArchive/General Optimization
+dir = ~/MyDocuments/ArticlesArchive/General Optimization
 
 [scheduling]
-dir = ~/Dropbox/ArticlesArchive/General Scheduling
+dir = ~/MyDocuments/ArticlesArchive/General Scheduling
 
 [cg]
-dir = ~/Dropbox/ArticlesArchive/ColumnGeneration
+dir = ~/MyDocuments/ArticlesArchive/ColumnGeneration
 
 [robust]
-dir = ~/Dropbox/ArticlesArchive/RobustOptimization
+dir = ~/MyDocuments/ArticlesArchive/RobustOptimization
 
 [bdd]
-dir = ~/Dropbox/ArticlesArchive/ZDD&BDD
+dir = ~/MyDocuments/ArticlesArchive/ZDD&BDD
 
 [approx]
-dir = ~/Dropbox/ArticlesArchive/ApproxAlgorithms
+dir = ~/MyDocuments/ArticlesArchive/ApproxAlgorithms
 
 [kpc]
-dir = ~/Dropbox/ArticlesArchive/KP(C)
+dir = ~/MyDocuments/ArticlesArchive/KP(C)
 
 [app]
-dir = ~/Dropbox/ArticlesArchive/ApplicationsOR
+dir = ~/MyDocuments/ArticlesArchive/ApplicationsOR
 
 [mwisp]
-dir = ~/Dropbox/ArticlesArchive/MWISP
+dir = ~/MyDocuments/ArticlesArchive/MWISP
 
 [rcpsp]
-dir = ~/Dropbox/ArticlesArchive/RCPSP
+dir = ~/MyDocuments/ArticlesArchive/RCPSP
 
 [rlp]
-dir = ~/Dropbox/ArticlesArchive/RLP
+dir = ~/MyDocuments/ArticlesArchive/RLP
 
 [metallo]
-dir = ~/Dropbox/ArticlesArchive/Metallo_papers
+dir = ~/MyDocuments/ArticlesArchive/Metallo_papers
 
 [covering]
-dir = ~/Dropbox/ArticlesArchive/SetCovering
+dir = ~/MyDocuments/ArticlesArchive/SetCovering
 
 [history]
-dir = ~/Dropbox/ArticlesArchive/History
+dir = ~/MyDocuments/ArticlesArchive/History
 
 [COML]
-dir = ~/Dropbox/ArticlesArchive/CO&ML
+dir = ~/MyDocuments/ArticlesArchive/CO&ML
 
 [scatter]
-dir = ~/Dropbox/ArticlesArchive/ScatterSearch
+dir = ~/MyDocuments/ArticlesArchive/ScatterSearch
 
 [cp]
-dir = ~/Dropbox/ArticlesArchive/CP
+dir = ~/MyDocuments/ArticlesArchive/CP
 
 [free]
-dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
+dir = ~/MyDocuments/ArticlesArchive/FreeEnergyPrinciple
 
 [fpt]
-dir = ~/Dropbox/ArticlesArchive/FTP
+dir = ~/MyDocuments/ArticlesArchive/FTP
 
 [quantum]
-dir = ~/Dropbox/ArticlesArchive/Quantum
+dir = ~/MyDocuments/ArticlesArchive/Quantum
 
 [math]
-dir = ~/Dropbox/ArticlesArchive/Math
+dir = ~/MyDocuments/ArticlesArchive/Math
 
 [books]
-dir = ~/Dropbox/BooksArchive
+dir = ~/MyDocuments/BooksArchive
 
 [tsptd]
-dir = ~/Dropbox/ArticlesArchive/TSPTD
+dir = ~/MyDocuments/ArticlesArchive/TSPTD
 
 [minimal]
-dir=~/Dropbox/ArticlesArchive/Articles/MinimalSubmanifolds
+dir=~/MyDocuments/ArticlesArchive/Articles/MinimalSubmanifolds
 
 [minmax]
-dir=~/Dropbox/ArticlesArchive/Articles/MinMax
+dir=~/MyDocuments/ArticlesArchive/Articles/MinMax
 
 [settings]
 default-library = papers
