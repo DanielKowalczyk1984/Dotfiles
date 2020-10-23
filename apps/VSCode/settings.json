@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
-    "editor.fontFamily": "FuraCode Nerd Font",
+    "editor.fontFamily": "RobotoMono Nerd Font",
     "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
@@ -230,7 +230,7 @@
     "cmake.configureOnOpen": false,
     "C_Cpp.default.cStandard": "c99",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
     "cSpell.ignoreRegExpList": [
         "GRB.*"
@@ -274,5 +274,6 @@
     ],
     "fenix.runCommands": "ask",
     "python.languageServer": "Pylance",
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
+    "C_Cpp.updateChannel": "Insiders"
 }
