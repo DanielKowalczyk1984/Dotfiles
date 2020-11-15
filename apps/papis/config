@@ -1,6 +1,9 @@
 [papers]
 dir = ~/MyDocuments/ArticlesArchive/Papers
 
+[bie]
+dir = ~/MyDocuments/Bie
+
 [mip]
 dir = ~/MyDocuments/ArticlesArchive/MathProgramming
 
