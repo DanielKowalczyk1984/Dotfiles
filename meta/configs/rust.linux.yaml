@@ -4,47 +4,51 @@
       create: true
       relink: true
 - clean:
-  - "~"
+    - "~"
 - rust:
-  - stable:
-    - targets:
-      - x86_64-apple-darwin
-      - x86_64-unknown-linux-gnu
-      - x86_64-unknown-linux-musl
-    - components:
-      - rust-analysis
-      - rls
-      - rust-src
-  - nightly:
-    - targets:
-      - x86_64-apple-darwin
-      - x86_64-unknown-linux-gnu
-      - x86_64-unknown-linux-musl
-    - components:
-      - rust-analysis
-      - rls
-      - rust-src
+    - stable:
+        - targets:
+            - x86_64-apple-darwin
+            - x86_64-unknown-linux-gnu
+            - x86_64-unknown-linux-musl
+        - components:
+            - rust-analysis
+            - rls
+            - rust-src
+    - nightly:
+        - targets:
+            - x86_64-apple-darwin
+            - x86_64-unknown-linux-gnu
+            - x86_64-unknown-linux-musl
+        - components:
+            - rust-analysis
+            - rls
+            - rust-src
 
 - shell:
-    -
-        command: scripts/install-rust
-        description: Installing rust
-        stdout: true
+    - command: scripts/install-rust
+      description: Installing rust
+      stdout: true
 
 - cargo:
-  - diskus
-  - find-files
-  - lsd
-  - skim
-  - starship
-  - watchexec
-  - xsv
-  - fd-find
-  - sd
-  - ripgrep
-  - bat
-  - rargs
-  - exa
-  - broot
-  - topgrade
-  - spt
+    - bat
+    - broot
+    - cargo-update
+    - diskus
+    - exa
+    - fd-find
+    - find-files
+    - grex
+    - lsd
+    - organize-rt
+    - rargs
+    - record-query
+    - ripgrep
+    - sd
+    - skim
+    - spt
+    - starship
+    - topgrade
+    - watchexec
+    - xsv
+    - ytop
