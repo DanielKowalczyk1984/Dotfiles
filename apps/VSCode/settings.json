@@ -193,7 +193,6 @@
     "files.associations": {
         "*.ipynb": "jupyter"
     },
-    "python.pythonPath": "/bin/python",
     "cmake.preferredGenerators": [
         "Unix Makefiles",
         "Ninja"
@@ -253,11 +252,6 @@
     },
     "editor.largeFileOptimizations": false,
     "python.autoComplete.addBrackets": true,
-    "python.dataScience.alwaysScrollOnNewCell": true,
-    "python.dataScience.ignoreVscodeTheme": true,
-    "python.dataScience.themeMatplotlibPlots": true,
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "python.dataScience.interactiveWindowMode": "perFile",
     "extensions.ignoreRecommendations": false,
     "vs-kubernetes": {
         "vs-kubernetes.helm-path.linux": "/home/daniel/.vs-kubernetes/tools/helm/linux-amd64/helm",
@@ -275,5 +269,13 @@
     "fenix.runCommands": "ask",
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "python.defaultInterpreterPath": "/bin/python",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "julia.enableTelemetry": true,
+    "jupyter.alwaysScrollOnNewCell": true,
+    "jupyter.ignoreVscodeTheme": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "jupyter.interactiveWindowMode": "perFile"
 }
