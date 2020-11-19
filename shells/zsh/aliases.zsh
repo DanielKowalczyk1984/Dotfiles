@@ -278,6 +278,12 @@ sk_bw_user() {
     bw get item "$(bw list items | jq '.[] | "\(.name) | username: \(.login.username) | id: \(.id)" ' | sk-tmux | awk '{print $(NF -0)}' | sd '"' '')" | jq '.login.username' | sd '"' '' | xclip -sel clip
   fi
 }
+
+sk_op_user() {
+  if hash op 2>/dev/null; then
+    op get item "$(op list items | jq '.overview.title' | sd '"' '')"
+  fi
+}
 # }}}
 # git fzf stuff {{{
 fshow() {
