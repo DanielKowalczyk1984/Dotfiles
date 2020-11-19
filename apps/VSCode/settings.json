@@ -277,5 +277,8 @@
     "jupyter.ignoreVscodeTheme": true,
     "jupyter.themeMatplotlibPlots": true,
     "jupyter.sendSelectionToInteractiveWindow": true,
-    "jupyter.interactiveWindowMode": "perFile"
+    "jupyter.interactiveWindowMode": "perFile",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ]
 }
