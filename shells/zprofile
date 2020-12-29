@@ -30,6 +30,7 @@ typeset -gx -U cdpath fpath mailpath path
 fpath=( \
     ~/.zsh/Completion(N-/) \
     ~/.zsh/functions(N-/) \
+    ~/.linuxbrew/share/zsh/site-functions \
     ~/.zsh/plugins/zsh-completions(N-/) \
     /usr/local/share/zsh/site-functions(N-/) \
     $fpath \
@@ -107,3 +108,4 @@ export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgreprc
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+eval $(/home/daniel/.linuxbrew/bin/brew shellenv)
