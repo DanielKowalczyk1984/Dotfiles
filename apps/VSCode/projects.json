@@ -103,5 +103,12 @@
 		"paths": [],
 		"group": "",
 		"enabled": true
+	},
+	{
+		"name": "branch-and-bound",
+		"rootPath": "$home/MyDocuments/apps/ORapps/modern-cpp-template",
+		"paths": [],
+		"group": "",
+		"enabled": true
 	}
 ]
