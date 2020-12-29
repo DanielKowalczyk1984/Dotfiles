@@ -89,6 +89,16 @@
                 "%DOCFILE%"
             ],
             "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "-o",
+                "%OUTDIR%",
+                "%DOC_EXT%",
+            ]
         }
     ],
     "latex-workshop.latex.recipes": [
@@ -123,6 +133,12 @@
             "name": "pdflatex",
             "tools": [
                 "pdflatex"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
             ]
         }
     ],
@@ -187,8 +203,6 @@
         "**/*.xdv": true
     },
     "terminal.external.linuxExec": "alacritty",
-    "ccls.completion.enableSnippetInsertion": true,
-    "ccls.completion.detailedLabel": true,
     "terminal.explorerKind": "external",
     "files.associations": {
         "*.ipynb": "jupyter"
@@ -201,6 +215,7 @@
         "ATIF",
         "BDDs",
         "Baptiste",
+        "CBFS",
         "Dantzig",
         "GUBs",
         "Gurobi",
@@ -221,14 +236,13 @@
         "natbib",
         "polytope",
         "pred",
-        "preprocess"
+        "preprocess",
+        "wctparms"
     ],
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
     "cSpell.ignoreRegExpList": [
@@ -242,10 +256,8 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "sync.gist": "ddb9afbd9e2373dcef4c6d7b4e6a38ff",
-    "C_Cpp.clang_format_fallbackStyle": "Chromium",
-    "C_Cpp.clang_format_sortIncludes": true,
     "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
     "[c]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
@@ -263,15 +275,9 @@
         "cmake"
     ],
     "editor.multiCursorModifier": "ctrlCmd",
-    "fenix.repos": [
-        "https://raw.githubusercontent.com/FenixTemplates/Default/master/fenix.json"
-    ],
-    "fenix.runCommands": "ask",
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
-    "C_Cpp.updateChannel": "Insiders",
     "python.defaultInterpreterPath": "/bin/python",
-    "kite.showWelcomeNotificationOnStartup": false,
     "julia.enableTelemetry": true,
     "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.ignoreVscodeTheme": true,
@@ -280,5 +286,16 @@
     "jupyter.interactiveWindowMode": "perFile",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
-    ]
+    ],
+    "window.titleBarStyle": "custom",
+    "clangd.onConfigChanged": "prompt",
+    "C_Cpp.clang_format_fallbackStyle": "Chromium",
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.message.information.show": true,
+    "latex-workshop.view.pdf.ref.viewer": "external"
 }
