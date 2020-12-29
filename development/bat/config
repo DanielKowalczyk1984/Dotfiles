@@ -9,3 +9,5 @@
 
 # Use 4 length spaced tabs.
 --tabs=4
+
+--pager="less -RF"
