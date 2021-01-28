@@ -288,14 +288,13 @@
         "language-julia.interrupt"
     ],
     "window.titleBarStyle": "custom",
-    "clangd.onConfigChanged": "prompt",
     "C_Cpp.clang_format_fallbackStyle": "Chromium",
     "C_Cpp.default.cStandard": "c99",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "C_Cpp.clang_format_sortIncludes": true,
-    "C_Cpp.updateChannel": "Insiders",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.message.information.show": true,
-    "latex-workshop.view.pdf.ref.viewer": "external"
+    "latex-workshop.view.pdf.ref.viewer": "external",
+    "clangd.onConfigChanged": "ignore"
 }
