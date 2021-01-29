@@ -11,3 +11,4 @@
     "~/.global_gitignore": development/global_gitignore
     "~/.config/bat": development/bat
     "~/.config/ripgrep": development/ripgrep
+    "~/.config/topgrade.toml": development/topgrade.toml
