@@ -1,70 +1,70 @@
 [
 	{
 		"name": "bdd-formulation",
-		"rootPath": "$home/MyDocuments/PapersOR/PM/implementation",
+		"rootPath": "$home/Papers/PM/implementation",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "bdd-formulation-tex",
-		"rootPath": "$home/MyDocuments/PapersOR/PM/Tex",
+		"rootPath": "$home/Papers/PM/Tex",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "WCTtex",
-		"rootPath": "$home/MyDocuments/PapersOR/WCT/WCTtex",
+		"rootPath": "$home/Papers/WCT/WCTtex",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "DDopt18",
-		"rootPath": "$home/MyDocuments/Conferences/DDopt18",
+		"rootPath": "$home/Conferences/DDopt18",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "ISMP2018",
-		"rootPath": "$home/MyDocuments/Conferences/ISMP2018/talk",
+		"rootPath": "$home/Conferences/ISMP2018/talk",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "seminar tue",
-		"rootPath": "$home/MyDocuments/Conferences/SeminarCO/talk",
+		"rootPath": "$home/Conferences/SeminarCO/talk",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "poster-eurotech",
-		"rootPath": "$home/MyDocuments/Conferences/Eurotech2019/poster",
+		"rootPath": "$home/Conferences/Eurotech2019/poster",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "mddCP-OR",
-		"rootPath": "$home/MyDocuments/apps/ORapps/mddCP-OR",
+		"rootPath": "$home/Projects/mddCP-OR",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "VRP",
-		"rootPath": "$home/MyDocuments/apps/ORapps/bcp_vrp",
+		"rootPath": "$home/Projects/bcp_vrp",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "SeminarDtu",
-		"rootPath": "$home/MyDocuments/Conferences/SeminarDTU2019/talk",
+		"rootPath": "$home/Conferences/SeminarDTU2019/talk",
 		"paths": [],
 		"group": "",
 		"enabled": true
@@ -78,35 +78,35 @@
 	},
 	{
 		"name": "fwo",
-		"rootPath": "$home/MyDocuments/CV en sollicitatiebrieven/fwo/latex",
+		"rootPath": "$home/CV_Cover_Letters/fwo/latex",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "gub-knapsack",
-		"rootPath": "$home/MyDocuments/PapersOR/gub-knapsack",
+		"rootPath": "$home/Papers/gub-knapsack",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "schedWT",
-		"rootPath": "$home/MyDocuments/apps/ORapps/schedWT",
+		"rootPath": "$home/Projects/schedWT",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "UHasseltCV",
-		"rootPath": "$home/MyDocuments/CV en sollicitatiebrieven/UHasselt/CV",
+		"rootPath": "$home/CV_Cover_Letters/UHasselt/CV",
 		"paths": [],
 		"group": "",
 		"enabled": true
 	},
 	{
 		"name": "branch-and-bound",
-		"rootPath": "$home/MyDocuments/apps/ORapps/modern-cpp-template",
+		"rootPath": "$home/Projects/modern-cpp-template",
 		"paths": [],
 		"group": "",
 		"enabled": true
