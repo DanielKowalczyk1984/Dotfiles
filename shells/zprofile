@@ -93,7 +93,7 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 #}}}
 # Gurobi environment {{{
-export GUROBI_HOME="/opt/gurobi903/linux64"
+export GUROBI_HOME="/opt/gurobi911/linux64"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
 export CPLEX_DIR="/opt/ibm/ILOG/CPLEX_Studio129"
 export CPLEX_STUDIO_BINARIES="${CPLEX_DIR}/cplex/bin/x86-64_linux"
