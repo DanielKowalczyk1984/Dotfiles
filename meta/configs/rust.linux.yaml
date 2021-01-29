@@ -38,6 +38,7 @@
     - exa
     - fd-find
     - find-files
+    - git-delta
     - grex
     - lsd
     - organize-rt
