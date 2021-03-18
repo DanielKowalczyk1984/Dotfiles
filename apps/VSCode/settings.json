@@ -217,17 +217,26 @@
         "Baptiste",
         "CBFS",
         "Dantzig",
+        "Eigen",
         "GUBs",
         "Gurobi",
         "Hoeve",
+        "Lowerbound",
         "MINJOB",
+        "Parms",
         "Sadykov",
+        "Scheduleset",
+        "Seperation",
         "Tikzstyle",
         "WSPT",
         "Xeon",
         "ZDDs",
+        "autodetect",
         "bioinformatics",
+        "bugprone",
+        "cmake",
         "coeffs",
+        "conanbuildinfo",
         "convexification",
         "discretization",
         "footnoteref",
@@ -237,13 +246,13 @@
         "polytope",
         "pred",
         "preprocess",
-        "wctparms"
+        "wctparms",
+        "wctprivate"
     ],
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
-    "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
     "cSpell.ignoreRegExpList": [
         "GRB.*"
@@ -296,5 +305,5 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.message.information.show": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
-    "clangd.onConfigChanged": "ignore"
+    "C_Cpp.updateChannel": "Insiders"
 }
