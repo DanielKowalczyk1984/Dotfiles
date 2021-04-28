@@ -3,7 +3,7 @@
     "workbench.colorTheme": "Nord",
     "editor.fontFamily": "RobotoMono Nerd Font",
     "editor.matchBrackets": "always",
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.external.args": {
@@ -97,7 +97,7 @@
                 "--synctex",
                 "-o",
                 "%OUTDIR%",
-                "%DOC_EXT%",
+                "%DOC_EXT%"
             ]
         }
     ],
@@ -305,5 +305,12 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.message.information.show": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "clangd.onConfigChanged": "ignore",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
