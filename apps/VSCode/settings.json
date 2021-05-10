@@ -3,7 +3,7 @@
     "workbench.colorTheme": "Nord",
     "editor.fontFamily": "RobotoMono Nerd Font",
     "editor.matchBrackets": "always",
-    "editor.formatOnPaste": false,
+    "editor.formatOnPaste": true,
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.external.args": {
@@ -223,7 +223,10 @@
         "Hoeve",
         "Lowerbound",
         "MINJOB",
+        "Matplotlib",
+        "Parens",
         "Parms",
+        "Pylance",
         "Sadykov",
         "Scheduleset",
         "Seperation",
@@ -234,6 +237,9 @@
         "autodetect",
         "bioinformatics",
         "bugprone",
+        "chktex",
+        "clangd",
+        "clippy",
         "cmake",
         "coeffs",
         "conanbuildinfo",
@@ -242,10 +248,19 @@
         "footnoteref",
         "gchar",
         "integrality",
+        "kubectl",
+        "kubernetes",
+        "llvm",
+        "ltex",
+        "minikube",
         "natbib",
+        "numpy",
         "polytope",
         "pred",
         "preprocess",
+        "pyplot",
+        "tikz",
+        "tikzplotlib",
         "wctparms",
         "wctprivate"
     ],
@@ -262,7 +277,6 @@
     "rust-client.updateOnStartup": true,
     "rust.all_features": true,
     "rust.clippy_preference": "on",
-    "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "sync.gist": "ddb9afbd9e2373dcef4c6d7b4e6a38ff",
     "[cpp]": {
@@ -299,18 +313,25 @@
     "window.titleBarStyle": "custom",
     "C_Cpp.clang_format_fallbackStyle": "Chromium",
     "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "C_Cpp.clang_format_sortIncludes": true,
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.message.information.show": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
-    "C_Cpp.updateChannel": "Insiders",
     "clangd.onConfigChanged": "ignore",
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
             "filenamePattern": "*.ipynb"
         }
+    ],
+    "cmake.configureEnvironment": {
+        "GUROBI_HOME": "/opt/gurobi911/linux64"
+    },
+    "clangd.path": "/home/daniel/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/12.0.0/clangd_12.0.0/bin/clangd",
+    "editor.formatOnSave": true,
+    "formattingToggle.affects": [
+        "formatOnPaste",
+        "formatOnSave",
+        "formatOnType"
     ]
 }
