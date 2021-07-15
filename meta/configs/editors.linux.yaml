@@ -5,15 +5,15 @@
       relink: true
       force: true
 - link:
-    "~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings": apps/SublimeText/Preferences.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/Package Control.sublime-settings":
+    "~/.config/sublime-text/Packages/User/Preferences.sublime-settings": apps/SublimeText/Preferences.sublime-settings
+    "~/.config/sublime-text/Packages/User/Package Control.sublime-settings":
       apps/SublimeText/Package
       Control.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings": apps/SublimeText/SublimeLinter.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings": apps/SublimeText/LaTeXTools.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/LaTeXYZ.sublime-settings": apps/SublimeText/LaTeXYZ.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/LSP.sublime-settings": apps/SublimeText/LSP.sublime-settings
-    "~/.config/sublime-text-3/Packages/User/EasyClangComplete.sublime-settings": apps/SublimeText/EasyClangComplete.sublime-settings
+    "~/.config/sublime-text/Packages/User/SublimeLinter.sublime-settings": apps/SublimeText/SublimeLinter.sublime-settings
+    "~/.config/sublime-text/Packages/User/LaTeXTools.sublime-settings": apps/SublimeText/LaTeXTools.sublime-settings
+    "~/.config/sublime-text/Packages/User/LaTeXYZ.sublime-settings": apps/SublimeText/LaTeXYZ.sublime-settings
+    "~/.config/sublime-text/Packages/User/LSP.sublime-settings": apps/SublimeText/LSP.sublime-settings
+    "~/.config/sublime-text/Packages/User/EasyClangComplete.sublime-settings": apps/SublimeText/EasyClangComplete.sublime-settings
     "~/.config/Code/User/settings.json": apps/VSCode/settings.json
     "~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json": apps/VSCode/projects.json
     "~/.config/.ideavimrc": editors/ideavimrc
