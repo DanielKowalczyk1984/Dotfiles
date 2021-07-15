@@ -6,11 +6,18 @@
     "editor.formatOnPaste": true,
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
     "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.external.viewer.args": [
+       "%PDF%"
+    ],
     "latex-workshop.view.pdf.external.args": {
         "command": "zathura",
         "args": [
-            "--synctex-editor-command",
-            "code --reuse-window -g \"%{input}:%{line}\"",
+            
             "%PDF%"
         ]
     },
@@ -70,6 +77,7 @@
             "args": [
                 "-file-line-error",
                 "-synctex=1",
+                "-outdir=%DIR%/latex.out",
                 "%DOC%"
             ],
             "env": {}
@@ -94,14 +102,14 @@
             "name": "tectonic",
             "command": "tectonic",
             "args": [
-                "--synctex",
-                "-o",
-                "%OUTDIR%",
-                "%DOC_EXT%"
+                "%DOC_EXT%",
+                "--synctex"
             ]
         }
     ],
     "latex-workshop.latex.recipes": [
+
+
         {
             "name": "latexmk 🔃",
             "tools": [
@@ -191,7 +199,6 @@
         "<C-t>": false
     },
     "astyle.astylerc": "/home/daniel/.astylerc",
-    "diffEditor.ignoreTrimWhitespace": false,
     "files.exclude": {
         "**/.ccls-cache": true,
         "**/*.aux": true,
@@ -230,6 +237,8 @@
         "Sadykov",
         "Scheduleset",
         "Seperation",
+        "Sint",
+        "Tiensevest",
         "Tikzstyle",
         "WSPT",
         "Xeon",
@@ -300,7 +309,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
-    "python.defaultInterpreterPath": "/bin/python",
     "julia.enableTelemetry": true,
     "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.ignoreVscodeTheme": true,
@@ -314,16 +322,14 @@
     "C_Cpp.clang_format_fallbackStyle": "Chromium",
     "C_Cpp.default.cStandard": "c99",
     "latex-workshop.latex.clean.subfolder.enabled": true,
-    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipe.default": "latexmk xelatex",
     "latex-workshop.message.information.show": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
     "clangd.onConfigChanged": "ignore",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "default"
+    },
     "cmake.configureEnvironment": {
         "GUROBI_HOME": "/opt/gurobi911/linux64"
     },
@@ -333,5 +339,33 @@
         "formatOnPaste",
         "formatOnSave",
         "formatOnType"
-    ]
+    ],
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%",
+        "-outdir=%DIR%/latex.out"
+    ],
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.tabSize": 8,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": false,
+    "window.zoomLevel": -1,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "python.defaultInterpreterPath": "/home/daniel/.linuxbrew/bin/python3"
 }

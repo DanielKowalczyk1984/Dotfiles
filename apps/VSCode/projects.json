@@ -117,5 +117,26 @@
 		"paths": [],
 		"group": "",
 		"enabled": true
+	},
+	{
+		"name": "UniversiteitMaastricht",
+		"rootPath": "/home/daniel/CV_Cover_Letters/Bedrijven/UniversiteitMaastricht",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "ComputerzittingenHIR",
+		"rootPath": "/home/daniel/Computertest",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "UMaastrichtSeminar",
+		"rootPath": "/home/daniel/Conferences/UMaastricht/seminarCO.code-workspace",
+		"paths": [],
+		"group": "",
+		"enabled": true
 	}
 ]
