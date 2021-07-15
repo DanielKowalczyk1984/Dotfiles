@@ -4,93 +4,93 @@
 # environment variables. Some entries may override variables
 # set by alacritty it self.
 env:
-  # TERM env customization. Default is xterm-256color
-  # Note: the default TERM value `xterm-256color` does not
-  # specify all features alacritty supports. This does pose
-  # a few issues with programs relying on terminfo and the
-  # `tput` command
-  TERM: screen-256color
+    # TERM env customization. Default is xterm-256color
+    # Note: the default TERM value `xterm-256color` does not
+    # specify all features alacritty supports. This does pose
+    # a few issues with programs relying on terminfo and the
+    # `tput` command
+    TERM: screen-256color
 
 # Window dimensions in character columns and lines
 # (changes require restart)
 window:
-  dimensions:
-    columns: 160
-    lines: 80
+    dimensions:
+        columns: 160
+        lines: 80
 
-  decorations: none
+    decorations: none
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
 dpi:
-  x: 96.0
-  y: 96.0
+    x: 96.0
+    y: 96.0
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false
 
 # Font configuration (changes require restart)
 font:
-  # The normal (roman) font face to use.
-  normal:
-    family: "Hack Nerd Font" # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
-    # style: "Regular"
+    # The normal (roman) font face to use.
+    normal:
+        family: "Hack Nerd Font" # should be "Menlo" or something on macOS.
+        # Style can be specified to pick a specific face.
+        # style: "Regular"
 
-  # The bold font face
-  bold:
-    family: "Hack Nerd Font" # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
-    style: "Bold"
+    # The bold font face
+    bold:
+        family: "Hack Nerd Font" # should be "Menlo" or something on macOS.
+        # Style can be specified to pick a specific face.
+        style: "Bold"
 
-  # The italic font face
-  italic:
-    family: "Gack Nerd Font" # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
-    style: "Italic"
+    # The italic font face
+    italic:
+        family: "Gack Nerd Font" # should be "Menlo" or something on macOS.
+        # Style can be specified to pick a specific face.
+        style: "Italic"
 
-  # Point size of the font
-  size: 11.0
-  # Offset is the extra space around each character. offset.y can be thought of
-  # as modifying the linespacing, and offset.x as modifying the letter spacing.
-  offset:
-    x: 0
-    y: 0
+    # Point size of the font
+    size: 11.0
+    # Offset is the extra space around each character. offset.y can be thought of
+    # as modifying the linespacing, and offset.x as modifying the letter spacing.
+    offset:
+        x: 0
+        y: 0
 
-  use_thin_strokes: false
+    use_thin_strokes: false
 
 # Should display the render timer
 debug:
-  render_timer: false
+    render_timer: false
 
 # Colors (Nord)
 colors:
-  # Default colors
-  primary:
-    background: "0x2E3440"
-    foreground: "0xD8DEE9"
+    # Default colors
+    primary:
+        background: "0x2E3440"
+        foreground: "0xD8DEE9"
 
-  # Normal colors
-  normal:
-    black: "0x3B4252"
-    red: "0xBF616A"
-    green: "0xA3BE8C"
-    yellow: "0xEBCB8B"
-    blue: "0x81A1C1"
-    magenta: "0xB48EAD"
-    cyan: "0x88C0D0"
-    white: "0xE5E9F0"
+    # Normal colors
+    normal:
+        black: "0x3B4252"
+        red: "0xBF616A"
+        green: "0xA3BE8C"
+        yellow: "0xEBCB8B"
+        blue: "0x81A1C1"
+        magenta: "0xB48EAD"
+        cyan: "0x88C0D0"
+        white: "0xE5E9F0"
 
-  # Bright colors
-  bright:
-    black: "0x4C566A"
-    red: "0xBF616A"
-    green: "0xA3BE8C"
-    yellow: "0xEBCB8B"
-    blue: "0x81A1C1"
-    magenta: "0xB48EAD"
-    cyan: "0x8FBCBB"
-    white: "0xECEFF4"
+    # Bright colors
+    bright:
+        black: "0x4C566A"
+        red: "0xBF616A"
+        green: "0xA3BE8C"
+        yellow: "0xEBCB8B"
+        blue: "0x81A1C1"
+        magenta: "0xB48EAD"
+        cyan: "0x8FBCBB"
+        white: "0xECEFF4"
 
 # Visual Bell
 #
@@ -115,8 +115,8 @@ colors:
 # To completely disable the visual bell, set its duration to 0.
 #
 bell:
-  animation: EaseOutExpo
-  duration: 0
+    animation: EaseOutExpo
+    duration: 0
 
 # Key bindings
 #
@@ -151,54 +151,54 @@ bell:
 # (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
 # then run `showkey -a` to get the sequence associated to a key combination.
 key_bindings:
-  - { key: V, mods: Control|Shift, action: Paste }
-  - { key: C, mods: Command, action: Copy }
-  - { key: Q, mods: Command, action: Quit }
-  - { key: W, mods: Command, action: Quit }
-  - { key: Home, chars: "\x1bOH", mode: AppCursor }
-  - { key: Home, chars: "\x1b[1~", mode: ~AppCursor }
-  - { key: End, chars: "\x1bOF", mode: AppCursor }
-  - { key: End, chars: "\x1b[4~", mode: ~AppCursor }
-  - { key: PageUp, chars: "\x1b[5~" }
-  - { key: PageDown, chars: "\x1b[6~" }
-  - { key: Left, mods: Shift, chars: "\x1b[1;2D" }
-  - { key: Left, mods: Control, chars: "\x1b[1;5D" }
-  - { key: Left, mods: Alt, chars: "\x1b[1;3D" }
-  - { key: Left, chars: "\x1b[D", mode: ~AppCursor }
-  - { key: Left, chars: "\x1bOD", mode: AppCursor }
-  - { key: Right, mods: Shift, chars: "\x1b[1;2C" }
-  - { key: Right, mods: Control, chars: "\x1b[1;5C" }
-  - { key: Right, mods: Alt, chars: "\x1b[1;3C" }
-  - { key: Right, chars: "\x1b[C", mode: ~AppCursor }
-  - { key: Right, chars: "\x1bOC", mode: AppCursor }
-  - { key: Up, mods: Shift, chars: "\x1b[1;2A" }
-  - { key: Up, mods: Control, chars: "\x1b[1;5A" }
-  - { key: Up, mods: Alt, chars: "\x1b[1;3A" }
-  - { key: Up, chars: "\x1b[A", mode: ~AppCursor }
-  - { key: Up, chars: "\x1bOA", mode: AppCursor }
-  - { key: Down, mods: Shift, chars: "\x1b[1;2B" }
-  - { key: Down, mods: Control, chars: "\x1b[1;5B" }
-  - { key: Down, mods: Alt, chars: "\x1b[1;3B" }
-  - { key: Down, chars: "\x1b[B", mode: ~AppCursor }
-  - { key: Down, chars: "\x1bOB", mode: AppCursor }
-  - { key: Tab, mods: Shift, chars: "\x1b[Z" }
-  - { key: F1, chars: "\x1bOP" }
-  - { key: F2, chars: "\x1bOQ" }
-  - { key: F3, chars: "\x1bOR" }
-  - { key: F4, chars: "\x1bOS" }
-  - { key: F5, chars: "\x1b[15~" }
-  - { key: F6, chars: "\x1b[17~" }
-  - { key: F7, chars: "\x1b[18~" }
-  - { key: F8, chars: "\x1b[19~" }
-  - { key: F9, chars: "\x1b[20~" }
-  - { key: F10, chars: "\x1b[21~" }
-  - { key: F11, chars: "\x1b[23~" }
-  - { key: F12, chars: "\x1b[24~" }
-  - { key: Back, chars: "\x7f" }
-  - { key: Back, mods: Alt, chars: "\x1b\x7f" }
-  - { key: Insert, chars: "\x1b[2~" }
-  - { key: Delete, chars: "\x1b[3~", mode: AppKeypad }
-  - { key: Delete, chars: "\x1b[P", mode: ~AppKeypad }
+    - { key: V, mods: Control|Shift, action: Paste }
+    - { key: C, mods: Command, action: Copy }
+    - { key: Q, mods: Command, action: Quit }
+    - { key: W, mods: Command, action: Quit }
+    - { key: Home, chars: "\x1bOH", mode: AppCursor }
+    - { key: Home, chars: "\x1b[1~", mode: ~AppCursor }
+    - { key: End, chars: "\x1bOF", mode: AppCursor }
+    - { key: End, chars: "\x1b[4~", mode: ~AppCursor }
+    - { key: PageUp, chars: "\x1b[5~" }
+    - { key: PageDown, chars: "\x1b[6~" }
+    - { key: Left, mods: Shift, chars: "\x1b[1;2D" }
+    - { key: Left, mods: Control, chars: "\x1b[1;5D" }
+    - { key: Left, mods: Alt, chars: "\x1b[1;3D" }
+    - { key: Left, chars: "\x1b[D", mode: ~AppCursor }
+    - { key: Left, chars: "\x1bOD", mode: AppCursor }
+    - { key: Right, mods: Shift, chars: "\x1b[1;2C" }
+    - { key: Right, mods: Control, chars: "\x1b[1;5C" }
+    - { key: Right, mods: Alt, chars: "\x1b[1;3C" }
+    - { key: Right, chars: "\x1b[C", mode: ~AppCursor }
+    - { key: Right, chars: "\x1bOC", mode: AppCursor }
+    - { key: Up, mods: Shift, chars: "\x1b[1;2A" }
+    - { key: Up, mods: Control, chars: "\x1b[1;5A" }
+    - { key: Up, mods: Alt, chars: "\x1b[1;3A" }
+    - { key: Up, chars: "\x1b[A", mode: ~AppCursor }
+    - { key: Up, chars: "\x1bOA", mode: AppCursor }
+    - { key: Down, mods: Shift, chars: "\x1b[1;2B" }
+    - { key: Down, mods: Control, chars: "\x1b[1;5B" }
+    - { key: Down, mods: Alt, chars: "\x1b[1;3B" }
+    - { key: Down, chars: "\x1b[B", mode: ~AppCursor }
+    - { key: Down, chars: "\x1bOB", mode: AppCursor }
+    - { key: Tab, mods: Shift, chars: "\x1b[Z" }
+    - { key: F1, chars: "\x1bOP" }
+    - { key: F2, chars: "\x1bOQ" }
+    - { key: F3, chars: "\x1bOR" }
+    - { key: F4, chars: "\x1bOS" }
+    - { key: F5, chars: "\x1b[15~" }
+    - { key: F6, chars: "\x1b[17~" }
+    - { key: F7, chars: "\x1b[18~" }
+    - { key: F8, chars: "\x1b[19~" }
+    - { key: F9, chars: "\x1b[20~" }
+    - { key: F10, chars: "\x1b[21~" }
+    - { key: F11, chars: "\x1b[23~" }
+    - { key: F12, chars: "\x1b[24~" }
+    - { key: Back, chars: "\x7f" }
+    - { key: Back, mods: Alt, chars: "\x1b\x7f" }
+    - { key: Insert, chars: "\x1b[2~" }
+    - { key: Delete, chars: "\x1b[3~", mode: AppKeypad }
+    - { key: Delete, chars: "\x1b[P", mode: ~AppKeypad }
 
 # Mouse bindings
 #
@@ -216,14 +216,14 @@ key_bindings:
 # - PasteSelection
 # - Copy (TODO)
 mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
+    - { mouse: Middle, action: PasteSelection }
 
 mouse:
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
+    double_click: { threshold: 300 }
+    triple_click: { threshold: 300 }
 
 selection:
-  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+    semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
 mouse.hide_cursor_when_typing: false
 # Shell
