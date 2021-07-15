@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
-    "editor.fontFamily": "RobotoMono Nerd Font",
+    "editor.fontFamily": "monospace",
     "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
@@ -366,6 +366,5 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
-    },
-    "python.defaultInterpreterPath": "/home/daniel/.linuxbrew/bin/python3"
+    }
 }
