@@ -29,8 +29,8 @@
     filemanager = "nerdtree"
     sidebar_direction = "left"
     # linter settings
-    enable_neomake = 0
-    enable_ale = 1
+    # enable_neomake = 0
+    # enable_ale = 1
     autocomplete_method = "coc"
 
 # Enable autocomplete layer
@@ -41,6 +41,9 @@ auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = "colorscheme"
+
+[[layers]]
+name = "denite"
 
 [[layers]]
 name = 'shell'
