@@ -30,6 +30,7 @@ typeset -gx -U cdpath fpath mailpath path
 fpath=( \
     ~/.zsh/Completion(N-/) \
     ~/.zsh/functions(N-/) \
+    ~/.linuxbrew/share/zsh/site-functions \
     ~/.zsh/plugins/zsh-completions(N-/) \
     /usr/local/share/zsh/site-functions(N-/) \
     $fpath \
@@ -43,6 +44,7 @@ path=(
   $GEM_BIN
   $HOME/.cargo/bin
   $HOME/bin
+  $HOME/.local/bin
 )
 # }}}
 # Pager {{{
@@ -91,9 +93,9 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 #}}}
 # Gurobi environment {{{
-export GUROBI_HOME="/opt/gurobi900/linux64"
+export GUROBI_HOME="/opt/gurobi912/linux64"
 export LD_LIBRARY_PATH=$GUROBI_HOME/lib
-export CPLEX_DIR="/opt/ibm/ILOG/CPLEX_Studio129"
+export CPLEX_DIR="/opt/ibm/ILOG/CPLEX_Studio1210"
 export CPLEX_STUDIO_BINARIES="${CPLEX_DIR}/cplex/bin/x86-64_linux"
 export PATH="${PATH}:${GUROBI_HOME}/bin:${CPLEX_DIR}/cplex/bin/x86-64_linux"
 # }}}
@@ -103,6 +105,18 @@ eval $(thefuck --alias)
 # Ripgrep config file {{{
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgreprc
 # }}}
+# Configure Zoxide {{{
+eval "$(zoxide init zsh)"
+# }}}
+# Configure Broot {{{
+source $HOME/.config/broot/launcher/bash/br
+# }}}
+# VirtualEnv {{{
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+source $HOME/.local/bin/virtualenvwrapper.sh
+# }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

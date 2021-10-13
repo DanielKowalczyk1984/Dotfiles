@@ -1,110 +1,116 @@
 [papers]
-dir = ~/Dropbox/ArticlesArchive/Papers
+dir = ~/MyDocuments/ArticlesArchive/Papers
+
+[bie]
+dir = ~/pCloudDrive/MyDocuments/Bie
 
 [mip]
-dir = ~/Dropbox/ArticlesArchive/MathProgramming
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/MathProgramming
+
+[geometry]
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Geometry
 
 [KPcuts]
-dir = ~/Dropbox/ArticlesArchive/KnapsackCuts
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/KnapsackCuts
 
 [bpp]
-dir = ~/Dropbox/ArticlesArchive/BPP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/BPP
 
 [lotsizing]
-dir = ~/Dropbox/ArticlesArchive/lotsizing
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/lotsizing
 
 [presentations]
-dir = ~/Dropbox/ArticlesArchive/presentations
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/presentations
 
 [thesis]
-dir = ~/Dropbox/ArticlesArchive/thesisOR
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/thesisOR
 
 [vrp]
-dir = ~/Dropbox/ArticlesArchive/VRP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/VRP
 
 [sdp]
-dir = ~/Dropbox/ArticlesArchive/SemidefinteProgramming
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/SemidefinteProgramming
 
 [vcp]
-dir = ~/Dropbox/ArticlesArchive/ColoringProblems
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ColoringProblems
 
 [tools]
-dir = ~/Dropbox/ArticlesArchive/OR-tools
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/OR-tools
 
 [optimization]
-dir = ~/Dropbox/ArticlesArchive/General Optimization
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/General Optimization
 
 [scheduling]
-dir = ~/Dropbox/ArticlesArchive/General Scheduling
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/General Scheduling
 
 [cg]
-dir = ~/Dropbox/ArticlesArchive/ColumnGeneration
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ColumnGeneration
 
 [robust]
-dir = ~/Dropbox/ArticlesArchive/RobustOptimization
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RobustOptimization
 
 [bdd]
-dir = ~/Dropbox/ArticlesArchive/ZDD&BDD
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ZDD&BDD
 
 [approx]
-dir = ~/Dropbox/ArticlesArchive/ApproxAlgorithms
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ApproxAlgorithms
 
 [kpc]
-dir = ~/Dropbox/ArticlesArchive/KP(C)
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/KP(C)
 
 [app]
-dir = ~/Dropbox/ArticlesArchive/ApplicationsOR
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ApplicationsOR
 
 [mwisp]
-dir = ~/Dropbox/ArticlesArchive/MWISP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/MWISP
 
 [rcpsp]
-dir = ~/Dropbox/ArticlesArchive/RCPSP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RCPSP
 
 [rlp]
-dir = ~/Dropbox/ArticlesArchive/RLP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RLP
 
 [metallo]
-dir = ~/Dropbox/ArticlesArchive/Metallo_papers
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Metallo_papers
 
 [covering]
-dir = ~/Dropbox/ArticlesArchive/SetCovering
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/SetCovering
 
 [history]
-dir = ~/Dropbox/ArticlesArchive/History
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/History
 
 [COML]
-dir = ~/Dropbox/ArticlesArchive/CO&ML
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/CO&ML
 
 [scatter]
-dir = ~/Dropbox/ArticlesArchive/ScatterSearch
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ScatterSearch
 
 [cp]
-dir = ~/Dropbox/ArticlesArchive/CP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/CP
 
 [free]
-dir = ~/Dropbox/ArticlesArchive/FreeEnergyPrinciple
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/FreeEnergyPrinciple
 
 [fpt]
-dir = ~/Dropbox/ArticlesArchive/FTP
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/FTP
 
 [quantum]
-dir = ~/Dropbox/ArticlesArchive/Quantum
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Quantum
 
 [math]
-dir = ~/Dropbox/ArticlesArchive/Math
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Math
 
 [books]
-dir = ~/Dropbox/BooksArchive
+dir = ~/pCloudDrive/MyDocuments/BooksArchive
 
 [tsptd]
-dir = ~/Dropbox/ArticlesArchive/TSPTD
+dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/TSPTD
 
 [minimal]
-dir=~/Dropbox/ArticlesArchive/Articles/MinimalSubmanifolds
+dir=~/pCloudDrive/MyDocuments/ArticlesArchive/Articles/MinimalSubmanifolds
 
 [minmax]
-dir=~/Dropbox/ArticlesArchive/Articles/MinMax
+dir=~/pCloudDrive/MyDocuments/ArticlesArchive/Articles/MinMax
 
 [settings]
 default-library = papers

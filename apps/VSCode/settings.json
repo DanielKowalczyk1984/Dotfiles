@@ -1,17 +1,23 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
-    "editor.fontFamily": "FuraCode Nerd Font",
-    "editor.matchBrackets": true,
+    "editor.fontFamily": "RobotoMono Nerd Font",
+    "editor.matchBrackets": "always",
     "editor.formatOnPaste": true,
-    "C_Cpp.updateChannel": "Insiders",
     "latex-workshop.latex.outDir": "%DIR%/latex.out",
     "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.external.viewer.args": [
+       "%PDF%"
+    ],
     "latex-workshop.view.pdf.external.args": {
         "command": "zathura",
         "args": [
-            "--synctex-editor-command",
-            "code --reuse-window -g \"%{input}:%{line}\"",
+            
             "%PDF%"
         ]
     },
@@ -71,6 +77,7 @@
             "args": [
                 "-file-line-error",
                 "-synctex=1",
+                "-outdir=%DIR%/latex.out",
                 "%DOC%"
             ],
             "env": {}
@@ -90,9 +97,19 @@
                 "%DOCFILE%"
             ],
             "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "%DOC_EXT%",
+                "--synctex"
+            ]
         }
     ],
     "latex-workshop.latex.recipes": [
+
+
         {
             "name": "latexmk 🔃",
             "tools": [
@@ -124,6 +141,12 @@
             "name": "pdflatex",
             "tools": [
                 "pdflatex"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
             ]
         }
     ],
@@ -176,7 +199,6 @@
         "<C-t>": false
     },
     "astyle.astylerc": "/home/daniel/.astylerc",
-    "diffEditor.ignoreTrimWhitespace": false,
     "files.exclude": {
         "**/.ccls-cache": true,
         "**/*.aux": true,
@@ -188,16 +210,10 @@
         "**/*.xdv": true
     },
     "terminal.external.linuxExec": "alacritty",
-    "ccls.completion.enableSnippetInsertion": true,
-    "ccls.completion.detailedLabel": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
     "terminal.explorerKind": "external",
     "files.associations": {
         "*.ipynb": "jupyter"
     },
-    "python.pythonPath": "/bin/python",
     "cmake.preferredGenerators": [
         "Unix Makefiles",
         "Ninja"
@@ -206,39 +222,150 @@
         "ATIF",
         "BDDs",
         "Baptiste",
+        "CBFS",
         "Dantzig",
+        "Eigen",
+        "GUBs",
         "Gurobi",
         "Hoeve",
+        "Lowerbound",
         "MINJOB",
+        "Matplotlib",
+        "Parens",
+        "Parms",
+        "Pylance",
         "Sadykov",
+        "Scheduleset",
+        "Seperation",
+        "Sint",
+        "Tiensevest",
         "Tikzstyle",
         "WSPT",
         "Xeon",
         "ZDDs",
+        "autodetect",
         "bioinformatics",
+        "bugprone",
+        "chktex",
+        "clangd",
+        "clippy",
+        "cmake",
+        "coeffs",
+        "conanbuildinfo",
         "convexification",
         "discretization",
         "footnoteref",
         "gchar",
         "integrality",
+        "kubectl",
+        "kubernetes",
+        "llvm",
+        "ltex",
+        "minikube",
         "natbib",
-        "pred"
+        "numpy",
+        "polytope",
+        "pred",
+        "preprocess",
+        "pyplot",
+        "tikz",
+        "tikzplotlib",
+        "wctparms",
+        "wctprivate"
     ],
     "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.chktex.enabled": true,
     "cmake.configureOnOpen": false,
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
-    "[c]": {
-        "editor.defaultFormatter": "ccls-project.ccls"
-    },
     "cSpell.ignoreRegExpList": [
         "GRB.*"
     ],
-    "C_Cpp.autocomplete": "Disabled",
     "languageTool.language": "en-GB",
-    "ltex.language": "en-GB"
+    "ltex.language": "en-GB",
+    "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
+    "rust.clippy_preference": "on",
+    "editor.formatOnType": true,
+    "sync.gist": "ddb9afbd9e2373dcef4c6d7b4e6a38ff",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "editor.largeFileOptimizations": false,
+    "python.autoComplete.addBrackets": true,
+    "extensions.ignoreRecommendations": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path.linux": "/home/daniel/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.draft-path.linux": "/home/daniel/.vs-kubernetes/tools/draft/linux-amd64/draft",
+        "vs-kubernetes.minikube-path.linux": "/home/daniel/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vs-kubernetes.kubectl-path.linux": "/home/daniel/.vs-kubernetes/tools/kubectl/kubectl"
+    },
+    "cSpell.enableFiletypes": [
+        "cmake"
+    ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true,
+    "julia.enableTelemetry": true,
+    "jupyter.alwaysScrollOnNewCell": true,
+    "jupyter.ignoreVscodeTheme": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "jupyter.interactiveWindowMode": "perFile",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "window.titleBarStyle": "custom",
+    "C_Cpp.clang_format_fallbackStyle": "Chromium",
+    "C_Cpp.default.cStandard": "c99",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.recipe.default": "latexmk xelatex",
+    "latex-workshop.message.information.show": true,
+    "latex-workshop.view.pdf.ref.viewer": "external",
+    "clangd.onConfigChanged": "ignore",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "default"
+    },
+    "cmake.configureEnvironment": {
+        "GUROBI_HOME": "/opt/gurobi911/linux64"
+    },
+    "clangd.path": "/home/daniel/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/12.0.0/clangd_12.0.0/bin/clangd",
+    "editor.formatOnSave": true,
+    "formattingToggle.affects": [
+        "formatOnPaste",
+        "formatOnSave",
+        "formatOnType"
+    ],
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%",
+        "-outdir=%DIR%/latex.out"
+    ],
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.tabSize": 8,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": false,
+    "window.zoomLevel": -1,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "python.defaultInterpreterPath": "/home/daniel/.linuxbrew/bin/python3"
 }
