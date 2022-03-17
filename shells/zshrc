@@ -61,7 +61,6 @@ zplug "hlissner/zsh-autopair", defer:2
 zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "lotabout/skim", as:command, use:"bin/sk-tmux"
 zplug "plugins/archlinux", from:oh-my-zsh
-zplug "plugins/cargo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/git-flow", from:oh-my-zsh
