@@ -96,3 +96,6 @@ zplug load
 # Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0
 # }}}
+
+autoload bashcompinit
+source /home/daniel/Code/vcpkg/scripts/vcpkg_completion.zsh
