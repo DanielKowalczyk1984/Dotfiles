@@ -113,8 +113,12 @@ source $HOME/.config/broot/launcher/bash/br
 # }}}
 # VirtualEnv {{{
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
-source $HOME/.local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/Code
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+# }}}
+# VCPKG_ENV {{{
+export VCPKG_ROOT=$HOME/vcpkg
 # }}}
 #" Folding the .vimrc {{{
 # vim:foldmethod=marker:foldlevel=0

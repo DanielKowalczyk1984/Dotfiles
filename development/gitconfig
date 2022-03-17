@@ -107,10 +107,12 @@
 [push]
   default = upstream
 [core]
-    pager = delta --theme='Nord'
-	autocrlf = input
-	editor = subl -n -w
+  pager = delta
+	autocrlf = false
+	editor = nvim
 	excludesfile = /Users/Daniel/.global_gitignore
+[delta]
+  theme = 'nord'
 [advice]
   statusHints = false
 [diff]
@@ -121,9 +123,9 @@
 [include]
   path = .gitconfig.user
 [user]
-	name = Kowalczyk, D.
-	email = d.kowalczyk@tue.nl
-	username = DanielKowalczyk1984
+	name = Daniel Kowalczyk
+	email = Daniel.Kowalczyk@camco.be
+	username = daniel
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
