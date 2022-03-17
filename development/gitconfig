@@ -107,9 +107,9 @@
 [push]
   default = upstream
 [core]
-    pager = delta --theme='Nord'
-	autocrlf = input
-	editor = subl -n -w
+  pager = delta
+	autocrlf = false
+	editor = nvim
 	excludesfile = /Users/Daniel/.global_gitignore
 [advice]
   statusHints = false
@@ -121,9 +121,9 @@
 [include]
   path = .gitconfig.user
 [user]
-	name = Kowalczyk, D.
-	email = d.kowalczyk@tue.nl
-	username = DanielKowalczyk1984
+	name = Daniel Kowalczyk
+	email = Daniel.Kowalczyk@camco.be
+	username = daniel
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -135,8 +135,15 @@
 	smudge = git-lfs smudge %f
 	required = true
 [delta]
-    features = side-by-side line-numbers decorations
-    whitespace-error-style = 22 reverse
+  theme = 'nord'
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
