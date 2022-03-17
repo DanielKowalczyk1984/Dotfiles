@@ -111,8 +111,6 @@
 	autocrlf = false
 	editor = nvim
 	excludesfile = /Users/Daniel/.global_gitignore
-[delta]
-  theme = 'nord'
 [advice]
   statusHints = false
 [diff]
@@ -137,8 +135,15 @@
 	smudge = git-lfs smudge %f
 	required = true
 [delta]
-    features = side-by-side line-numbers decorations
-    whitespace-error-style = 22 reverse
+  theme = 'nord'
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
