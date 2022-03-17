@@ -1,16 +1,15 @@
 [submodule "meta/dotbot"]
 	path = meta/dotbot
-	url = git://github.com/anishathalye/dotbot
-	ignore = dirty
+	url = https://github.com/anishathalye/dotbot.git
 [submodule "meta/yay"]
 	path = meta/yay
-	url = git://github.com/oxson/dotbot-yay
+	url = https://github.com/oxson/dotbot-yay.git
 [submodule "meta/rust"]
 	path = meta/rust
-	url = git://github.com/alexcormier/dotbot-rust
+	url = https://github.com/alexcormier/dotbot-rust.git
 [submodule "shells/tmux/plugins/tpm"]
 	path = shells/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
 [submodule "shells/tmux/plugins/tmux-cpu"]
 	path = shells/tmux/plugins/tmux-cpu
-	url = https://github.com/tmux-plugins/tmux-cpu
+	url = https://github.com/tmux-plugins/tmux-cpu.git
