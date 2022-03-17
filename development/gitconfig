@@ -107,10 +107,12 @@
 [push]
   default = upstream
 [core]
-    pager = delta --theme='Nord'
-	autocrlf = input
-	editor = subl -n -w
+  pager = delta
+	autocrlf = false
+	editor = nvim
 	excludesfile = /Users/Daniel/.global_gitignore
+[delta]
+  theme = 'nord'
 [advice]
   statusHints = false
 [diff]
