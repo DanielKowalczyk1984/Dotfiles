@@ -98,4 +98,4 @@ zplug load
 # }}}
 
 autoload bashcompinit
-source /home/daniel/Code/vcpkg/scripts/vcpkg_completion.zsh
+source ${VCPKG_ROOT}/scripts/vcpkg_completion.zsh
