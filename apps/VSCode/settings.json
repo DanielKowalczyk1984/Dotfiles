@@ -12,12 +12,11 @@
         "%TEX%"
     ],
     "latex-workshop.view.pdf.external.viewer.args": [
-       "%PDF%"
+        "%PDF%"
     ],
     "latex-workshop.view.pdf.external.args": {
         "command": "zathura",
         "args": [
-            
             "%PDF%"
         ]
     },
@@ -108,8 +107,6 @@
         }
     ],
     "latex-workshop.latex.recipes": [
-
-
         {
             "name": "latexmk 🔃",
             "tools": [
@@ -366,5 +363,8 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "yaml.schemas": {
+        "file:///home/daniel/.vscode/extensions/atlassian.atlascode-2.10.11/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     }
 }

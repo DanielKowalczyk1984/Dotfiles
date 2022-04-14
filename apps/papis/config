@@ -5,112 +5,112 @@ dir = ~/MyDocuments/ArticlesArchive/Papers
 dir = ~/pCloudDrive/MyDocuments/Bie
 
 [mip]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/MathProgramming
+dir = ~/Papers/MathProgramming
 
 [geometry]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Geometry
+dir = ~/Papers/Geometry
 
 [KPcuts]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/KnapsackCuts
+dir = ~/Papers/KnapsackCuts
 
 [bpp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/BPP
+dir = ~/Papers/BPP
 
 [lotsizing]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/lotsizing
+dir = ~/Papers/lotsizing
 
 [presentations]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/presentations
+dir = ~/Papers/presentations
 
 [thesis]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/thesisOR
+dir = ~/Papers/thesisOR
 
 [vrp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/VRP
+dir = ~/Papers/VRP
 
 [sdp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/SemidefinteProgramming
+dir = ~/Papers/SemidefinteProgramming
 
 [vcp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ColoringProblems
+dir = ~/Papers/ColoringProblems
 
 [tools]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/OR-tools
+dir = ~/Papers/OR-tools
 
 [optimization]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/General Optimization
+dir = ~/Papers/General Optimization
 
 [scheduling]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/General Scheduling
+dir = ~/Papers/General Scheduling
 
 [cg]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ColumnGeneration
+dir = ~/Papers/ColumnGeneration
 
 [robust]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RobustOptimization
+dir = ~/Papers/RobustOptimization
 
 [bdd]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ZDD&BDD
+dir = ~/Papers/ZDD&BDD
 
 [approx]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ApproxAlgorithms
+dir = ~/Papers/ApproxAlgorithms
 
 [kpc]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/KP(C)
+dir = ~/Papers/KP(C)
 
 [app]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ApplicationsOR
+dir = ~/Papers/ApplicationsOR
 
 [mwisp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/MWISP
+dir = ~/Papers/MWISP
 
 [rcpsp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RCPSP
+dir = ~/Papers/RCPSP
 
 [rlp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/RLP
+dir = ~/Papers/RLP
 
 [metallo]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Metallo_papers
+dir = ~/Papers/Metallo_papers
 
 [covering]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/SetCovering
+dir = ~/Papers/SetCovering
 
 [history]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/History
+dir = ~/Papers/History
 
 [COML]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/CO&ML
+dir = ~/Papers/CO&ML
 
 [scatter]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/ScatterSearch
+dir = ~/Papers/ScatterSearch
 
 [cp]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/CP
+dir = ~/Papers/CP
 
 [free]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/FreeEnergyPrinciple
+dir = ~/Papers/FreeEnergyPrinciple
 
 [fpt]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/FTP
+dir = ~/Papers/FTP
 
 [quantum]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Quantum
+dir = ~/Papers/Quantum
 
 [math]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/Math
+dir = ~/Papers/Math
 
 [books]
-dir = ~/pCloudDrive/MyDocuments/BooksArchive
+dir = ~/pCloudDrive/Books
 
 [tsptd]
-dir = ~/pCloudDrive/MyDocuments/ArticlesArchive/TSPTD
+dir = ~/Papers/TSPTD
 
 [minimal]
-dir=~/pCloudDrive/MyDocuments/ArticlesArchive/Articles/MinimalSubmanifolds
+dir=~/Papers/Articles/MinimalSubmanifolds
 
 [minmax]
-dir=~/pCloudDrive/MyDocuments/ArticlesArchive/Articles/MinMax
+dir=~/Papers/Articles/MinMax
 
 [settings]
 default-library = papers
