@@ -99,3 +99,4 @@ zplug load
 
 autoload bashcompinit
 source ${VCPKG_ROOT}/scripts/vcpkg_completion.zsh
+eval "$(atuin init zsh)"
